@@ -13,14 +13,14 @@ const data = {
   category: "frames",
 };
 
-function WorkerDash({ ...receivedUser }) {
-  const [user, setUser] = useState({});
+function WorkerDash({ user }) {
+  // const [user, setUser] = useState({});
   const [workerSequence, setWorkerSequence] = useState([]);
 
-  useEffect(function () {
-    if (!receivedUser?._id) return;
-    setUser((user) => (user = { ...receivedUser }));
-  }, []);
+  // useEffect(function () {
+  //   if (!receivedUser?._id) return;
+  //   setUser((user) => (user = { ...receivedUser }));
+  // }, []);
 
   useEffect(function () {
     async function getJobs() {

@@ -191,6 +191,7 @@ function Register() {
       role: "user",
       address: {
         country: values.country,
+        city: values.city,
         postCode: values.postCode,
         district: values.district,
         block: values.block,

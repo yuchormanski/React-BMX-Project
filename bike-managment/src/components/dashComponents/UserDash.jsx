@@ -46,16 +46,16 @@ const workerSequence = [
   },
 ];
 
-function UserDash({ ...receivedUser }) {
-  const [user, setUser] = useState({});
+function UserDash({ user }) {
+  // const [user, setUser] = useState({});
 
-  useEffect(
-    function () {
-      setUser({ ...receivedUser });
-    },
+  // useEffect(
+  //   function () {
+  //     setUser({ ...receivedUser });
+  //   },
 
-    []
-  );
+  //   []
+  // );
 
   const headingType = {
     frames:
