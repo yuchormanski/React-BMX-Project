@@ -1435,6 +1435,7 @@
         balance: 123.45,
         city: "Veliko Tarnowo",
         role: "user",
+        phone: "+746879273987298",
         address: {
           country: "Bulgaria",
           postCode: "1000",
@@ -1457,6 +1458,7 @@
         balance: 1000,
         city: "Sofia",
         role: "worker",
+        phone: "+746879273987298",
         address: {
           country: "Bulgaria",
           postCode: "",
@@ -1479,6 +1481,7 @@
         balance: 123.45,
         city: "Veliko Tarnowo",
         role: "user",
+        phone: "+746879273987298",
         address: {
           country: "Bulgaria",
           postCode: "1000",
@@ -1501,6 +1504,7 @@
         balance: 123.45,
         city: "Veliko Tarnowo",
         role: "worker",
+        phone: "+746879273987298",
         address: {
           country: "Bulgaria",
           postCode: "1000",
