@@ -1,0 +1,42 @@
+{
+  "2d5ae478-87c7-45fa-acf9-f04aa4724421": {
+    "_ownerId": "847ec027-f659-40f6-8032-5173e2f9c93a",
+    "type": "bmx",
+    "brand": "Scott",
+    "model": "Addict",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit omnis, voluptates officia iste quasi perferendis sint.",
+    "category": "frame",
+    "_createdOn": 1700111055376,
+    "_id": "2d5ae478-87c7-45fa-acf9-f04aa4724421"
+  },
+  "6012c542-38e1-4660-ba40-1b109c40cb2f": {
+    "_ownerId": "847ec027-f659-40f6-8032-5173e2f9c93b",
+    "type": "road",
+    "brand": "TREK",
+    "model": "Madone",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis itaque architecto, deleniti quo omnis odio quam voluptatibus ea! Explicabo, quam.",
+    "category": "frame",
+    "_createdOn": 1700111055377,
+    "_id": "6012c542-38e1-4660-ba40-1b109c40cb2f"
+  },
+  "6012c542-38e1-4660-ba40-1b109c40cb2c": {
+    "_ownerId": "847ec027-f659-40f6-8032-5173e2f9c93b",
+    "type": "road",
+    "brand": "Specialized",
+    "model": "Allez",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis suscipit eaque id exercitationem cum! Facere doloremque dignissimos cupiditate fugit, culpa animi eveniet est blanditiis!",
+    "category": "frame",
+    "_createdOn": 1700111055277,
+    "_id": "6012c542-38e1-4660-ba40-1b109c40cb2c"
+  },
+  "6012c542-38e1-4660-bag0-1b109c40cb2c": {
+    "_ownerId": "847ec027-f659-40f6-8032-5173e2f9c93b",
+    "type": "bmx",
+    "brand": "Canyon",
+    "model": "Canyon model",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, nulla!",
+    "category": "frame",
+    "_createdOn": 1730111055377,
+    "_id": "6012c542-38e1-4660-bag0-1b109c40cb2c"
+  }
+}
