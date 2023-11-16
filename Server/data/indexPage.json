@@ -1,0 +1,47 @@
+{
+  "defaultBikes": [
+    {
+      "id": 798230344538092830,
+      "modelName": "Bike 1",
+      "imageUrl": "https://yuchormanski.free.bg/bikes/bike-1.webp",
+      "price": 123,
+      "description": "Slow Initial Rendering: Since the data is fetched from the server before rendering, initial load times can be slow, resulting in a less-than-ideal user experience."
+    },
+    {
+      "id": 79823082938092830,
+      "modelName": "Bike 2",
+      "imageUrl": "https://yuchormanski.free.bg/bikes/bike-2.webp",
+      "price": 54,
+      "description": "Loading States: Users may experience an in-between or loading state, as they wait for the data to be rendered on the page."
+    },
+    {
+      "id": 798230828609592830,
+      "modelName": "Bike 3",
+      "imageUrl": "https://yuchormanski.free.bg/bikes/bike-3.webp",
+      "price": 234.78,
+      "description": " Lack of Interactivity: There isn’t much opportunity for interactivity with the user until the data has been fully loaded and rendered on the page."
+    }
+  ],
+  "comments": [
+    {
+      "id": 8273284930820349802,
+      "partId": 984095804580394,
+      "partName": "Part Name 1",
+      "clientId": "jkhsfdkjghsljdfhg",
+      "clientFullName": "Gosho Petrov",
+      "clientImageUrl": "https://i.pravatar.cc/300",
+      "commentDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, tenetur laboriosam voluptatibus dicta, vel perferendis placeat aliquam dolores magnam quibusdam iste repudiandae error quod voluptatem.",
+      "dateCreated": "10/12/2018"
+    },
+    {
+      "id": 8273284837489379420349802,
+      "partId": 984098348804580394,
+      "partName": "Part Name 2",
+      "clientId": "jkhsfdksdflssljdfhg",
+      "clientFullName": "Stamat Grozdanov",
+      "clientImageUrl": "https://i.pravatar.cc/300",
+      "commentDescription": "Magni porro ducimus velit tenetur vero placeat suscipit at, totam reiciendis minus ipsam earum dolorem provident fugiat quia deserunt, expedita laudantium fuga nostrum quis illo doloremque beatae? Magni beatae quo distinctio, nobis aperiam, unde corporis sint possimus praesentium molestiae esse iusto explicabo.",
+      "dateCreated": "21/04/2021"
+    }
+  ]
+}
