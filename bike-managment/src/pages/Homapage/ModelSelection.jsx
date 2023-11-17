@@ -72,6 +72,7 @@ function ModelSelection() {
             <BikeModel
               key={x.id}
               imageUrl={x.imageUrl}
+              model={x.modelName}
               description={x.description}
               price={x.price}
               top={top}
