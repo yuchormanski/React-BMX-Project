@@ -35,6 +35,9 @@
 }
 
 .totalPrice {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   padding: 0.1rem 4rem 0rem;
   margin-left: auto;
   color: var(--color-main-dark);

@@ -137,6 +137,8 @@ function CreateBike() {
           dispatch({ type: "partsList", payload: [] });
           dispatch({ type: "selectedWheel", payload: "" });
           dispatch({ type: "selectedPart", payload: "" });
+          dispatch({ type: "wheelPrice", payload: 0 });
+          dispatch({ type: "partsPrice", payload: 0 });
           dispatch({ type: "buy", payload: false });
           dispatch({ type: "dataReceived", payload: false });
         } catch (err) {
@@ -169,6 +171,7 @@ function CreateBike() {
           dispatch({ type: "isPartSelected", payload: {} });
           dispatch({ type: "partsList", payload: partsData });
           dispatch({ type: "selectedPart", payload: "" });
+          dispatch({ type: "partsPrice", payload: 0 });
           dispatch({ type: "buy", payload: false });
           dispatch({ type: "dataReceived", payload: false });
         } catch (err) {
@@ -205,6 +208,13 @@ function CreateBike() {
     [selectedPart]
   );
 
+  useEffect(
+    function () {
+      dispatch({ type: "cash", payload: framePrice + wheelPrice + partsPrice });
+    },
+    [framePrice, wheelPrice, partsPrice]
+  );
+
   return (
     <>
       {loading && <LoaderWheel />}
@@ -227,6 +237,7 @@ function CreateBike() {
               }
             >
               <ion-icon name="cart-outline"></ion-icon>
+              <span className={styles.priceNumbers}> {total.toFixed(2)}</span>
             </div>
           </header>
 
