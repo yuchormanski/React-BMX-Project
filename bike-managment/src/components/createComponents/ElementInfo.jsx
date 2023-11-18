@@ -1,31 +1,31 @@
-import styles from "./FrameInfo.module.css";
+import styles from "./ElementInfo.module.css";
 
-function FrameInfo({ frame }) {
+function ElementInfo({ data }) {
   return (
     <div className={styles.frameInfo}>
       <div className={styles.infoBox}>
         <div className={styles.info}>
           <span className={styles.label}>Brand</span>
-          {frame.name}
+          {data.name}
         </div>
 
         <div className={styles.info}>
           <span className={styles.label}>Model/OEM number</span>
-          {frame.oem}
+          {data.oem}
         </div>
       </div>
-
+      {/* TODO: missing rating */}
       <div className={`${styles.info} ${styles.price}`}>
         <span className={styles.label}>Price</span>
-        {frame.price}
+        {data.price}
       </div>
 
       <div className={`${styles.info} ${styles.description}`}>
         <span className={styles.label}>Description</span>
-        {frame.description}
+        {data.description}
       </div>
     </div>
   );
 }
 
-export default FrameInfo;
+export default ElementInfo;

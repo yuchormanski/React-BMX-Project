@@ -1572,6 +1572,243 @@
         _id: "hkjhsf766djhdkjhs86f7s",
       },
     },
+    frames: {
+      "2d5ae478-87c7-45fa-acf9-f04aa4724421": {
+        _ownerId: "847ec027-f659-40f6-8032-5173e2f9c93a",
+        name: "Parody",
+        oem: "87394894",
+        imageUrl:
+          "https://colonybmx.com.au/news/wp-content/uploads/2022/02/ProdyLITE-Black-Side-D08-093A-1.jpg",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit omnis, voluptates officia iste quasi perferendis sint.",
+        _createdOn: 1700111055376,
+        _id: "2d5ae478-87c7-45fa-acf9-f04aa4724421",
+        quantity: 3,
+        rating: 3,
+        price: 123.45,
+        type: 1,
+      },
+      "6012c542-38e1-4660-ba40-1b109c40cb2f": {
+        _ownerId: "847ec027-f659-40f6-8032-5173e2f9c93b",
+        name: "Blaster",
+        oem: "Colony",
+        imageUrl:
+          "https://colonybmx.com.au/news/wp-content/uploads/2019/09/Blaster-Grey-Side-D08-072F-1.jpg",
+        description:
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis itaque architecto, deleniti quo omnis odio quam voluptatibus ea! Explicabo, quam.",
+        _createdOn: 1700111055377,
+        _id: "6012c542-38e1-4660-ba40-1b109c40cb2f",
+        quantity: 1,
+        rating: 1,
+        price: 98.99,
+        type: 2,
+      },
+      "6012c542-38e1-4660-ba40-1b109c40cb2c": {
+        _ownerId: "847ec027-f659-40f6-8032-5173e2f9c93b",
+        name: "Zeal",
+        oem: "96789",
+        imageUrl:
+          "https://colonybmx.com.au/news/wp-content/uploads/2023/09/zeal-green-side.jpg",
+        description:
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis suscipit eaque id exercitationem cum! Facere doloremque dignissimos cupiditate fugit, culpa animi eveniet est blanditiis!",
+        _createdOn: 1700111055277,
+        _id: "6012c542-38e1-4660-ba40-1b109c40cb2c",
+        quantity: 4,
+        rating: 5,
+        price: 1000.01,
+        type: 3,
+      },
+      "6012c542-38e1-4660-bag0-1b109c40cb2c": {
+        _ownerId: "847ec027-f659-40f6-8032-5173e2f9c93b",
+        name: "Prisma",
+        oem: "678967",
+        imageUrl:
+          "https://colonybmx.com.au/news/wp-content/uploads/2022/02/Prisma-Black-Side-D08-062A-1.jpg",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, nulla!",
+        _createdOn: 1730111055377,
+        _id: "6012c542-38e1-4660-bag0-1b109c40cb2c",
+        quantity: 5,
+        rating: 3,
+        price: 561.92,
+        type: 1,
+      },
+    },
+    wheels: {
+      "2d5ae478-87c7-45fa-acf9-f04aa4729872398": {
+        _ownerId: "847ec027-f659-40f6-8032-5173e2f9c93a",
+        name: "BMX  Black Front Wheel",
+        oem: "87394894",
+        imageUrl:
+          "https://cdn.skatepro.com/product/440/collective-20-bmx-front-wheel-si.jpg",
+        description:
+          "This complete front wheel allows you to change all your old parts between your fork with a single fix, as this complete wheel comes with a rim, tyre, and inner tube.",
+        _createdOn: 1700111055376,
+        _id: "2d5ae478-87c7-45fa-acf9-f04aa4729872398",
+        quantity: 3,
+        rating: 2,
+        price: 23.45,
+        type: "frame2",
+        wheelBase: 4,
+      },
+      "2d5ae478-87c7-45fa-acf9-f04aa4729872399": {
+        _ownerId: "847ec027-f659-40f6-8032-5173e2f9c93a",
+        name: "SUNDAY KNOX V2",
+        oem: "87394894",
+        imageUrl:
+          "https://ourbmx.com/wp-content/uploads/2020/04/SUNDAY-KNOX-V2-480x480.jpg",
+        description:
+          "This complete front wheel allows you to change all your old parts between your fork with a single fix, as this complete wheel comes with a rim, tyre, and inner tube.",
+        _createdOn: 1700111055376,
+        _id: "2d5ae478-87c7-45fa-acf9-f04aa4729872399",
+        quantity: 3,
+        rating: 5,
+        price: 89.45,
+        type: "frame2",
+        wheelBase: 4,
+      },
+      "2d5ae478-87c7-45fa-acf9-f04aa472987222": {
+        _ownerId: "847ec027-f659-40f6-8032-5173e2f9c93a",
+        name: "BMX  Black Front Wheel",
+        oem: "87394894",
+        imageUrl:
+          "https://cdn.skatepro.com/product/440/collective-20-bmx-front-wheel.jpg",
+        description:
+          "Salt has combined a killer set of parts to bring you their Everest 20 front wheel. Available in a fresh range of colours and  36 spokes.",
+        _createdOn: 1700111055376,
+        _id: "2d5ae478-87c7-45fa-acf9-f04aa472987222",
+        quantity: 2,
+        rating: 4,
+        price: 43.45,
+        type: "frame3",
+        wheelBase: 3,
+      },
+      "2d5ae478-87c7-45fa-acf9-f05aa472987222": {
+        _ownerId: "847ec027-f659-40f6-8032-5173e2f9c93a",
+        name: "HARO TEAM DISC",
+        oem: "87394894",
+        imageUrl:
+          "https://ourbmx.com/wp-content/uploads/2020/04/HARO-TEAM-DISC.jpg",
+        description:
+          "Salt has combined a killer set Available in a fresh range of colours and  36 spokes.",
+        _createdOn: 1700111055376,
+        _id: "2d5ae478-87c7-45fa-acf9-f05aa472987222",
+        quantity: 2,
+        rating: 4,
+        price: 43.45,
+        type: "frame1",
+        wheelBase: 3,
+      },
+      "2d5ae478-87c7-45fa-acf9-f04aa472987228": {
+        _ownerId: "847ec027-f659-40f6-8032-5173e2f9c93a",
+        name: "Everest 20 Cassette BMX Rear Wheel",
+        oem: "87394823",
+        imageUrl:
+          "https://cdn.skatepro.com/product/440/salt-everest-20-cassette-bmx-rear-wheel.jpg",
+        description:
+          "Salt has combined a killer set of parts to bring you their Everest 20 wheel. Available in a fresh range of colours and comes complete with hub, rim, rim tape, and 36 spokes.",
+        _createdOn: 1700111056376,
+        _id: "2d5ae478-87c7-45fa-acf9-f04aa472987228",
+        quantity: 2,
+        rating: 4,
+        price: 93.45,
+        type: "frame3",
+        wheelBase: 2,
+      },
+      "2d5ae478-87c7-45fa-acf9-f04aa472987221": {
+        _ownerId: "847ec027-f659-40f6-8032-5173e2f9c93a",
+        name: "20 Rampage BMX Front Wheel",
+        oem: "8739423494",
+        imageUrl:
+          "https://cdn.skatepro.com/product/440/stolen-20-rampage-bmx-front-wheel.jpg",
+        description:
+          "Whether you're building a custom, replacing on your complete or simply need a new complete front wheel - the Rampage 20 by Stolen is worth looking at. It comes with all the techs you're looking for, and at a very fair price point.",
+        _createdOn: 1700111355376,
+        _id: "2d5ae478-87c7-45fa-acf9-f04aa472987221",
+        quantity: 2,
+        rating: 4,
+        price: 43.45,
+        type: "frame1",
+        wheelBase: 1,
+      },
+    },
+    parts: {
+      "parts-87c7-45fa-acf9-f04aa4729872398": {
+        _ownerId: "847ec027-f659-40f6-8032-5173e2f9c93a",
+        name: "KINK ASTRO SPROCKET",
+        oem: "873jahsk894",
+        imageUrl:
+          "https://ourbmx.com/wp-content/uploads/2020/05/Screen-Shot-2020-05-26-at-10.42.08-AM-1-480x480.png",
+        description:
+          "The Astro sprocket is a true mix of form and function. Using heat-treated 4130 chromoly steel enables this sprocket to use thin spoke like patterns which create the unique look. ",
+        _createdOn: 1700111055376,
+        _id: "parts-87c7-45fa-acf9-f04aa4729872398",
+        quantity: 3,
+        rating: 5,
+        price: 126.99,
+        type: "wheelBase4",
+      },
+      "parts-87c7-45fa-acf9-f04aa472987222": {
+        _ownerId: "847ec027-f659-40f6-8032-5173e2f9c93a",
+        name: "ENDEAVOUR SPROCKET",
+        oem: "873948asda94",
+        imageUrl:
+          "https://colonybmx.com.au/news/wp-content/uploads/2019/07/endeavour-sprocket-pink.jpg",
+        description:
+          "The Colony Endeavour BMX Sprocket that comes on most of Colony’s complete bikes is now available separately! Good quality sprocket at a great price.",
+        _createdOn: 1700111055376,
+        _id: "parts-87c7-45fa-acf9-f04aa472987222",
+        quantity: 3,
+        rating: 1,
+        price: 13.45,
+        type: "wheelBase3",
+      },
+      "parts-87c7-45fa-acf9-f04aa472987228": {
+        _ownerId: "847ec027-f659-40f6-8032-5173e2f9c93a",
+        name: "BLASTER SPROCKET",
+        oem: "8739482as3",
+        imageUrl:
+          "https://colonybmx.com.au/news/wp-content/uploads/2019/07/blaster-sprocket-black-front.jpg",
+        description:
+          "Salt has combined a killer set of parts to bring you their Everest 20 wheel. Available in a fresh range of colours and comes complete with hub, rim, rim tape, and 36 spokes.",
+        _createdOn: 1700111056376,
+        _id: "parts-87c7-45fa-acf9-f04aa472987228",
+        quantity: 2,
+        rating: 3,
+        price: 43.45,
+        type: "wheelBase2",
+      },
+      "parts-87c7-45fa-acf9-f04aa472987221": {
+        _ownerId: "847ec027-f659-40f6-8032-5173e2f9c93a",
+        name: "CD SPROCKET",
+        oem: "8739423494",
+        imageUrl:
+          "https://colonybmx.com.au/news/wp-content/uploads/2018/12/cd-sprocket-black-NEW.jpg",
+        description:
+          "Retro inspired Colony CD style BMX sprocket, keeping the design clean with a single locator bolt.",
+        _createdOn: 1700111355376,
+        _id: "parts-87c7-45fa-acf9-f04aa472987221",
+        quantity: 2,
+        rating: 2,
+        price: 33.45,
+        type: "wheelBase1",
+      },
+      "parts-87c7-45fa-acf9-d04aa472987221": {
+        _ownerId: "847ec027-f659-40f6-8032-5173e2f9c93a",
+        name: "SUNDAY KNOX GUARD SPROCKET",
+        oem: "8739423494",
+        imageUrl:
+          "https://ourbmx.com/wp-content/uploads/2020/04/sunday-knox-480x480.jpg",
+        description:
+          "Guard sprocket from Sunday. The Knox sprocket is made from 7075 aluminum and has been designed to fit larger chains like halflink chains.",
+        _createdOn: 1700111355376,
+        _id: "parts-87c7-45fa-acf9-d04aa472987221",
+        quantity: 2,
+        rating: 4,
+        price: 33.45,
+        type: "wheelBase3",
+      },
+    },
   };
   var rules$1 = {
     users: {

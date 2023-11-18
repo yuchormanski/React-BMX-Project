@@ -1,0 +1,54 @@
+{
+  "2d5ae478-87c7-45fa-acf9-f04aa4724421": {
+    "_ownerId": "847ec027-f659-40f6-8032-5173e2f9c93a",
+    "name": "Parody",
+    "oem": "87394894",
+    "imageUrl": "https://colonybmx.com.au/news/wp-content/uploads/2022/02/ProdyLITE-Black-Side-D08-093A-1.jpg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit omnis, voluptates officia iste quasi perferendis sint.",
+    "_createdOn": 1700111055376,
+    "_id": "2d5ae478-87c7-45fa-acf9-f04aa4724421",
+    "quantity": 3,
+    "rating": 3,
+    "price": 123.45,
+    "type": 1
+  },
+  "6012c542-38e1-4660-ba40-1b109c40cb2f": {
+    "_ownerId": "847ec027-f659-40f6-8032-5173e2f9c93b",
+    "name": "Blaster",
+    "oem": "Colony",
+    "imageUrl": "https://colonybmx.com.au/news/wp-content/uploads/2019/09/Blaster-Grey-Side-D08-072F-1.jpg",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis itaque architecto, deleniti quo omnis odio quam voluptatibus ea! Explicabo, quam.",
+    "_createdOn": 1700111055377,
+    "_id": "6012c542-38e1-4660-ba40-1b109c40cb2f",
+    "quantity": 1,
+    "rating": 1,
+    "price": 98.99,
+    "type": 2
+  },
+  "6012c542-38e1-4660-ba40-1b109c40cb2c": {
+    "_ownerId": "847ec027-f659-40f6-8032-5173e2f9c93b",
+    "name": "Zeal",
+    "oem": "96789",
+    "imageUrl": "https://colonybmx.com.au/news/wp-content/uploads/2023/09/zeal-green-side.jpg",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis suscipit eaque id exercitationem cum! Facere doloremque dignissimos cupiditate fugit, culpa animi eveniet est blanditiis!",
+    "_createdOn": 1700111055277,
+    "_id": "6012c542-38e1-4660-ba40-1b109c40cb2c",
+    "quantity": 4,
+    "rating": 5,
+    "price": 1000.01,
+    "type": 3
+  },
+  "6012c542-38e1-4660-bag0-1b109c40cb2c": {
+    "_ownerId": "847ec027-f659-40f6-8032-5173e2f9c93b",
+    "name": "Prisma",
+    "oem": "678967",
+    "imageUrl": "https://colonybmx.com.au/news/wp-content/uploads/2022/02/Prisma-Black-Side-D08-062A-1.jpg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, nulla!",
+    "_createdOn": 1730111055377,
+    "_id": "6012c542-38e1-4660-bag0-1b109c40cb2c",
+    "quantity": 5,
+    "rating": 3,
+    "price": 561.92,
+    "type": 1
+  }
+}
