@@ -1526,7 +1526,7 @@
         firstName: "Peter",
         lastName: "Petrov",
         _id: "35c62d76-8152-4626-8712-eeb96381bea8",
-        type: "worker",
+        type: "user",
         category: "frames",
       },
       "847ec027-f659-40f6-8032-5173e2f9c93a": {

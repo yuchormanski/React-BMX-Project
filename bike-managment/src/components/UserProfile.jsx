@@ -13,7 +13,7 @@ export const UserContext = createContext({});
 
 function UserProfile() {
   const userData = getUserData();
-  const [user, setUser] = useState(userData);
+  const [user, setUser] = useState(userData.user);
 
   function userBalanceHandler(action, value) {
     if (user === null) return;

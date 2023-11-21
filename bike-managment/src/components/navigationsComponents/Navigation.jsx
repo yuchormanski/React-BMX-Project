@@ -57,7 +57,7 @@ function Navigation() {
           <li className={styles.navListItem}>
             {isUser ? (
               <NavLink to={"/profile"} className={styles.navLink}>
-                {isUser.firstName} {isUser.lastName}
+                {isUser.user.firstName} {isUser.user.lastName}
               </NavLink>
             ) : (
               <NavLink to={"/auth"} className={styles.navLink}>
@@ -67,7 +67,7 @@ function Navigation() {
           </li>
           {hasOrder && (
             <li className={styles.navListItem}>
-              <Link to={"profile/cart"} className={styles.cartIcon}>
+              <Link to={"/profile/cart"} className={styles.cartIcon}>
                 <ion-icon name="cart-sharp"></ion-icon>
               </Link>
             </li>
