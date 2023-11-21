@@ -34,7 +34,8 @@ function Navigation() {
       <nav className={styles.nav}>
         <ul className={styles.navList} role="list">
           <li className={styles.navListItem}>
-            {window.location.pathname === "/" ? (
+            {window.location.pathname === "/" &&
+            isUser?.user.role !== "worker" ? (
               <NavLink to={"/app"} className={styles.navLink}>
                 Create
               </NavLink>

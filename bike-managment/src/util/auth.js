@@ -4,7 +4,7 @@ import { environment } from "../environments/environment_dev.js";
 
 const endpoints = {
   login: environment.LOGIN,
-  register: environment.REGISTER,
+  register: environment.REGISTER_CLIENT,
   logout: environment.LOGOUT,
 };
 

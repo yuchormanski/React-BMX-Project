@@ -40,6 +40,7 @@ function UserProfile() {
         <div className={styles.container}>
           {user.role === "user" && <UserDash />}
           {user.role === "worker" && <WorkerDash />}
+          {user.role === "manager" && <WorkerDash />}
         </div>
         <Footer />
       </div>

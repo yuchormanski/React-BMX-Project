@@ -1,4 +1,3 @@
-import { dataPath } from "../environments/path.js";
 import { environment } from "../environments/environment_dev.js";
 import { get } from "../util/api.js";
 
