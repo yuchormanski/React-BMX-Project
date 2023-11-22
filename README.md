@@ -2,7 +2,7 @@
 
 Bike management platform
 
-Server - in server dir - node server.js
+Server - in app dir - npm run server
 App start - in app dir - npm run dev
 
 ## Routes
