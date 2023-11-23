@@ -9,13 +9,16 @@ function UserContactInfo() {
   const { user } = useContext(UserContext);
   const [info, setInfo] = useState("");
 
-  useEffect(function () {
-    async function getClientInfo() {
-      const data = await userInfo(user.id);
-      setInfo(data);
-    }
-    getClientInfo();
-  }, []);
+  useEffect(
+    function () {
+      async function getClientInfo() {
+        const data = await userInfo(user.id);
+        setInfo(data);
+      }
+      getClientInfo();
+    },
+    [user]
+  );
   return (
     <>
       {info && (

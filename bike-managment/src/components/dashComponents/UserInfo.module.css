@@ -62,9 +62,11 @@
 }
 
 .imgHolder {
-  width: 80%;
+  width: 60%;
   display: flex;
   justify-content: center;
+  padding: 2rem;
+  border: 1px solid var(--color-secondary-hd);
 }
 
 .usernameHeading {
