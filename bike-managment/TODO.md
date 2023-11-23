@@ -24,3 +24,7 @@
 
     [ ] - add orders in profile list
     [ ] - after successful order remove cart icon from navbar
+
+## LOGIN
+
+според ролята се изпраща заявка на разли1ни ендпоийнти
