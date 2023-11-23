@@ -4,8 +4,9 @@ import { UserContext } from "../../context/GlobalUserProvider.jsx";
 import { userInfo } from "../../userServices/userService.js";
 // import { UserContext } from "../UserProfile.jsx";
 
-function UserContactInfo({ user }) {
-  // const { user } = useContext(UserContext);
+function UserContactInfo() {
+  // function UserContactInfo({ user }) {
+  const { user } = useContext(UserContext);
   const [info, setInfo] = useState("");
 
   useEffect(function () {

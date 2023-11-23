@@ -175,7 +175,7 @@
         "dateCreated": "10/12/2018"
       },
       {
-        "id": 8.27328483748938e+24,
+        "id": 8.27328483748938e24,
         "partId": 984098348804580400,
         "partName": "Part Name 2",
         "clientId": "jkhsfdksdflssljdfhg",
@@ -262,8 +262,12 @@
       "lastName": "Smith",
       "repass": "John-1",
       "role": "worker",
-      "category": "frames",
-      "id": 2
+      "id": 2,
+      "phoneNumber": "+359567474237",
+      "position": "string",
+      "dateOfHire": "string",
+      "department": "frames",
+      "isManeger": false
     },
     {
       "email": "stamat@abv.bg",
@@ -272,8 +276,12 @@
       "lastName": "Spiridonov",
       "repass": "Stamat-1",
       "role": "worker",
-      "category": "wheels",
-      "id": 3
+      "department": "wheels",
+      "id": 3,
+      "phoneNumber": "+359567474237",
+      "position": "string",
+      "dateOfHire": "string",
+      "isManeger": false
     },
     {
       "email": "manager@b-free.com",
@@ -282,7 +290,11 @@
       "lastName": "Manager",
       "repass": "User123",
       "role": "manager",
-      "id": 4
+      "id": 4,
+      "phoneNumber": "+359567474237",
+      "position": "string",
+      "dateOfHire": "string",
+      "isManeger": true
     }
   ],
   "wheels": [
