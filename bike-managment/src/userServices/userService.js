@@ -7,7 +7,7 @@ function userInfo(id) {
 }
 
 function updateUserData(id, data) {
-  const result = put(environment.INFO_CLIENT + id, data);
+  const result = put(environment.UPDATE_CLIENT + id, data);
   return result;
 }
 

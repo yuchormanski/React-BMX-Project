@@ -175,7 +175,7 @@
         "dateCreated": "10/12/2018"
       },
       {
-        "id": 8.27328483748938e+24,
+        "id": 8.27328483748938e24,
         "partId": 984098348804580400,
         "partName": "Part Name 2",
         "clientId": "jkhsfdksdflssljdfhg",
@@ -192,10 +192,14 @@
       "wheelId": 5,
       "partsId": 4,
       "ownerId": 1,
-      "orderDate": 1700635042215,
-      "orderTotal": 1126.91,
-      "cashReserved": 225.38200000000003,
       "id": 1
+    },
+    {
+      "frameId": 2,
+      "wheelId": 2,
+      "partsId": 5,
+      "ownerId": 1,
+      "id": 2
     }
   ],
   "production": [
