@@ -175,7 +175,7 @@
         "dateCreated": "10/12/2018"
       },
       {
-        "id": 8.27328483748938e24,
+        "id": 8.27328483748938e+24,
         "partId": 984098348804580400,
         "partName": "Part Name 2",
         "clientId": "jkhsfdksdflssljdfhg",
@@ -200,6 +200,13 @@
       "partsId": 5,
       "ownerId": 1,
       "id": 2
+    },
+    {
+      "frameId": 4,
+      "wheelId": 4,
+      "partsId": 3,
+      "ownerId": 1,
+      "id": 3
     }
   ],
   "production": [

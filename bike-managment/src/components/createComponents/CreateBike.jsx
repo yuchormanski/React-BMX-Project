@@ -109,7 +109,7 @@ function CreateBike() {
   function orderHandler() {
     const orderId = uuidv4();
     const orderName = user.id + "_#_" + orderId;
-    const data = { selectedFrame, selectedWheel, selectedPart };
+    const data = { selectedFrame, selectedWheel, selectedPart, id: orderId };
 
     //adding order with selected parts in local storage
     setOrderData("order", data);
