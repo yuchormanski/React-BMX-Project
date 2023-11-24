@@ -175,7 +175,7 @@
         "dateCreated": "10/12/2018"
       },
       {
-        "id": 8.27328483748938e+24,
+        "id": 8.27328483748938e24,
         "partId": 984098348804580400,
         "partName": "Part Name 2",
         "clientId": "jkhsfdksdflssljdfhg",
@@ -249,7 +249,7 @@
       "lastName": "Petrov",
       "repass": "Petar-1",
       "iban": "QWESADAXC456FDGH",
-      "balance": 12774.618,
+      "balance": 12440.618,
       "phone": "+3591234567890",
       "city": "Veliko Tarnowo",
       "role": "user",
@@ -264,7 +264,7 @@
         "strNumber": "54"
       },
       "id": 1,
-      "password": "$2a$10$U10fMFN3pr1xA4/s8PqAUu5Em/JNkTDYme.D80tKLyBK6UdQ0lJ/y"
+      "password": "$2a$10$jb50/13CeR/REkbtJ5RqcOcRaOpGweZ7YsDkrnkA0i/OLKwmbyJXu"
     },
     {
       "email": "john@abv.bg",
