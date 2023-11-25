@@ -1,6 +1,6 @@
 import styles from "./WorkerDash.module.css";
 
-import NavigationSecondary from "../navigationsComponents/NavigationSecondary.jsx";
+import NavigationSecondary from "../../navigationsComponents/NavigationSecondary.jsx";
 import { Outlet } from "react-router-dom";
 
 function WorkerDash({ user }) {

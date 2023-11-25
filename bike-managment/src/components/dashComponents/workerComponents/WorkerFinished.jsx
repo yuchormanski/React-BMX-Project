@@ -1,4 +1,4 @@
-import BoardHeader from "./BoardHeader.jsx";
+import BoardHeader from "../BoardHeader.jsx";
 import styles from "./WorkerFinished.module.css";
 
 function WorkerFinished() {

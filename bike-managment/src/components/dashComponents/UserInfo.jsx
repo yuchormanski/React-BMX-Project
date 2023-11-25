@@ -6,7 +6,7 @@ import { UserContext } from "../../context/GlobalUserProvider.jsx";
 
 import UserContactInfo from "./UserContactInfo.jsx";
 import BoardHeader from "./BoardHeader.jsx";
-import WorkerContactInfo from "./WorkerContactInfo.jsx";
+import WorkerContactInfo from "./workerComponents/WorkerContactInfo.jsx";
 import { setUserData } from "../../util/util.js";
 import { updateUserData, userInfo } from "../../userServices/userService.js";
 

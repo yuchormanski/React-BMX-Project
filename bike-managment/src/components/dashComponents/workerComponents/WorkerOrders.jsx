@@ -2,12 +2,12 @@ import { useContext, useEffect, useState } from "react";
 
 import styles from "./WorkerOrders.module.css";
 
-import { get } from "../../util/api.js";
-import OrderItem from "./OrderItem.jsx";
+import { get } from "../../../util/api.js";
+import OrderItem from "../OrderItem.jsx";
 // import { UserContext } from "../UserProfile.jsx";
-import Category from "./Category.jsx";
-import BoardHeader from "./BoardHeader.jsx";
-import { UserContext } from "../../context/GlobalUserProvider.jsx";
+import Category from "../Category.jsx";
+import BoardHeader from "../BoardHeader.jsx";
+import { UserContext } from "../../../context/GlobalUserProvider.jsx";
 
 function WorkerOrders() {
   const { user } = useContext(UserContext);
