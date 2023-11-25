@@ -7,19 +7,22 @@ import Order from "./Order.jsx";
 function ManagerOrders() {
   const [ordersList, setOrdersList] = useState([]);
 
-  useEffect(function () {
-    const abortController = new AbortController();
+  useEffect(
+    function () {
+      const abortController = new AbortController();
 
-    async function ordersFunc() {
-      const orders = await getList("orders");
-      orders.sort((a, b) => a.createdAt - b.createdAt);
+      async function ordersFunc() {
+        const orders = await getList("orders");
+        orders.sort((a, b) => a.createdAt - b.createdAt);
 
-      setOrdersList(orders);
-    }
-    ordersFunc();
+        setOrdersList(orders);
+      }
+      ordersFunc();
 
-    return () => abortController.abort();
-  }, []);
+      return () => abortController.abort();
+    },
+    [ordersList]
+  );
 
   if (ordersList.length === 0)
     return <h2>There is no orders in this category</h2>;
