@@ -12,14 +12,3 @@ function onDeleteHandler(id) {
 }
 
 export { onApproveHandler, onRejectHandler, onDeleteHandler };
-
-// {
-//   "unitType": "frame",
-//   "model": "BGS5657",
-//   "brand": "Scott",
-//   "jobType": "painting",
-//   "startedTime": "",
-//   "finishedTime": "",
-//   "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At, dolorum.",
-//   "id": "hkjhsf766ds86f7s"
-// }

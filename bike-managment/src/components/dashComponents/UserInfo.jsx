@@ -10,7 +10,7 @@ import WorkerContactInfo from "./workerComponents/WorkerContactInfo.jsx";
 import { setUserData } from "../../util/util.js";
 import { updateUserData, userInfo } from "../../userServices/userService.js";
 
-import { User, PlusCircle, CameraPlus } from "@phosphor-icons/react";
+import { User, CameraPlus } from "@phosphor-icons/react";
 import ManagerContactInfo from "./managerComponents/ManagerContactInfo.jsx";
 
 function UserInfo() {

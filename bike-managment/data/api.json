@@ -188,25 +188,40 @@
   },
   "orders": [
     {
-      "frameId": 3,
-      "wheelId": 5,
-      "accessoryId": 4,
+      "frame": {
+        "name": "Parody",
+        "OEMNumber": "87394894",
+        "imageUrl": "https://yuchormanski.free.bg/bikes/frame1.webp",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit omnis, voluptates officia iste quasi perferendis sint.",
+        "rating": 3,
+        "salesPrice": 123.45,
+        "type": 1,
+        "id": 1
+      },
+      "wheel": {
+        "name": "HARO TEAM DISC",
+        "OEMNumber": "87394894",
+        "imageUrl": "https://yuchormanski.free.bg/bikes/wheel4.webp",
+        "description": "Salt has combined a killer set Available in a fresh range of colours and  36 spokes.",
+        "rating": 1,
+        "salesPrice": 43.45,
+        "type": 1,
+        "id": 4
+      },
+      "accessory": {
+        "name": "CD SPROCKET",
+        "OEMNumber": "8739423494",
+        "imageUrl": "https://yuchormanski.free.bg/bikes/sprocket4.webp",
+        "description": "Retro inspired Colony CD style BMX sprocket, keeping the design clean with a single locator bolt.",
+        "rating": 2,
+        "salesPrice": 33.45,
+        "type": 1,
+        "id": 3
+      },
+      "userText": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
+      "count": 2,
       "ownerId": 1,
       "id": 1
-    },
-    {
-      "frameId": 2,
-      "wheelId": 2,
-      "accessoryId": 5,
-      "ownerId": 1,
-      "id": 2
-    },
-    {
-      "frameId": 4,
-      "wheelId": 4,
-      "accessoryId": 3,
-      "ownerId": 1,
-      "id": 3
     }
   ],
   "production": [
@@ -249,7 +264,7 @@
       "lastName": "Petrov",
       "repass": "Petar-1",
       "iban": "QWESADAXC456FDGH",
-      "balance": 12440.618,
+      "balance": 13440.618,
       "phone": "+3591234567890",
       "city": "Veliko Tarnowo",
       "role": "user",
@@ -264,7 +279,7 @@
         "strNumber": "54"
       },
       "id": 1,
-      "password": "$2a$10$jb50/13CeR/REkbtJ5RqcOcRaOpGweZ7YsDkrnkA0i/OLKwmbyJXu"
+      "password": "$2a$10$/lA2fzzo6dl3x/rfOxKpneEjovEHZ4JEMvRlX60jXDD6NNduMpkDi"
     },
     {
       "email": "john@abv.bg",
