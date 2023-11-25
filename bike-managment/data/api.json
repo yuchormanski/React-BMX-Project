@@ -175,7 +175,7 @@
         "dateCreated": "10/12/2018"
       },
       {
-        "id": 8.27328483748938e24,
+        "id": 8.27328483748938e+24,
         "partId": 984098348804580400,
         "partName": "Part Name 2",
         "clientId": "jkhsfdksdflssljdfhg",
@@ -223,6 +223,43 @@
       "createdAt": 1700934872505,
       "ownerId": 1,
       "id": 1
+    },
+    {
+      "frame": {
+        "name": "Zeal",
+        "OEMNumber": "96789",
+        "imageUrl": "https://yuchormanski.free.bg/bikes/frame3.webp",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis suscipit eaque id exercitationem cum! Facere doloremque dignissimos cupiditate fugit, culpa animi eveniet est blanditiis!",
+        "rating": 5,
+        "salesPrice": 1000.01,
+        "type": 3,
+        "id": 3
+      },
+      "wheel": {
+        "name": "Everest 20 Wheels",
+        "OEMNumber": "87394823",
+        "imageUrl": "https://yuchormanski.free.bg/bikes/wheel5.webp",
+        "description": "Salt has combined a killer set of parts to bring you their Everest 20 wheel. Available in a fresh range of colours and comes complete with hub, rim, rim tape, and 36 spokes.",
+        "rating": 0,
+        "salesPrice": 93.45,
+        "type": 3,
+        "id": 5
+      },
+      "accessory": {
+        "name": "ENDEAVOUR SPROCKET",
+        "OEMNumber": "873948asda94",
+        "imageUrl": "https://yuchormanski.free.bg/bikes/sprocket2.webp",
+        "description": "The Colony Endeavour BMX Sprocket that comes on most of Colony’s complete bikes is now available separately! Good quality sprocket at a great price.",
+        "rating": 1,
+        "salesPrice": 13.45,
+        "type": 3,
+        "id": 2
+      },
+      "userText": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisit",
+      "count": 2,
+      "createdAt": 1700940605650,
+      "ownerId": 5,
+      "id": 2
     }
   ],
   "production": [
@@ -325,12 +362,12 @@
     },
     {
       "email": "van@deribohten.com",
-      "password": "$2a$10$cTRQTunZAFmhYW/m3lFque8SZW.lsAz/sfxzmC8EHxEJCsfCM11ZG",
+      "password": "$2a$10$HbFYdBTTqy7wcqx/X38Ea.uF0.qbArepi.0mDFPUr.Cpy9.K18XKO",
       "firstName": "Van",
       "lastName": "Deribohten",
       "repass": "Van-12",
       "iban": "BG80BNBG96611020345678",
-      "balance": 1000,
+      "balance": 1020,
       "phone": "+359888777666",
       "city": "Dolno chepruchane",
       "role": "user",
