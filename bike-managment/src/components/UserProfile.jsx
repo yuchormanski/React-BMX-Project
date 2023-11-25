@@ -10,8 +10,6 @@ import Footer from "./Footer.jsx";
 import { createContext, useContext, useState } from "react";
 import { UserContext } from "../context/GlobalUserProvider.jsx";
 
-// export const UserContext = createContext({});
-
 function UserProfile() {
   // const userData = getUserData();
   // const [user, setUser] = useState(userData.user);
@@ -41,9 +39,10 @@ function UserProfile() {
       <Navigation />
       <div className={styles.spacer}></div>
       <div className={styles.container}>
-        {user.role === "user" && <UserDash />}
+        {/* {user.role === "user" && <UserDash />}
         {user.role === "worker" && <WorkerDash />}
-        {user.role === "manager" && <WorkerDash />}
+        {user.role === "manager" && <WorkerDash />} */}
+        <UserDash />
       </div>
       <Footer />
     </div>
