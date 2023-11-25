@@ -23,6 +23,7 @@ function NavigationSecondary() {
       { link: "finished", textContent: "Finished" },
     ],
     manager: [
+      { link: "info", textContent: "Profile" },
       { link: "managerLink2", textContent: "Orders" },
       { link: "managerLink4", textContent: "In production" },
       { link: "managerLink3", textContent: "Ready" },
