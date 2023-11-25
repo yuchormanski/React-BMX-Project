@@ -190,21 +190,21 @@
     {
       "frameId": 3,
       "wheelId": 5,
-      "partsId": 4,
+      "accessoryId": 4,
       "ownerId": 1,
       "id": 1
     },
     {
       "frameId": 2,
       "wheelId": 2,
-      "partsId": 5,
+      "accessoryId": 5,
       "ownerId": 1,
       "id": 2
     },
     {
       "frameId": 4,
       "wheelId": 4,
-      "partsId": 3,
+      "accessoryId": 3,
       "ownerId": 1,
       "id": 3
     }

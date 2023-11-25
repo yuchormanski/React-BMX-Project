@@ -1,14 +1,39 @@
+import { useEffect, useState } from "react";
 import BoardHeader from "../BoardHeader.jsx";
 import styles from "./ManagerOrders.module.css";
+import {
+  getElement,
+  getList,
+  getOneFrame,
+} from "../../../bikeServices/service.js";
+import Order from "./Order.jsx";
 
 function ManagerOrders() {
+  const [ordersList, setOrdersList] = useState([]);
+
+  useEffect(function () {
+    const abortController = new AbortController();
+
+    async function getOrders() {
+      const orders = await getList("orders");
+      setOrdersList(orders);
+    }
+    getOrders();
+
+    return () => abortController.abort();
+  }, []);
+
+  if (ordersList.length === 0)
+    return <h2>There is no orders in this category</h2>;
   return (
     <>
       <h2 className={styles.dashHeading}>Orders in sequence</h2>
       <section className={styles.board}>
         <BoardHeader />
         <div className={styles.orders}>
-          <h2>There is no orders in this category</h2>
+          {ordersList.map((order) => (
+            <Order key={order.id} order={order} />
+          ))}
         </div>
       </section>
     </>
