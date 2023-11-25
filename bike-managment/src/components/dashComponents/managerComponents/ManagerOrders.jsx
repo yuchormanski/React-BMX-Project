@@ -14,11 +14,11 @@ function ManagerOrders() {
   useEffect(function () {
     const abortController = new AbortController();
 
-    async function getOrders() {
+    async function ordersFunc() {
       const orders = await getList("orders");
       setOrdersList(orders);
     }
-    getOrders();
+    ordersFunc();
 
     return () => abortController.abort();
   }, []);

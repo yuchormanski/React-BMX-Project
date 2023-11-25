@@ -36,6 +36,11 @@ async function getList(criteria) {
   return data;
 }
 
+async function getOrder(id) {
+  const data = await get(environment.orders + id);
+  return data;
+}
+
 async function getElement(elName, id) {
   const data = await get(environment[elName] + id);
   return data;
@@ -50,4 +55,5 @@ export {
   getOnePart,
   getList,
   getElement,
+  getOrder,
 };

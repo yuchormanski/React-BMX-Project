@@ -20,7 +20,6 @@ function Order({ order }) {
   useEffect(
     function () {
       const abortController = new AbortController();
-      console.log(order);
 
       setLoading(true);
       async function orderElements() {
@@ -47,6 +46,24 @@ function Order({ order }) {
     },
     [order]
   );
+
+  function onApproveHandler(id) {
+    const approvedOrder = {
+      frame,
+      wheel,
+      accessory,
+      frameStartedTime: "",
+      frameFinishedTime: "",
+      wheelStartedTime: "",
+      wheelFinishedTime: "",
+      accessoryStartedTime: "",
+      accessoryFinishedTime: "",
+      id: orderId,
+      customerId,
+    };
+
+    console.log(approvedOrder);
+  }
 
   return (
     <>
