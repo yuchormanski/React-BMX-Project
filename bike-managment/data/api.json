@@ -175,7 +175,7 @@
         "dateCreated": "10/12/2018"
       },
       {
-        "id": 8.27328483748938e+24,
+        "id": 8.27328483748938e24,
         "partId": 984098348804580400,
         "partName": "Part Name 2",
         "clientId": "jkhsfdksdflssljdfhg",
@@ -219,7 +219,7 @@
         "id": 7
       },
       "userText": "",
-      "count": "",
+      "count": "1",
       "createdAt": 1700934872505,
       "ownerId": 1,
       "id": 1
@@ -294,7 +294,7 @@
       "position": "string",
       "dateOfHire": "string",
       "department": "frames",
-      "isManeger": false
+      "isManager": false
     },
     {
       "email": "stamat@abv.bg",
@@ -308,7 +308,7 @@
       "phoneNumber": "+359567474237",
       "position": "string",
       "dateOfHire": "string",
-      "isManeger": false
+      "isManager": false
     },
     {
       "email": "manager@b-free.com",
@@ -321,7 +321,31 @@
       "phoneNumber": "+359567474237",
       "position": "string",
       "dateOfHire": "string",
-      "isManeger": true
+      "isManager": true
+    },
+    {
+      "email": "van@deribohten.com",
+      "password": "$2a$10$cTRQTunZAFmhYW/m3lFque8SZW.lsAz/sfxzmC8EHxEJCsfCM11ZG",
+      "firstName": "Van",
+      "lastName": "Deribohten",
+      "repass": "Van-12",
+      "iban": "BG80BNBG96611020345678",
+      "balance": 1000,
+      "phone": "+359888777666",
+      "city": "Dolno chepruchane",
+      "role": "user",
+      "address": {
+        "country": "Bulgaria",
+        "city": "Dolno chepruchane",
+        "postCode": "1234",
+        "district": "",
+        "block": "",
+        "floor": 0,
+        "apartment": "",
+        "street": "Ovcha mogila",
+        "strNumber": "13"
+      },
+      "id": 5
     }
   ],
   "wheels": [

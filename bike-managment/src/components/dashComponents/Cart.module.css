@@ -133,7 +133,16 @@
 }
 
 .priceBlock {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.warning {
+  position: absolute;
+  top: -10px;
+  left: -185px;
+  font-size: 2rem;
+  color: var(--color-warning);
 }

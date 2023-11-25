@@ -24,6 +24,7 @@ function Cart() {
   const [parts, setParts] = useState({});
   const [userText, setUserText] = useState("");
   const [select, setSelect] = useState("");
+  const [error, setError] = useState({});
 
   const order = getOrderData();
   const navigate = useNavigate();
@@ -51,14 +52,16 @@ function Cart() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  function onChangeHandler(e) {
+    setSelect(Number(e.target.value));
+    setError({});
+  }
+
   async function orderClickHandler(e) {
     e.preventDefault();
     if (!order) return;
     const additionalFields = {
       ownerId: user.id,
-      // orderDate: Date.now(),
-      // orderTotal: frame.salesPrice + wheel.salesPrice + parts.salesPrice,
-
       // according to documentation customer pays while ordering 20% of the total order price
       // cashReserved: (frame.salesPrice + wheel.salesPrice + parts.salesPrice) * 0.2,
     };
@@ -78,6 +81,13 @@ function Cart() {
       ...additionalFields,
     };
 
+    if (
+      user.balance <
+      (frame.salesPrice + wheel.salesPrice + parts.salesPrice) * 0.2
+    ) {
+      return setError({ message: "Not enough money!" });
+    }
+    if (!select) return setError({ message: "Select quantity" });
     // TODO:
     // ONLY FOR DEV SERVER
     //DATA FOR UPDATE USER AFTER ORDER
@@ -165,7 +175,7 @@ function Cart() {
                   <select
                     className={styles.quantity}
                     value={select}
-                    onChange={(e) => setSelect(Number(e.target.value))}
+                    onChange={onChangeHandler}
                     id={"qtySelect"}
                     required
                   >
@@ -191,17 +201,10 @@ function Cart() {
                       ).toFixed(2)}
                   </p>
                   {/* TODO: check if user has enough money */}
-                  <button
-                    className={styles.btn}
-                    disabled={
-                      user.balance <
-                      (frame.salesPrice + wheel.salesPrice + parts.salesPrice) *
-                        0.2
-                    }
-                    onClick={orderClickHandler}
-                  >
+                  <button className={styles.btn} onClick={orderClickHandler}>
                     Finish order
                   </button>
+                  <p className={styles.warning}>{error.message}</p>
                 </div>
               </div>
             </div>
