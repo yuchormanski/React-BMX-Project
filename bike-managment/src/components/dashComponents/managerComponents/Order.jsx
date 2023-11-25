@@ -3,6 +3,11 @@ import styles from "./Order.module.css";
 import { getElement } from "../../../bikeServices/service.js";
 import LoaderWheel from "../../LoaderWheel.jsx";
 import Button from "../../Button.jsx";
+import {
+  onApproveHandler,
+  onDeleteHandler,
+  onRejectHandler,
+} from "./managerActions/orderActions.js";
 
 function Order({ order }) {
   const [frame, setFrame] = useState("");
@@ -15,6 +20,7 @@ function Order({ order }) {
   useEffect(
     function () {
       const abortController = new AbortController();
+      console.log(order);
 
       setLoading(true);
       async function orderElements() {
@@ -28,8 +34,8 @@ function Order({ order }) {
           setFrame(frameData);
           setWheel(wheelData);
           setAccessory(accessoryData);
-          setOrderId(order.ownerId);
-          setCustomerId(order.id);
+          setOrderId(order.id);
+          setCustomerId(order.ownerId);
         } catch (err) {
           console.error(err);
         } finally {
@@ -41,8 +47,6 @@ function Order({ order }) {
     },
     [order]
   );
-
-  const options = {};
 
   return (
     <>
@@ -70,6 +74,7 @@ function Order({ order }) {
                 <span>OEM Number:</span>
                 {frame.OEMNumber}
               </p>
+              <p className={styles.qty}>Qty: 2</p>
             </div>
 
             <div id={"wheel"} className={styles.info}>
@@ -81,6 +86,7 @@ function Order({ order }) {
                 <span>OEM Number:</span>
                 {wheel.OEMNumber}
               </p>
+              <p className={styles.qty}>Qty: 2</p>
             </div>
 
             <div id={"accessory"} className={styles.info}>
@@ -92,13 +98,20 @@ function Order({ order }) {
                 <span>OEM Number:</span>
                 {accessory.OEMNumber}
               </p>
+              <p className={styles.qty}>Qty: 2</p>
             </div>
           </div>
 
           <div className={styles.actions}>
-            <Button type={"approve"}>Approve</Button>
-            <Button type={"reject"}>Reject</Button>
-            <Button type={"delete"}>Delete</Button>
+            <Button type={"approve"} onClick={onApproveHandler} id={orderId}>
+              Approve
+            </Button>
+            <Button type={"reject"} onClick={onRejectHandler} id={orderId}>
+              Reject
+            </Button>
+            <Button type={"delete"} onClick={onDeleteHandler} id={orderId}>
+              Delete
+            </Button>
           </div>
         </section>
       </div>
