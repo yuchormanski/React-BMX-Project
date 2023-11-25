@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react";
 import BoardHeader from "../BoardHeader.jsx";
 import styles from "./ManagerOrders.module.css";
-import {
-  getElement,
-  getList,
-  getOneFrame,
-} from "../../../bikeServices/service.js";
+import { getList } from "../../../bikeServices/service.js";
 import Order from "./Order.jsx";
 
 function ManagerOrders() {
@@ -16,6 +12,7 @@ function ManagerOrders() {
 
     async function ordersFunc() {
       const orders = await getList("orders");
+      orders.sort((a, b) => a.createdAt - b.createdAt);
 
       setOrdersList(orders);
     }

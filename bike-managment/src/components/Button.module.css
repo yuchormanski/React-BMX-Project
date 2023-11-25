@@ -2,6 +2,7 @@
   color: var(--color-link-light);
   font-size: 1.6rem;
   padding: 0rem 1rem;
+  text-align: center;
 }
 
 .approve {
