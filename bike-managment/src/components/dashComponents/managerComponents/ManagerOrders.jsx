@@ -16,6 +16,7 @@ function ManagerOrders() {
 
     async function ordersFunc() {
       const orders = await getList("orders");
+
       setOrdersList(orders);
     }
     ordersFunc();

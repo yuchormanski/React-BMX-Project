@@ -74,6 +74,7 @@ function Cart() {
       accessory: parts,
       userText,
       count: select,
+      createdAt: Date.now(),
       ...additionalFields,
     };
 
@@ -166,6 +167,7 @@ function Cart() {
                     value={select}
                     onChange={(e) => setSelect(Number(e.target.value))}
                     id={"qtySelect"}
+                    required
                   >
                     <option value=""></option>
                     <option value="1">1</option>

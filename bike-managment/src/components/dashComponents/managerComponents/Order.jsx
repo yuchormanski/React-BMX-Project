@@ -10,42 +10,45 @@ import {
 } from "./managerActions/orderActions.js";
 
 function Order({ order }) {
-  const [frame, setFrame] = useState("");
-  const [wheel, setWheel] = useState("");
-  const [accessory, setAccessory] = useState("");
-  const [customerId, setCustomerId] = useState("");
-  const [orderId, setOrderId] = useState("");
-  const [loading, setLoading] = useState(false);
+  console.log(order);
+  const { frame, wheel, accessory, createdAt, count, ownerId, id } = order;
 
-  useEffect(
-    function () {
-      const abortController = new AbortController();
+  // const [frame, setFrame] = useState("");
+  // const [wheel, setWheel] = useState("");
+  // const [accessory, setAccessory] = useState("");
+  // const [customerId, setCustomerId] = useState("");
+  // const [orderId, setOrderId] = useState("");
+  // const [loading, setLoading] = useState(false);
 
-      setLoading(true);
-      async function orderElements() {
-        try {
-          const frameData = await getElement("frames", order.frameId);
-          const wheelData = await getElement("wheels", order.wheelId);
-          const accessoryData = await getElement(
-            "accessories",
-            order.accessoryId
-          );
-          setFrame(frameData);
-          setWheel(wheelData);
-          setAccessory(accessoryData);
-          setOrderId(order.id);
-          setCustomerId(order.ownerId);
-        } catch (err) {
-          console.error(err);
-        } finally {
-          setLoading(false);
-        }
-      }
-      orderElements();
-      return () => abortController.abort();
-    },
-    [order]
-  );
+  // useEffect(
+  //   function () {
+  //     const abortController = new AbortController();
+
+  //     setLoading(true);
+  //     async function orderElements() {
+  //       try {
+  //         const frameData = await getElement("frames", order.frameId);
+  //         const wheelData = await getElement("wheels", order.wheelId);
+  //         const accessoryData = await getElement(
+  //           "accessories",
+  //           order.accessoryId
+  //         );
+  //         setFrame(frameData);
+  //         setWheel(wheelData);
+  //         setAccessory(accessoryData);
+  //         setOrderId(order.id);
+  //         setCustomerId(order.ownerId);
+  //       } catch (err) {
+  //         console.error(err);
+  //       } finally {
+  //         setLoading(false);
+  //       }
+  //     }
+  //     orderElements();
+  //     return () => abortController.abort();
+  //   },
+  //   [order]
+  // );
 
   function onApproveHandler(id) {
     const approvedOrder = {
@@ -58,8 +61,8 @@ function Order({ order }) {
       wheelFinishedTime: "",
       accessoryStartedTime: "",
       accessoryFinishedTime: "",
-      id: orderId,
-      customerId,
+      // id: orderId,
+      // customerId,
     };
 
     console.log(approvedOrder);
@@ -67,16 +70,16 @@ function Order({ order }) {
 
   return (
     <>
-      {loading && <LoaderWheel />}
+      {/* {order && <LoaderWheel />} */}
       <div className={styles.box}>
         <div className={styles.additional}>
           <p>
             <span>Order ID: </span>
-            {orderId}
+            {id}
           </p>
           <p>
             <span>Customer ID: </span>
-            {customerId}
+            {ownerId}
           </p>
         </div>
 
@@ -120,13 +123,13 @@ function Order({ order }) {
           </div>
 
           <div className={styles.actions}>
-            <Button type={"approve"} onClick={onApproveHandler} id={orderId}>
+            <Button type={"approve"} onClick={onApproveHandler} id={id}>
               Approve
             </Button>
-            <Button type={"reject"} onClick={onRejectHandler} id={orderId}>
+            <Button type={"reject"} onClick={onRejectHandler} id={id}>
               Reject
             </Button>
-            <Button type={"delete"} onClick={onDeleteHandler} id={orderId}>
+            <Button type={"delete"} onClick={onDeleteHandler} id={id}>
               Delete
             </Button>
           </div>

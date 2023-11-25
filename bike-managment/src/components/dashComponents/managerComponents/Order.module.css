@@ -38,14 +38,22 @@
 }
 
 .content {
-  width: 45%;
-  font-size: 1.8rem;
+  display: block;
+
+  width: 90%;
+  font-size: 1.6rem;
 }
 
 .content span {
+  display: block;
   font-size: 1.2rem;
   color: var(--color-hd-second);
   margin-right: 1rem;
+  width: 50%;
+}
+
+.qty {
+  width: 15%;
 }
 
 .actions {
