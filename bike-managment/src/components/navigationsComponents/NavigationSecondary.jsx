@@ -25,11 +25,11 @@ function NavigationSecondary() {
     manager: [
       { link: "info", textContent: "Profile" },
       { link: "managerOrders", textContent: "Orders" },
-      { link: "managerLink4", textContent: "In production" },
-      { link: "managerLink3", textContent: "Ready" },
-      { link: "managerLink5", textContent: "Finished" },
-      { link: "managerLink6", textContent: "Employees" },
-      { link: "managerLink1", textContent: "Statistic" },
+      { link: "manager-in-progress", textContent: "In production" },
+      { link: "manager-ready", textContent: "Ready" },
+      { link: "manager-finished", textContent: "Finished" },
+      { link: "employee", textContent: "Employees" },
+      { link: "statistic", textContent: "Statistic" },
     ],
   };
 

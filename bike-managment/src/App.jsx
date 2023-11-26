@@ -32,6 +32,11 @@ function App() {
             <Route path="workerOrders" element={<WorkerOrders />} />
             <Route path={"finished"} element={<WorkerFinished />} />
             <Route path={"managerOrders"} element={<ManagerOrders />} />
+            <Route path={"manager-in-progress"} element={<ManagerOrders />} />
+            <Route path={"manager-ready"} element={<ManagerOrders />} />
+            <Route path={"manager-finished"} element={<ManagerOrders />} />
+            <Route path={"employee"} element={<ManagerOrders />} />
+            <Route path={"statistic"} element={<ManagerOrders />} />
           </Route>
 
           <Route path="app" element={<AppLayout />}>
