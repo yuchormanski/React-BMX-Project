@@ -8,11 +8,11 @@ import {
   onRejectHandler,
 } from "./managerActions/orderActions.js";
 
-function Order({ order }) {
+function Order({ order, orders,onApprove }) {
   const { frame, wheel, accessory, ownerId, id } = order;
 
   function buttonApproveHandler() {
-    onApproveHandler(order);
+    onApproveHandler(order, orders,onApprove);
   }
 
   return (

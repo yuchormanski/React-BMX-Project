@@ -33,7 +33,12 @@ function ManagerOrders() {
         <BoardHeader />
         <div className={styles.orders}>
           {ordersList.map((order) => (
-            <Order key={order.id} order={order} />
+            <Order
+              key={order.id}
+              order={order}
+              onApprove={setOrdersList}
+              orders={ordersList}
+            />
           ))}
         </div>
       </section>
