@@ -5,7 +5,7 @@ import styles from "./Images.module.css";
 function Images({ imgArray }) {
   const [arr, setArr] = useState([]);
   const [modal, setModal] = useState(false);
-  const [currentImg, setCurrentImg] = useState("");
+  const [currentImg, setCurrentImg] = useState({});
 
   useEffect(
     function () {
@@ -18,8 +18,9 @@ function Images({ imgArray }) {
     [imgArray]
   );
 
-  function onClickHandler(img) {
-    setCurrentImg(img);
+  function onClickHandler(i) {
+    if (i < 0 || i >= arr.length) return;
+    setCurrentImg({ img: arr[i], index: i });
     setModal(true);
   }
 
@@ -38,7 +39,21 @@ function Images({ imgArray }) {
             <button className={styles.closeBtn} onClick={closeModalHandler}>
               <ion-icon name="close-outline"></ion-icon>
             </button>
-            <img src={currentImg} alt="Frame Image" />
+            <div className={styles.imgControl}>
+              <button
+                className={styles.arrow}
+                onClick={() => onClickHandler(currentImg.index - 1)}
+              >
+                <ion-icon name="chevron-back-outline"></ion-icon>
+              </button>
+              <img src={currentImg.img} alt="Frame Image" />
+              <button
+                className={styles.arrow}
+                onClick={() => onClickHandler(currentImg.index + 1)}
+              >
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+              </button>
+            </div>
           </div>
         </div>
       )}
@@ -47,10 +62,10 @@ function Images({ imgArray }) {
         {arr.length > 0 &&
           arr.map((x, i) => (
             <img
-              src={x}
+              src={arr[i]}
               alt="Frame image"
               key={i}
-              onClick={() => onClickHandler(x)}
+              onClick={() => onClickHandler(i)}
             />
           ))}
       </div>

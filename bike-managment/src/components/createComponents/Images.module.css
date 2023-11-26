@@ -49,7 +49,23 @@
   width: 50%;
 }
 .closeBtn {
-  margin: 0 10rem 0 auto;
+  margin: 0 1rem 0 auto;
   font-size: 5.2rem;
   color: var(--color-main-dark);
+}
+.imgControl {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50rem;
+  height: 5rem;
+  font-size: 3rem;
+  color: var(--color-main-dark);
+  z-index: 1;
+  cursor: pointer;
 }
