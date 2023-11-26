@@ -1,0 +1,10 @@
+.imgBox {
+  height: 100px;
+  width: 200px;
+  position: absolute;
+  border: 1px solid red;
+}
+.imgBox img {
+  width: 100px;
+  height: 100px;
+}

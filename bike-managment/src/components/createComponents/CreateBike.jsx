@@ -19,6 +19,8 @@ import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/GlobalUserProvider.jsx";
 
 import { v4 as uuidv4 } from "uuid"; //unique ID
+import { imageResolver } from "../../util/resolvers.js";
+import Images from "./Images.jsx";
 
 const initialState = {
   frames: [],
@@ -137,11 +139,15 @@ function CreateBike() {
 
           // get selected frame
           const data = await getOneFrame(selectedFrame);
-
           // get wheels depending on selected frame type
           const wheelsData = await getWheels(data.type);
 
-          dispatch({ type: "isFrameSelected", payload: data });
+          const frameImage = data.imageUrls[0];
+
+          dispatch({
+            type: "isFrameSelected",
+            payload: { ...data, headImg: frameImage },
+          });
           dispatch({ type: "framePrice", payload: data.salesPrice });
           dispatch({ type: "isWheelSelected", payload: {} });
           dispatch({ type: "isPartSelected", payload: {} });
@@ -287,7 +293,12 @@ function CreateBike() {
               <div className={styles.selectionImg}>
                 {!selectedFrame && <p className={styles.questionMark}>?</p>}
                 {selectedFrame && (
-                  <img src={currentFrame.imageUrls} alt={currentFrame.name} />
+                  <>
+                    <img src={currentFrame.headImg} alt={currentFrame.name} />
+                    <div className={styles.imgArray}>
+                      <Images imgArray={currentFrame.imageUrls} />
+                    </div>
+                  </>
                 )}
               </div>
             </article>
