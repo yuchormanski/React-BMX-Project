@@ -8,7 +8,6 @@ import Login from "./components/authComponents/Login.jsx";
 import Register from "./components/authComponents/Register.jsx";
 import Auth from "./pages/Auth.jsx";
 import UserProfile from "./components/UserProfile.jsx";
-import UserInfo from "./components/dashComponents/UserInfo.jsx";
 import CreateBike from "./components/createComponents/CreateBike.jsx";
 import ForgottenPassword from "./components/authComponents/ForgottenPassword.jsx";
 import Cart from "./components/dashComponents/Cart.jsx";
@@ -16,6 +15,7 @@ import { GlobalUser } from "./context/GlobalUserProvider.jsx";
 import ManagerOrders from "./components/dashComponents/managerComponents/ManagerOrders.jsx";
 import WorkerOrders from "./components/dashComponents/workerComponents/WorkerOrders.jsx";
 import WorkerFinished from "./components/dashComponents/workerComponents/WorkerFinished.jsx";
+import UserInfo from "./components/dashComponents/userComponents/UserInfo.jsx";
 
 function App() {
   return (
@@ -29,6 +29,9 @@ function App() {
             <Route index element={<Navigate replace to="info" />} />
             <Route path="info" element={<UserInfo />} />
             <Route path={"cart"} element={<Cart />} />
+            <Route path={"user-ready"} element={<Cart />} />
+            <Route path={"user-in-progress"} element={<Cart />} />
+            <Route path={"user-archive"} element={<Cart />} />
             <Route path="workerOrders" element={<WorkerOrders />} />
             <Route path={"finished"} element={<WorkerFinished />} />
             <Route path={"managerOrders"} element={<ManagerOrders />} />

@@ -13,9 +13,9 @@ function NavigationSecondary() {
     user: [
       { link: "info", textContent: "Profile" },
       { link: "cart", textContent: "Cart" },
-      { link: "user-orders-ready", textContent: "Ready" },
-      { link: "user-orders-in_process", textContent: "In production" },
-      { link: "user-past-orders", textContent: "Past orders" },
+      { link: "user-ready", textContent: "Ready" },
+      { link: "user-in-progress", textContent: "In production" },
+      { link: "user-archive", textContent: "Archive" },
     ],
     worker: [
       { link: "info", textContent: "Profile" },
