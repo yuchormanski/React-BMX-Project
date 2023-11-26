@@ -303,12 +303,7 @@ function CreateBike() {
               <div className={styles.selectionImg}>
                 {!selectedFrame && <p className={styles.questionMark}>?</p>}
                 {selectedFrame && (
-                  <>
-                    <img src={currentFrame.headImg} alt={currentFrame.name} />
-                    {/* <div className={styles.imgArray}>
-                      <Images imgArray={currentFrame.imageUrls} />
-                    </div> */}
-                  </>
+                  <img src={currentFrame.headImg} alt={currentFrame.name} />
                 )}
               </div>
               {selectedFrame && (

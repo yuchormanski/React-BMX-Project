@@ -8,7 +8,8 @@
       "rating": 5,
       "salesPrice": 126.99,
       "type": 4,
-      "id": 1
+      "id": 1,
+      "intend": "Competition"
     },
     {
       "name": "ENDEAVOUR SPROCKET",
@@ -18,7 +19,8 @@
       "rating": 1,
       "salesPrice": 13.45,
       "type": 3,
-      "id": 2
+      "id": 2,
+      "intend": "Competition"
     },
     {
       "name": "BLASTER SPROCKET",
@@ -28,7 +30,8 @@
       "id": "parts-87c7-45fa-acf9-f04aa472987228",
       "rating": 3,
       "salesPrice": 43.45,
-      "type": 2
+      "type": 2,
+      "intend": "Competition"
     },
     {
       "name": "CD SPROCKET",
@@ -38,7 +41,8 @@
       "rating": 2,
       "salesPrice": 33.45,
       "type": 1,
-      "id": 3
+      "id": 3,
+      "intend": "Competition"
     },
     {
       "name": "GUARD SPROCKET",
@@ -48,7 +52,8 @@
       "rating": 4,
       "salesPrice": 33.45,
       "type": 3,
-      "id": 4
+      "id": 4,
+      "intend": "Competition"
     },
     {
       "name": "SUNDAY SPROCKET",
@@ -58,7 +63,8 @@
       "rating": 1,
       "salesPrice": 33.45,
       "type": 2,
-      "id": 5
+      "id": 5,
+      "intend": "Competition"
     },
     {
       "name": "KNOX SPROCKET",
@@ -68,7 +74,8 @@
       "rating": 2,
       "salesPrice": 33.45,
       "type": 4,
-      "id": 6
+      "id": 6,
+      "intend": "Competition"
     },
     {
       "name": "SUNDAY KNOX SPROCKET",
@@ -78,7 +85,8 @@
       "rating": 2,
       "salesPrice": 33.45,
       "type": 2,
-      "id": 7
+      "id": 7,
+      "intend": "Competition"
     }
   ],
   "archive": [
@@ -109,7 +117,8 @@
       "rating": 3,
       "salesPrice": 123.45,
       "type": 1,
-      "id": 1
+      "id": 1,
+      "intend": "Tricks and Stunts"
     },
     {
       "name": "Blaster",
@@ -119,7 +128,8 @@
       "rating": 1,
       "salesPrice": 98.99,
       "type": 2,
-      "id": 2
+      "id": 2,
+      "intend": "Freestyle"
     },
     {
       "name": "Zeal",
@@ -129,7 +139,8 @@
       "rating": 5,
       "salesPrice": 1000.01,
       "type": 3,
-      "id": 3
+      "id": 3,
+      "intend": "Completing jumps"
     },
     {
       "name": "Prisma",
@@ -139,7 +150,8 @@
       "rating": 3,
       "salesPrice": 561.92,
       "type": 1,
-      "id": 4
+      "id": 4,
+      "intend": "BMX racing"
     }
   ],
   "indexPage": {
@@ -434,7 +446,8 @@
       "rating": 2,
       "salesPrice": 23.45,
       "type": 2,
-      "id": 1
+      "id": 1,
+      "intend": "Regular usage"
     },
     {
       "name": "SUNDAY KNOX V2",
@@ -444,7 +457,8 @@
       "rating": 5,
       "salesPrice": 89.45,
       "type": 2,
-      "id": 2
+      "id": 2,
+      "intend": "Regular usage"
     },
     {
       "name": "BMX Purple Wheels",
@@ -454,7 +468,8 @@
       "rating": 5,
       "salesPrice": 43.45,
       "type": 3,
-      "id": 3
+      "id": 3,
+      "intend": "Regular usage"
     },
     {
       "name": "HARO TEAM DISC",
@@ -464,7 +479,8 @@
       "rating": 1,
       "salesPrice": 43.45,
       "type": 1,
-      "id": 4
+      "id": 4,
+      "intend": "Regular usage"
     },
     {
       "name": "Everest 20 Wheels",
@@ -474,7 +490,8 @@
       "rating": 0,
       "salesPrice": 93.45,
       "type": 3,
-      "id": 5
+      "id": 5,
+      "intend": "Regular usage"
     },
     {
       "name": "20 Rampage Wheel",
@@ -484,7 +501,8 @@
       "rating": 5,
       "salesPrice": 43.45,
       "type": 4,
-      "id": 6
+      "id": 6,
+      "intend": "Regular usage"
     },
     {
       "name": "Rear Wheel",
@@ -494,7 +512,8 @@
       "rating": 1,
       "salesPrice": 43.45,
       "type": 4,
-      "id": 7
+      "id": 7,
+      "intend": "Regular usage"
     },
     {
       "name": "Black Rear Wheel",
@@ -504,7 +523,8 @@
       "rating": 2,
       "salesPrice": 43.45,
       "type": 4,
-      "id": 8
+      "id": 8,
+      "intend": "Regular usage"
     }
   ]
 }
