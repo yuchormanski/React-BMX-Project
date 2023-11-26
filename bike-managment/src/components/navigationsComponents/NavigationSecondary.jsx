@@ -28,7 +28,8 @@ function NavigationSecondary() {
       { link: "manager-in-progress", textContent: "In production" },
       { link: "manager-ready", textContent: "Ready" },
       { link: "manager-finished", textContent: "Finished" },
-      { link: "employee", textContent: "Employees" },
+      { link: "employers", textContent: "Employers" },
+      { link: "manager-storage", textContent: "Storage" },
       { link: "statistic", textContent: "Statistic" },
     ],
   };
