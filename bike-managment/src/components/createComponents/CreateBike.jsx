@@ -184,7 +184,12 @@ function CreateBike() {
           const partsData = await getParts(data.type);
           // console.log(partsData);
 
-          dispatch({ type: "isWheelSelected", payload: data });
+          const wheelImage = data.imageUrls[0];
+
+          dispatch({
+            type: "isWheelSelected",
+            payload: { ...data, headImg: wheelImage },
+          });
           dispatch({ type: "wheelPrice", payload: data.salesPrice });
           dispatch({ type: "isPartSelected", payload: {} });
           dispatch({ type: "partsList", payload: partsData });
@@ -213,7 +218,12 @@ function CreateBike() {
           const data = await getOnePart(selectedPart);
           // console.log(data);
 
-          dispatch({ type: "isPartSelected", payload: data });
+          const partsImage = data.imageUrls[0];
+
+          dispatch({
+            type: "isPartSelected",
+            payload: { ...data, headImg: partsImage },
+          });
           dispatch({ type: "partsPrice", payload: data.salesPrice });
           dispatch({ type: "buy", payload: true });
           dispatch({ type: "dataReceived", payload: false });
@@ -295,12 +305,17 @@ function CreateBike() {
                 {selectedFrame && (
                   <>
                     <img src={currentFrame.headImg} alt={currentFrame.name} />
-                    <div className={styles.imgArray}>
+                    {/* <div className={styles.imgArray}>
                       <Images imgArray={currentFrame.imageUrls} />
-                    </div>
+                    </div> */}
                   </>
                 )}
               </div>
+              {selectedFrame && (
+                <div className={styles.imgArray}>
+                  <Images imgArray={currentFrame.imageUrls} />
+                </div>
+              )}
             </article>
 
             <article className={styles.framesBlock}>
@@ -318,9 +333,20 @@ function CreateBike() {
               <div className={styles.selectionImg}>
                 {!selectedWheel && <p className={styles.questionMark}>?</p>}
                 {selectedWheel && (
-                  <img src={currentWheel.imageUrls} alt={currentWheel.name} />
+                  // <img src={currentWheel.imageUrls} alt={currentWheel.name} />
+                  <>
+                    <img src={currentWheel.headImg} alt={currentWheel.name} />
+                    <div className={styles.imgArray}>
+                      <Images imgArray={currentWheel.imageUrls} />
+                    </div>
+                  </>
                 )}
               </div>
+              {selectedWheel && (
+                <div className={styles.imgArray}>
+                  <Images imgArray={currentWheel.imageUrls} />
+                </div>
+              )}
             </article>
 
             <article className={styles.framesBlock}>
@@ -339,9 +365,18 @@ function CreateBike() {
               <div className={styles.selectionImg}>
                 {!selectedPart && <p className={styles.questionMark}>?</p>}
                 {selectedPart && (
-                  <img src={currentPart.imageUrls} alt={currentPart.name} />
+                  // <img src={currentPart.imageUrls} alt={currentPart.name} />
+                  <>
+                    <img src={currentPart.headImg} alt={currentPart.name} />
+                  </>
                 )}
               </div>
+
+              {selectedPart && (
+                <div className={styles.imgArray}>
+                  <Images imgArray={currentPart.imageUrls} />
+                </div>
+              )}
             </article>
           </div>
         </section>
