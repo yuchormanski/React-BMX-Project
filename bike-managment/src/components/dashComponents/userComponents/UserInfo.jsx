@@ -2,16 +2,16 @@ import { useContext, useState } from "react";
 
 import styles from "./UserInfo.module.css";
 
-import { UserContext } from "../../context/GlobalUserProvider.jsx";
+import { UserContext } from "../../../context/GlobalUserProvider.jsx";
 
 import UserContactInfo from "./UserContactInfo.jsx";
-import BoardHeader from "./BoardHeader.jsx";
-import WorkerContactInfo from "./workerComponents/WorkerContactInfo.jsx";
-import { setUserData } from "../../util/util.js";
-import { updateUserData, userInfo } from "../../userServices/userService.js";
+import BoardHeader from "../BoardHeader.jsx";
+import WorkerContactInfo from "../workerComponents/WorkerContactInfo.jsx";
+import { setUserData } from "../../../util/util.js";
+import { updateUserData, userInfo } from "../../../userServices/userService.js";
 
 import { User, CameraPlus } from "@phosphor-icons/react";
-import ManagerContactInfo from "./managerComponents/ManagerContactInfo.jsx";
+import ManagerContactInfo from "../managerComponents/ManagerContactInfo.jsx";
 
 function UserInfo() {
   const { user, updateUser } = useContext(UserContext);

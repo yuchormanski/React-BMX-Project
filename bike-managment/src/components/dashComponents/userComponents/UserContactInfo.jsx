@@ -2,9 +2,9 @@ import { useContext, useEffect, useState } from "react";
 
 import styles from "./UserContactInfo.module.css";
 
-import { UserContext } from "../../context/GlobalUserProvider.jsx";
-import { userInfo } from "../../userServices/userService.js";
-import ContactInfoElement from "./ContactInfoElement.jsx";
+import { UserContext } from "../../../context/GlobalUserProvider.jsx";
+import { userInfo } from "../../../userServices/userService.js";
+import ContactInfoElement from "../ContactInfoElement.jsx";
 
 function UserContactInfo() {
   const { user } = useContext(UserContext);

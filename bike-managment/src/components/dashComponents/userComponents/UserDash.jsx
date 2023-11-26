@@ -1,4 +1,4 @@
-import NavigationSecondary from "../navigationsComponents/NavigationSecondary.jsx";
+import NavigationSecondary from "../../navigationsComponents/NavigationSecondary.jsx";
 import styles from "./UserDash.module.css";
 import { Outlet } from "react-router-dom";
 
