@@ -287,7 +287,7 @@ function CreateBike() {
               <div className={styles.selectionImg}>
                 {!selectedFrame && <p className={styles.questionMark}>?</p>}
                 {selectedFrame && (
-                  <img src={currentFrame.imageUrl} alt={currentFrame.name} />
+                  <img src={currentFrame.imageUrls} alt={currentFrame.name} />
                 )}
               </div>
             </article>
@@ -307,7 +307,7 @@ function CreateBike() {
               <div className={styles.selectionImg}>
                 {!selectedWheel && <p className={styles.questionMark}>?</p>}
                 {selectedWheel && (
-                  <img src={currentWheel.imageUrl} alt={currentWheel.name} />
+                  <img src={currentWheel.imageUrls} alt={currentWheel.name} />
                 )}
               </div>
             </article>
@@ -328,7 +328,7 @@ function CreateBike() {
               <div className={styles.selectionImg}>
                 {!selectedPart && <p className={styles.questionMark}>?</p>}
                 {selectedPart && (
-                  <img src={currentPart.imageUrl} alt={currentPart.name} />
+                  <img src={currentPart.imageUrls} alt={currentPart.name} />
                 )}
               </div>
             </article>
