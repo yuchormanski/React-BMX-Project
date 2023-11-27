@@ -35,9 +35,6 @@
   gap: 2rem;
 }
 
-.figure {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  border: 1px solid gray;
+.spacer {
+  margin-bottom: 4rem;
 }
