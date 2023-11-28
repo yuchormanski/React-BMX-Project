@@ -43,7 +43,7 @@
   border: 1px solid var(--color-line);
 }
 
-main {
+main.main {
   width: 88%;
 }
 

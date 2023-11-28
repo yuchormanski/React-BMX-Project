@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 
 import styles from "./UserInfo.module.css";
 
@@ -16,6 +16,8 @@ import ManagerContactInfo from "../managerComponents/ManagerContactInfo.jsx";
 function UserInfo() {
   const { user, updateUser } = useContext(UserContext);
   const [add, setAdd] = useState("");
+  const [image, setImage] = useState(null);
+  const [base64, setBase64] = useState("");
 
   async function addMoneyBtnHandler() {
     // TODO: make request to update user balance
@@ -36,9 +38,25 @@ function UserInfo() {
 
     const result = await updateUserData(user.id, data);
   }
+  const uploadedImage = useRef(null);
 
-  function uploadFile() {
-    console.log("okjsdij");
+  async function handleFileUpload(e) {
+    const [file] = e.target.files;
+    console.log(file);
+
+    if (file) {
+      const reader = new FileReader();
+      const { current } = uploadedImage;
+      current.file = file;
+      setImage({ ...file });
+      reader.onload = (e) => {
+        current.src = e.target.result;
+        setBase64(current.src);
+        // setImage(reader.result.toString());
+        console.log(current.src);
+      };
+      reader.readAsDataURL(file);
+    }
   }
 
   return (
@@ -52,14 +70,29 @@ function UserInfo() {
 
         <div className={styles.userInfoWrapper}>
           <figure className={styles.mainInfo}>
-            <div className={styles["imgHolder"]} onClick={uploadFile}>
+            <div className={styles["imgHolder"]}>
               {!user.img && <User size={196} color="#363636" weight="thin" />}
+              <label htmlFor="imgFile">
+                <CameraPlus
+                  size={32}
+                  color="#0a0a0a"
+                  weight="thin"
+                  className={styles.uploadPicture}
+                />
+              </label>
 
-              <CameraPlus
-                size={32}
-                color="#0a0a0a"
-                weight="thin"
-                className={styles.uploadPicture}
+              <input
+                type="file"
+                accept="image/*"
+                id="imgFile"
+                style={{ display: "none" }}
+                onChange={handleFileUpload}
+              />
+              <img
+                ref={uploadedImage}
+                alt=""
+                width="200"
+                className={styles.mainImg}
               />
             </div>
 

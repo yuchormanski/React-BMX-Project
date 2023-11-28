@@ -62,7 +62,7 @@ function Employers() {
               Add employee
             </Link>
           </aside>
-          <main>
+          <main className={styles.main}>
             <h2 className={styles.dashHeading}>Employers list</h2>
             <div className={styles.cardHolder}>
               {emp &&

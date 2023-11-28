@@ -81,6 +81,9 @@
   right: 0.8rem;
 }
 
+.mainImg {
+  position: absolute;
+}
 .usernameHeading {
   font-size: 2.4rem;
   font-weight: 500;
