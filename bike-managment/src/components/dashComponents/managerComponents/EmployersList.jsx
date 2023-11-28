@@ -56,7 +56,7 @@ function Employers() {
         {/* <div className={styles.spacer}></div> */}
 
         <div className={styles.wrapper}>
-          <aside>
+          <aside className={styles.control}>
             <Link to={"/profile/add-member"} className={styles.actionLink}>
               Add employee
             </Link>

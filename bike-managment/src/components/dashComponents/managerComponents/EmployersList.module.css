@@ -13,7 +13,8 @@
   gap: 2rem;
   padding: 4rem 1rem 1rem;
 }
-aside {
+
+.control {
   background-color: var(--color-border);
   width: 12%;
   display: flex;
