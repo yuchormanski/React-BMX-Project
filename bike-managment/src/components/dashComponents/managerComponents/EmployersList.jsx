@@ -39,16 +39,14 @@ function Employers() {
     setBackground(true);
   }
 
-  function close() {
+  function close(e) {
     setPerson({});
     setBackground(false);
   }
 
   return (
     <>
-      {background && (
-        <PopupInfo person={person} onClose={close} onOpen={handleClick} />
-      )}
+      {background && <PopupInfo person={person} onClose={close} />}
       <section className={styles.board}>
         <BoardHeader />
         {/* <div className={styles.spacer}></div> */}
