@@ -1,9 +1,13 @@
-import { useEffect, useState } from "react";
-import { useEmployers } from "../../../customHooks/useEmployers.js";
 import styles from "./EmployersList.module.css";
+
+import { useEffect, useState } from "react";
+
 import BoardHeader from "../BoardHeader.jsx";
 import Employee from "./Employee.jsx";
 import PopupInfo from "./PopupInfo.jsx";
+
+import { useEmployers } from "../../../customHooks/useEmployers.js";
+import { Link } from "react-router-dom";
 
 function Employers() {
   const [emp, setEmp] = useState([]);
@@ -53,7 +57,9 @@ function Employers() {
 
         <div className={styles.wrapper}>
           <aside>
-            <button className={styles.btn}>Add employee</button>
+            <Link to={"/profile/add-member"} className={styles.actionLink}>
+              Add employee
+            </Link>
           </aside>
           <main>
             <h2 className={styles.dashHeading}>Employers list</h2>
@@ -69,7 +75,6 @@ function Employers() {
             </div>
 
             <h2 className={styles.dashHeading}>Managers List</h2>
-            {/* <section className={styles.board}> */}
             <div className={styles.cardHolder}>
               {man &&
                 man.map((manager) => (
@@ -80,7 +85,6 @@ function Employers() {
                   />
                 ))}
             </div>
-            {/* </section> */}
           </main>
         </div>
       </section>
