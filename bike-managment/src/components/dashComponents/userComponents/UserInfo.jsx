@@ -37,6 +37,10 @@ function UserInfo() {
     const result = await updateUserData(user.id, data);
   }
 
+  function uploadFile() {
+    console.log("okjsdij");
+  }
+
   return (
     <>
       <h2 className={styles.dashHeading}>
@@ -48,7 +52,7 @@ function UserInfo() {
 
         <div className={styles.userInfoWrapper}>
           <figure className={styles.mainInfo}>
-            <div className={styles["imgHolder"]}>
+            <div className={styles["imgHolder"]} onClick={uploadFile}>
               {!user.img && <User size={196} color="#363636" weight="thin" />}
 
               <CameraPlus
