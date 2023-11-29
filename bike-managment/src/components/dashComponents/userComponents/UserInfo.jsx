@@ -52,12 +52,23 @@ function UserInfo() {
       reader.onload = (e) => {
         current.src = e.target.result;
         setBase64(current.src);
-        // setImage(reader.result.toString());
+        // setImage(reader.result.toString()); //without this
         console.log(current.src);
       };
       reader.readAsDataURL(file);
     }
   }
+
+  // const handleFileUpload = (e) => {
+  //   const file = e.target.files[0];
+  //   if (file) {// https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications
+  //     const reader = new FileReader();
+  //     reader.onloadend = () => {
+  //       onUserImageUpload(reader.result);
+  //     };
+  //     reader.readAsDataURL(file);
+  //   }
+  // };
 
   return (
     <>
