@@ -51,6 +51,7 @@ function UserInfo() {
       reader.onload = (e) => {
         current.src = e.target.result;
         setBase64(current.src);
+        setInfo({ ...info, imageUrl: current.src });
         // setImage(reader.result.toString()); //without this
         console.log(current.src);
       };
@@ -69,28 +70,34 @@ function UserInfo() {
   //   }
   // };
 
-  async function addMoneyBtnHandler() {
-    // TODO: make request to update user balance
-    //next is only for testing
+  // async function addMoneyBtnHandler() {
+  //   // TODO: make request to update user balance
+  //   //next is only for testing
 
-    const currentUser = await userInfo(user.id);
+  //   const currentUser = await userInfo(user.id);
 
-    if (add === 0) return;
-    updateUser({ ...user, balance: user.balance + add });
-    setUserData({ ...user, balance: user.balance + add });
-    setAdd("");
+  //   if (add === 0) return;
+  //   updateUser({ ...user, balance: user.balance + add });
+  //   setUserData({ ...user, balance: user.balance + add });
+  //   setAdd("");
 
-    const data = {
-      ...currentUser,
-      password: currentUser.repass,
-      balance: currentUser.balance + add,
-    };
+  //   const data = {
+  //     ...currentUser,
+  //     password: currentUser.repass,
+  //     balance: currentUser.balance + add,
+  //   };
 
-    const result = await updateUserData(user.id, data);
-  }
+  //   const result = await updateUserData(user.id, data);
+  // }
+
+  function addMoneyBtnHandler() {}
 
   function editBtnHandler() {
     setEdit(true);
+  }
+
+  function submitSave() {
+    console.log(info);
   }
   return (
     <>
@@ -126,36 +133,41 @@ function UserInfo() {
             </div>
           </figure>
 
-          {!edit && <UserContactInfo info={info} />}
-          {edit && <EditContactInfo info={info} />}
+          {!edit && <UserContactInfo info={info} setInfo={setInfo} />}
+          {edit && (
+            <EditContactInfo info={info} setInfo={setInfo} base64={base64} />
+            // <EditContactInfo  />
+          )}
           {/* {user.role === "user" && <UserContactInfo user={user} />} */}
           {/* {user.role === "worker" && <WorkerContactInfo user={user} />} */}
           {/* {user.role === "manager" && <ManagerContactInfo />} */}
         </div>
         <div className={styles.userInfoControl}>
-          {user.role === "user" && (
-            <div className={styles.infoWrapper}>
-              <input
-                className={styles.addMoneyInput}
-                type="text"
-                value={add}
-                onChange={(e) => setAdd(Number(e.target.value))}
-              />
-              <button className={styles.addMoney} onClick={addMoneyBtnHandler}>
-                Add money
-              </button>
-            </div>
-          )}
           <div className={styles.infoWrapper}>
-            {edit && (
-              <button className={styles.editBtn} onClick={() => setEdit(false)}>
-                Back
-              </button>
+            {user.role === "user" && (
+              <>
+                <input
+                  className={styles.addMoneyInput}
+                  type="text"
+                  value={add}
+                  onChange={(e) => setAdd(Number(e.target.value))}
+                />
+                <button
+                  className={styles.addMoney}
+                  onClick={addMoneyBtnHandler}
+                >
+                  Add money
+                </button>
+              </>
             )}
-            <button className={styles.editBtn} onClick={editBtnHandler}>
-              Edit
+            <button
+              className={styles.editBtn}
+              onClick={!edit ? editBtnHandler : () => setEdit(false)}
+            >
+              {edit ? "Back" : "Edit profile"}
             </button>
           </div>
+          <div className={styles.infoWrapper}></div>
         </div>
       </section>
     </>
