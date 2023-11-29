@@ -1,9 +1,13 @@
-import { useEffect, useReducer } from "react";
+import { useContext, useEffect, useReducer } from "react";
 import styles from "./EditContactInfo.module.css";
 import EditTextInput from "./editComponents/EditTextInput.jsx";
 import { reducer } from "./editComponents/reducer.js";
+import { updateUserData } from "../../../userServices/userService.js";
+import { UserContext } from "../../../context/GlobalUserProvider.jsx";
 
 function EditContactInfo({ info, setInfo, base64 }) {
+  const { user, updateUser } = useContext(UserContext);
+
   const initialState = {
     email: info.email,
     firstName: info.firstName,
@@ -54,9 +58,56 @@ function EditContactInfo({ info, setInfo, base64 }) {
     [base64]
   );
 
+  async function formSubmitHandler(e) {
+    e.preventDefault();
+
+    const newAddress = {
+      country,
+      district,
+      postCode,
+      block,
+      apartment,
+      street: street,
+      strNumber,
+      floor,
+    };
+
+    setInfo({
+      ...info,
+      email: email,
+      firstName: firstName,
+      lastName,
+      iban,
+      balance,
+      phone,
+      city,
+      address: newAddress,
+      imageUrl: base64,
+    });
+
+    updateUser({ ...user, balance: balance });
+    //   setUserData({ ...user, balance: user.balance + add });
+    //   setAdd("");
+
+    //   const data = {
+    //     ...currentUser,
+    //     password: currentUser.repass,
+    //     balance: currentUser.balance + add,
+    //   };
+
+    //   const result = await updateUserData(user.id, data);
+    const data = {
+      ...info,
+      password: info.repass,
+    };
+
+    const result = await updateUserData(info.id, data);
+    console.log(result);
+  }
+
   return (
     <>
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={formSubmitHandler}>
         {/* FIRST NAME */}
         <EditTextInput
           inputValue={firstName}
@@ -89,14 +140,6 @@ function EditContactInfo({ info, setInfo, base64 }) {
           type="text"
           content={"IBAN"}
         />
-        {/* BALANCE
-        <EditTextInput
-          inputValue={balance}
-          dispatch={dispatch}
-          action="setBalance"
-          type="tel"
-          content={"Account"}
-        /> */}
         {/* PHONE */}
         <EditTextInput
           inputValue={phone}
@@ -177,6 +220,16 @@ function EditContactInfo({ info, setInfo, base64 }) {
           type="text"
           content={"Street"}
         />
+        {/* BALANCE */}
+        <EditTextInput
+          inputValue={balance}
+          dispatch={dispatch}
+          action="setBalance"
+          type="tel"
+          content={"Account"}
+        />
+
+        <button className={styles.saveBtn}>Save profile</button>
       </form>
     </>
   );

@@ -13,7 +13,7 @@ function reducer(state, action) {
     case "setPhone":
       return { ...state, phone: action.payload };
     case "setBalance":
-      return { ...state, balance: action.payload };
+      return { ...state, balance: Number(action.payload) };
     case "setCountry":
       return { ...state, country: action.payload };
     case "setPostCode":
