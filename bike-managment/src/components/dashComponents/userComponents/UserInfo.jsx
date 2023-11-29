@@ -1,44 +1,43 @@
-import { useContext, useRef, useState } from "react";
-
 import styles from "./UserInfo.module.css";
 
-import { UserContext } from "../../../context/GlobalUserProvider.jsx";
+import { useContext, useEffect, useRef, useState } from "react";
+import { User, CameraPlus } from "@phosphor-icons/react";
 
-import UserContactInfo from "./UserContactInfo.jsx";
 import BoardHeader from "../BoardHeader.jsx";
+import UserContactInfo from "./UserContactInfo.jsx";
 import WorkerContactInfo from "../workerComponents/WorkerContactInfo.jsx";
+import ManagerContactInfo from "../managerComponents/ManagerContactInfo.jsx";
 import { setUserData } from "../../../util/util.js";
 import { updateUserData, userInfo } from "../../../userServices/userService.js";
 
-import { User, CameraPlus } from "@phosphor-icons/react";
-import ManagerContactInfo from "../managerComponents/ManagerContactInfo.jsx";
+import { UserContext } from "../../../context/GlobalUserProvider.jsx";
+import EditContactInfo from "./EditContactInfo.jsx";
+import { useNavigate } from "react-router-dom";
 
 function UserInfo() {
   const { user, updateUser } = useContext(UserContext);
   const [add, setAdd] = useState("");
   const [image, setImage] = useState(null);
   const [base64, setBase64] = useState("");
-
-  async function addMoneyBtnHandler() {
-    // TODO: make request to update user balance
-    //next is only for testing
-
-    const currentUser = await userInfo(user.id);
-
-    if (add === 0) return;
-    updateUser({ ...user, balance: user.balance + add });
-    setUserData({ ...user, balance: user.balance + add });
-    setAdd("");
-
-    const data = {
-      ...currentUser,
-      password: currentUser.repass,
-      balance: currentUser.balance + add,
-    };
-
-    const result = await updateUserData(user.id, data);
-  }
+  const [edit, setEdit] = useState(false);
+  const [info, setInfo] = useState("");
+  const navigate = useNavigate();
   const uploadedImage = useRef(null);
+
+  useEffect(
+    function () {
+      async function getClientInfo() {
+        const data = await userInfo(user.id);
+        console.log(data);
+        setInfo({ ...data });
+        if (data.role === "user") {
+          setInfo({ ...data, balance: Number(data.balance.toFixed(2)) });
+        }
+      }
+      getClientInfo();
+    },
+    [user]
+  );
 
   async function handleFileUpload(e) {
     const [file] = e.target.files;
@@ -70,6 +69,29 @@ function UserInfo() {
   //   }
   // };
 
+  async function addMoneyBtnHandler() {
+    // TODO: make request to update user balance
+    //next is only for testing
+
+    const currentUser = await userInfo(user.id);
+
+    if (add === 0) return;
+    updateUser({ ...user, balance: user.balance + add });
+    setUserData({ ...user, balance: user.balance + add });
+    setAdd("");
+
+    const data = {
+      ...currentUser,
+      password: currentUser.repass,
+      balance: currentUser.balance + add,
+    };
+
+    const result = await updateUserData(user.id, data);
+  }
+
+  function editBtnHandler() {
+    setEdit(true);
+  }
   return (
     <>
       <h2 className={styles.dashHeading}>
@@ -91,47 +113,49 @@ function UserInfo() {
                   className={styles.uploadPicture}
                 />
               </label>
-
               <input
                 type="file"
-                accept="image/*"
+                accept="image/png, image/jpeg"
                 id="imgFile"
                 style={{ display: "none" }}
                 onChange={handleFileUpload}
               />
               <div className={styles.userImgBox}>
-                <img
-                  ref={uploadedImage}
-                  alt=""
-                  // width="200"
-                  className={styles.userImg}
-                />
+                <img ref={uploadedImage} alt="" className={styles.userImg} />
               </div>
             </div>
-
-            <p className={styles.userEmail}>{user.email}</p>
-            <p className={styles.userEmail}>{user.phone}</p>
-            {user.role === "user" && (
-              <>
-                <input
-                  className={styles.addMoneyInput}
-                  type="text"
-                  value={add}
-                  onChange={(e) => setAdd(Number(e.target.value))}
-                />
-                <button
-                  className={styles.addMoney}
-                  onClick={addMoneyBtnHandler}
-                >
-                  Add money
-                </button>
-              </>
-            )}
           </figure>
 
-          {user.role === "user" && <UserContactInfo user={user} />}
-          {user.role === "worker" && <WorkerContactInfo user={user} />}
-          {user.role === "manager" && <ManagerContactInfo />}
+          {!edit && <UserContactInfo info={info} />}
+          {edit && <EditContactInfo info={info} />}
+          {/* {user.role === "user" && <UserContactInfo user={user} />} */}
+          {/* {user.role === "worker" && <WorkerContactInfo user={user} />} */}
+          {/* {user.role === "manager" && <ManagerContactInfo />} */}
+        </div>
+        <div className={styles.userInfoControl}>
+          {user.role === "user" && (
+            <div className={styles.infoWrapper}>
+              <input
+                className={styles.addMoneyInput}
+                type="text"
+                value={add}
+                onChange={(e) => setAdd(Number(e.target.value))}
+              />
+              <button className={styles.addMoney} onClick={addMoneyBtnHandler}>
+                Add money
+              </button>
+            </div>
+          )}
+          <div className={styles.infoWrapper}>
+            {edit && (
+              <button className={styles.editBtn} onClick={() => setEdit(false)}>
+                Back
+              </button>
+            )}
+            <button className={styles.editBtn} onClick={editBtnHandler}>
+              Edit
+            </button>
+          </div>
         </div>
       </section>
     </>
