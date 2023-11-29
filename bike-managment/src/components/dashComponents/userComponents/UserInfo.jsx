@@ -99,12 +99,14 @@ function UserInfo() {
                 style={{ display: "none" }}
                 onChange={handleFileUpload}
               />
-              <img
-                ref={uploadedImage}
-                alt=""
-                width="200"
-                className={styles.mainImg}
-              />
+              <div className={styles.userImgBox}>
+                <img
+                  ref={uploadedImage}
+                  alt=""
+                  // width="200"
+                  className={styles.userImg}
+                />
+              </div>
             </div>
 
             <p className={styles.userEmail}>{user.email}</p>

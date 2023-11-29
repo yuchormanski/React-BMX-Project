@@ -66,24 +66,42 @@
 
 .imgHolder {
   position: relative;
-  width: 60%;
+  width: 80%;
+  padding: 2rem;
   /* aspect-ratio: 1/1; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 2rem;
+  align-items: center;
+  padding: 4rem 2rem 12rem;
   border: 1px solid var(--color-border-hover);
-  cursor: pointer;
+  border-radius: 0.3rem;
 }
 
 .uploadPicture {
   position: absolute;
   top: 0.5rem;
   right: 0.8rem;
+  cursor: pointer;
 }
 
-.mainImg {
+.userImgBox {
   position: absolute;
+  top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
+
+.userImg {
+  width: 95%;
+  height: 95%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 0.3rem;
+}
+
 .usernameHeading {
   font-size: 2.4rem;
   font-weight: 500;
