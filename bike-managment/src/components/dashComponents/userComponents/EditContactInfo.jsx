@@ -14,21 +14,26 @@ function EditContactInfo({ info, setInfo, base64 }) {
     email: info.email,
     firstName: info.firstName,
     lastName: info.lastName,
-    iban: info.iban,
-    balance: info.balance,
+    iban: info?.iban,
+    balance: info?.balance,
     phone: info.phone,
-    city: info.city,
+    city: info?.city,
     role: info.role,
-    country: info.address.country,
-    district: info.address.district,
-    postCode: info.address.postCode,
-    block: info.address.block,
-    apartment: info.address.apartment,
-    street: info.address.street,
-    floor: info.address.floor,
-    strNumber: info.address.strNumber,
+    country: info.address?.country,
+    district: info.address?.district,
+    postCode: info.address?.postCode,
+    block: info.address?.block,
+    apartment: info.address?.apartment,
+    street: info.address?.street,
+    floor: info.address?.floor,
+    strNumber: info.address?.strNumber,
     id: info.id,
     imageUrl: base64,
+    department: info?.department,
+    phoneNumber: info?.phoneNumber,
+    position: info?.position,
+    dateOfHire: info?.dateOfHire,
+    isManager: info?.isManager,
   };
 
   const [
@@ -62,6 +67,7 @@ function EditContactInfo({ info, setInfo, base64 }) {
     },
     [base64]
   );
+  console.log(role);
 
   async function formSubmitHandler(e) {
     e.preventDefault();
@@ -78,20 +84,38 @@ function EditContactInfo({ info, setInfo, base64 }) {
       strNumber,
       floor,
     };
-    const data = {
-      password: info.repass,
-      repass: info.repass,
-      role: info.role,
-      email,
-      firstName,
-      lastName,
-      iban,
-      balance,
-      phone,
-      city,
-      imageUrl: updatedImg,
-      address: newAddress,
-    };
+    let data;
+    if (role === "user") {
+      data = {
+        password: info.repass,
+        repass: info.repass,
+        role: info.role,
+        email,
+        firstName,
+        lastName,
+        iban,
+        balance,
+        phone,
+        city,
+        imageUrl: updatedImg,
+        address: newAddress,
+      };
+    } else {
+      data = {
+        imageUrl: updatedImg,
+        password: info.repass,
+        repass: info.repass,
+        role: info.role,
+        email,
+        firstName,
+        lastName,
+        department: info?.department,
+        phoneNumber: info?.phoneNumber,
+        position: info?.position,
+        dateOfHire: info?.dateOfHire,
+        isManager: info?.isManager,
+      };
+    }
 
     setInfo({
       ...info,
@@ -147,13 +171,15 @@ function EditContactInfo({ info, setInfo, base64 }) {
           content={"Email"}
         />
         {/* IBAN */}
-        <EditTextInput
-          inputValue={iban}
-          dispatch={dispatch}
-          action="setIban"
-          type="text"
-          content={"IBAN"}
-        />
+        {role === "user" && (
+          <EditTextInput
+            inputValue={iban}
+            dispatch={dispatch}
+            action="setIban"
+            type="text"
+            content={"IBAN"}
+          />
+        )}
         {/* PHONE */}
         <EditTextInput
           inputValue={phone}
@@ -163,85 +189,105 @@ function EditContactInfo({ info, setInfo, base64 }) {
           content={"Phone"}
         />
         {/* CITY */}
-        <EditTextInput
-          inputValue={city}
-          dispatch={dispatch}
-          action="setCity"
-          type="text"
-          content={"City"}
-        />
+        {role === "user" && (
+          <EditTextInput
+            inputValue={city}
+            dispatch={dispatch}
+            action="setCity"
+            type="text"
+            content={"City"}
+          />
+        )}
         {/* COUNTRY */}
-        <EditTextInput
-          inputValue={country}
-          dispatch={dispatch}
-          action="setCountry"
-          type="text"
-          content={"Country"}
-        />
+        {role === "user" && (
+          <EditTextInput
+            inputValue={country}
+            dispatch={dispatch}
+            action="setCountry"
+            type="text"
+            content={"Country"}
+          />
+        )}
         {/* POSTCODE */}
-        <EditTextInput
-          inputValue={postCode}
-          dispatch={dispatch}
-          action="setPostCode"
-          type="text"
-          content={"Post Code"}
-        />
+        {role === "user" && (
+          <EditTextInput
+            inputValue={postCode}
+            dispatch={dispatch}
+            action="setPostCode"
+            type="text"
+            content={"Post Code"}
+          />
+        )}
         {/* DISTRICT */}
-        <EditTextInput
-          inputValue={district}
-          dispatch={dispatch}
-          action="setDistrict"
-          type="text"
-          content={"District"}
-        />
+        {role === "user" && (
+          <EditTextInput
+            inputValue={district}
+            dispatch={dispatch}
+            action="setDistrict"
+            type="text"
+            content={"District"}
+          />
+        )}
         {/* BLOCK*/}
-        <EditTextInput
-          inputValue={block}
-          dispatch={dispatch}
-          action="setBlock"
-          type="text"
-          content={"Block"}
-        />
+        {role === "user" && (
+          <EditTextInput
+            inputValue={block}
+            dispatch={dispatch}
+            action="setBlock"
+            type="text"
+            content={"Block"}
+          />
+        )}
         {/* FLOOR*/}
-        <EditTextInput
-          inputValue={floor}
-          dispatch={dispatch}
-          action="setFloor"
-          type="text"
-          content={"Floor"}
-        />
+        {role === "user" && (
+          <EditTextInput
+            inputValue={floor}
+            dispatch={dispatch}
+            action="setFloor"
+            type="text"
+            content={"Floor"}
+          />
+        )}
         {/* APARTMENT*/}
-        <EditTextInput
-          inputValue={apartment}
-          dispatch={dispatch}
-          action="setApartment"
-          type="text"
-          content={"Apartment"}
-        />
+        {role === "user" && (
+          <EditTextInput
+            inputValue={apartment}
+            dispatch={dispatch}
+            action="setApartment"
+            type="text"
+            content={"Apartment"}
+          />
+        )}
         {/* STREET*/}
-        <EditTextInput
-          inputValue={street}
-          dispatch={dispatch}
-          action="setStreet"
-          type="text"
-          content={"Street"}
-        />
+        {role === "user" && (
+          <EditTextInput
+            inputValue={street}
+            dispatch={dispatch}
+            action="setStreet"
+            type="text"
+            content={"Street"}
+          />
+        )}
         {/* STREET*/}
-        <EditTextInput
-          inputValue={strNumber}
-          dispatch={dispatch}
-          action="setStrNumber"
-          type="text"
-          content={"Street"}
-        />
+        {role === "user" && (
+          <EditTextInput
+            inputValue={strNumber}
+            dispatch={dispatch}
+            action="setStrNumber"
+            type="text"
+            content={"Street"}
+          />
+        )}
         {/* BALANCE */}
-        <EditTextInput
-          inputValue={balance}
-          dispatch={dispatch}
-          action="setBalance"
-          type="tel"
-          content={"Account"}
-        />
+        {role === "user" && (
+          <EditTextInput
+            inputValue={balance}
+            dispatch={dispatch}
+            action="setBalance"
+            type="tel"
+            content={"Account"}
+          />
+        )}
 
         <button className={styles.saveBtn}>Save profile</button>
       </form>
