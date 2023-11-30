@@ -1,9 +1,12 @@
-# React-BMX-Project
+# React-BMX-Projec - Bike management platform
 
-Bike management platform
+### App start
 
-Server - in app dir - npm run server
-App start - in app dir - npm run dev
+- in app dir - npm run dev
+
+### Server
+
+- in app dir - npm run server
 
 ## Routes
 
@@ -11,8 +14,11 @@ App start - in app dir - npm run dev
 
     - All other route endpoints are in path.js file
 
-- Home page fetch request
-- - [HOST/jsonstore/indexPage](http://localhost:3030/jsonstore/indexPage)
+## Home page
+
+Representing base information of the application. Gating data from database for three of the produced bicycles, some company information and also two random comment from users.
+
+- fetch request [HOST/api/indexPage](http://localhost:3030/jsonstore/indexPage)
 - Data for index page should be changed according to project deployment service
 
 ### Create page

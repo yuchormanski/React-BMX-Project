@@ -4,9 +4,11 @@ import EditTextInput from "./editComponents/EditTextInput.jsx";
 import { reducer } from "./editComponents/reducer.js";
 import { updateUserData } from "../../../userServices/userService.js";
 import { UserContext } from "../../../context/GlobalUserProvider.jsx";
+import { useNavigate } from "react-router-dom";
 
 function EditContactInfo({ info, setInfo, base64 }) {
   const { user, updateUser } = useContext(UserContext);
+  const navigate = useNavigate();
 
   const initialState = {
     email: info.email,
@@ -47,6 +49,9 @@ function EditContactInfo({ info, setInfo, base64 }) {
       apartment,
       floor,
       imageUrl,
+      password,
+      repass,
+      role,
     },
     dispatch,
   ] = useReducer(reducer, initialState);
@@ -61,6 +66,8 @@ function EditContactInfo({ info, setInfo, base64 }) {
   async function formSubmitHandler(e) {
     e.preventDefault();
 
+    let updatedImg = info.imageUrl || imageUrl;
+
     const newAddress = {
       country,
       district,
@@ -71,38 +78,45 @@ function EditContactInfo({ info, setInfo, base64 }) {
       strNumber,
       floor,
     };
-
-    setInfo({
-      ...info,
-      email: email,
-      firstName: firstName,
+    const data = {
+      password: info.repass,
+      repass: info.repass,
+      role: info.role,
+      email,
+      firstName,
       lastName,
       iban,
       balance,
       phone,
       city,
+      imageUrl: updatedImg,
       address: newAddress,
-      imageUrl: base64,
+    };
+
+    setInfo({
+      ...info,
+      email: email,
+      firstName: firstName,
+      lastName: lastName,
+      iban: iban,
+      balance: balance,
+      phone: phone,
+      city: city,
+      address: newAddress,
+      imageUrl: updatedImg,
     });
 
-    updateUser({ ...user, balance: balance });
-    //   setUserData({ ...user, balance: user.balance + add });
-    //   setAdd("");
-
-    //   const data = {
-    //     ...currentUser,
-    //     password: currentUser.repass,
-    //     balance: currentUser.balance + add,
-    //   };
-
-    //   const result = await updateUserData(user.id, data);
-    const data = {
-      ...info,
-      password: info.repass,
-    };
+    // UPDATE CONTEXT USER
+    updateUser({
+      ...user,
+      firstName: firstName,
+      lastName: lastName,
+      balance: balance,
+    });
 
     const result = await updateUserData(info.id, data);
     console.log(result);
+    navigate("/profile");
   }
 
   return (

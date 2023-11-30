@@ -22,8 +22,6 @@ function UserInfo() {
   const [info, setInfo] = useState("");
   const uploadedImage = useRef(null);
 
-  let img;
-
   useEffect(
     function () {
       async function getClientInfo() {
