@@ -6,7 +6,6 @@
   justify-content: space-around;
   font-size: 2rem;
   color: var(--color-main-dark);
-  /* padding-block: 2rem 3rem; */
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -39,12 +38,11 @@
   border-radius: 50%;
   position: relative;
   background-color: #fff;
-  /* filter: drop-shadow(1px 1px 1px #c4c4c4); */
 }
 
 .circle span {
   position: absolute;
-  top: 3rem;
+  top: 3.2rem;
   font-size: 1.8rem;
   font-weight: 300;
   color: var(--button-blue);
@@ -59,10 +57,10 @@
 
 .circle span.icon {
   color: green;
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: 700;
   position: absolute;
-  top: -0.5rem;
+  top: -0.3rem;
 }
 
 .btn {
