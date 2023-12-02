@@ -11,6 +11,8 @@ export const environment = {
   UPDATE_CLIENT: "/users/", // + id
   UPDATE_EMPLOYEE: "/users/", // + id
   INFO_CLIENT: "/users/", // + id
+  //    /api/client/info/:id
+
   INFO_EMPLOYEE: "/users/", // + id
 
   // TODO: for local list load
