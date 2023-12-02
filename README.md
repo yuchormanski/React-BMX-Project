@@ -12,6 +12,15 @@
     - [Order](#order)
   - [Employee](#employee)
   - [Manager](#manager)
+    - [Profile](#profile-page) - Информация за потербителя
+    - [New Orders](#new-orders)
+    - [Production]
+    - [Finished]
+    - [Dispatched]
+    - [Employers](#employers)
+      - [Add Employee](#add-employee)
+    - [Storage]
+    - [Statistic]
 - [Back-End](#back-end) - Интерфейс и Front-end функционалност!
 
 При стартиране се извежда базова информация за приложението, възможност за избор на някое от предварително създадени модели велосипеди, както и два произволни коментара от потребители, като се прави заявка към сървър.
@@ -144,6 +153,8 @@ TODO: MISSING ENDPOINT!!!!!
 
 ### Response
 
+- Когато ролята на потребителя е Client
+
 ```json
 {
   "role": "user",
@@ -166,6 +177,28 @@ TODO: MISSING ENDPOINT!!!!!
     "floor": "21"
   },
   "id": 1
+}
+```
+
+- Когато ролята на потребителя е Служител
+
+```json
+{
+  "accessToken": "",
+  "user": {
+    "imageUrl": "",
+    "repass": "Lea-12",
+    "role": "worker",
+    "email": "leaorgana@b-free.com",
+    "firstName": "Lea",
+    "lastName": "Organa",
+    "department": "Accessory",
+    "phoneNumber": "+359656456456343",
+    "position": "Master",
+    "dateOfHire": "12/2/2023",
+    "isManager": true/false,
+    "id": 7
+  }
 }
 ```
 
@@ -259,6 +292,35 @@ TODO: MISSING ENDPOINT!!!!!
 ### [Manager](#manager)
 
 - [Content](#content)
+
+- След успешно влизане в системата се генерира меню , съобразено с ролята на потребителя:
+
+### [Employers](#employers)
+
+Зарежда се информация за всички служители, разделени в категории.
+
+#### Endpoint `GET/ MISSING ENDPOINT!!!!` ?role=worker&role=manager&role=qControl
+
+Има функционалност да се добави `Нов служител`
+
+### [Add Employee](#add-employee)
+
+След попълване на формата за регистрация се изпраща заявка към сървъра със съдържание:
+
+```json
+      "email": "username + @b-free.com",
+      "password":"",
+      "firstName":"",
+      "lastName":"",
+      "repass":"",
+      "role":"",
+      "phoneNumber":"",
+      "isManager": true/false,
+      "dateOfHire": "",
+      "imageUrl":"",
+      "department":"",
+      "position":""
+```
 
 ## [Back-End](#back-end)
 
@@ -408,6 +470,7 @@ Download
     "rating": [],
     "type": 1,
     "salePrice": 65
+  }
  ]
 
 ```
