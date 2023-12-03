@@ -59,7 +59,6 @@ function OrderItem({ product, onBtnHandler }) {
   function onButtonClick() {
     let currentDate = new Date();
     // console.log("in btn");
-    let isFinished = false;
 
     if (item.startedTime === "" && item.finishedTime === "") {
       setItem({
@@ -71,7 +70,6 @@ function OrderItem({ product, onBtnHandler }) {
     if (item.startedTime !== "" && item.finishedTime === "") {
       setItem({ ...item, finishedTime: currentDate, isProduced: true });
       setIsDone(true);
-      // newProduct = { ...JSON.parse(JSON.stringify(product)) };
     }
   }
 
@@ -102,6 +100,8 @@ function OrderItem({ product, onBtnHandler }) {
             <span>Model: </span>
             {item.partModel}
           </p>
+        </div>
+        <div className={styles.info}>
           <p className={styles.model}>
             <span>Started on: </span>
             {item.startedTime &&
@@ -112,14 +112,14 @@ function OrderItem({ product, onBtnHandler }) {
             {item.finishedTime &&
               item.finishedTime.toLocaleString().split(", ")[0]}
           </p>
-        </div>
-
-        <div className={styles.description}>
-          <span>Description:</span>
-          {product.description}
+          <p className={styles.partId}>ID# {item.partId}</p>
         </div>
 
         <div className={styles.timer}>
+          <p className={styles.prod}>
+            <span>Produced by: </span>
+            {item.nameOfEmplоyeeProducedThePart}
+          </p>
           <button
             className={styles.startBtn}
             onClick={onButtonClick}
@@ -132,6 +132,8 @@ function OrderItem({ product, onBtnHandler }) {
             {item.startedTime !== "" && item.finishedTime !== "" && "Finished"}
           </button>
         </div>
+
+        <img className={styles.background} src="/img/bg-bike.webp" alt="" />
       </figure>
     </>
   );
