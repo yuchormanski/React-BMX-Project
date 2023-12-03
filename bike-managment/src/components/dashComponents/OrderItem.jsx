@@ -101,29 +101,39 @@ function OrderItem({ product, onBtnHandler, orderId }) {
     <>
       {loading && <LoaderWheel />}
       <figure className={styles.order}>
-        <header className={styles.header}></header>
-        <div className={styles.info}>
-          <h3 className={styles.brand}>
-            <span>Brand: </span>
-            {item.partType}
-          </h3>
+        <header className={styles.header}>
           <p className={styles.model}>
-            <span>Model: </span>
-            {item.partModel}
-          </p>
-        </div>
-        <div className={styles.info}>
-          <p className={styles.model}>
-            <span>Started on: </span>
-            {item.startedTime && new Date(item.startedTime).toDateString()}
+            <span>SN: </span>
+            {meta.serialNumber}
           </p>
           <p className={styles.model}>
-            <span>Finished on: </span>
-            {item.finishedTime && new Date(item.finishedTime).toDateString()}
+            <span>Date created: </span>
+            {meta.dateCreated}
           </p>
-          {/* <p className={styles.partId}>ID# {item.partId}</p> */}
-          <p className={styles.partId}>ID# {orderId + "-" + item.partId}</p>
-        </div>
+        </header>
+
+        {/* <div className={styles.info}> */}
+        <h3 className={styles.brand}>
+          <span>Brand: </span>
+          {item.partType}
+        </h3>
+        <p className={styles.model}>
+          <span>Model: </span>
+          {item.partModel}
+        </p>
+        {/* </div> */}
+        {/* <div className={styles.info}> */}
+        <p className={styles.model}>
+          <span>Started on: </span>
+          {item.startedTime && new Date(item.startedTime).toDateString()}
+        </p>
+        <p className={`${styles.model} ${styles.shortLine}`}>
+          <span>Finished on: </span>
+          {item.finishedTime && new Date(item.finishedTime).toDateString()}
+        </p>
+        {/* <p className={styles.partId}>ID# {item.partId}</p> */}
+        <p className={styles.partId}>ID# {orderId + "-" + item.partId}</p>
+        {/* </div> */}
 
         <div className={styles.timer}>
           <p className={styles.prod}>
