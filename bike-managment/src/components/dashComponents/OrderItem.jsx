@@ -11,16 +11,24 @@ function OrderItem({ product, onBtnHandler, orderId }) {
   const { user } = useContext(UserContext);
   const [index, setIndex] = useState(null);
   const [item, setItem] = useState("");
-  const [id, setId] = useState("");
+  // const [id, setId] = useState("");
   const [firstCall, setFirstCall] = useState(false);
   const [isDone, setIsDone] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [meta, setMeta] = useState({});
 
   let newProduct = {};
 
   useEffect(function () {
     const abortController = new AbortController();
-    setId(orderId);
+    // setId(product.id);
+    console.log(product);
+
+    setMeta({
+      id: product.id,
+      dateCreated: product.dateCreated,
+      serialNumber: product.serialNumber,
+    });
 
     if (user.department === "Frames") {
       setItem(product.orderStates[0]);
@@ -49,7 +57,7 @@ function OrderItem({ product, onBtnHandler, orderId }) {
         // console.log(newProduct);
 
         // write data to database
-        finishedJob(id);
+        finishedJob(meta.id);
         // rerender parent component
         onBtnHandler();
       }
@@ -93,6 +101,7 @@ function OrderItem({ product, onBtnHandler, orderId }) {
     <>
       {loading && <LoaderWheel />}
       <figure className={styles.order}>
+        <header className={styles.header}></header>
         <div className={styles.info}>
           <h3 className={styles.brand}>
             <span>Brand: </span>
