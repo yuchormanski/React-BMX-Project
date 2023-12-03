@@ -54,17 +54,17 @@ BASE_URL: "http://localhost:9000",
 
 `GET/ in_progress_orders`: MISSING <!-- ? --> +id - [Order by id manager model](#order-by-id-manager-model)
 
-`GET/ rejected_orders`:"/api/manager/rejected_orders"
+`GET/ rejected_orders`: "/api/manager/rejected_orders"
 
-`POST/ delete_order`:"/api/manager/delete_order?orderId=3"
+`POST/ delete_order`: "/api/manager/delete_order?orderId=3"
 
-`POST/ approve_order`:"/api/manager/approve_order?orderId=3"
+`POST/ approve_order`: "/api/manager/approve_order?orderId=3"
 
-`POST/ `:"/api/manager/approve_rejected_order?orderId=3" ?
+`POST/ `: "/api/manager/approve_rejected_order?orderId=3" ?
 
-`POST/ reject_order`:"/api/manager/reject_order?orderId=3"
+`POST/ reject_order`: "/api/manager/reject_order?orderId=3"
 
-`GET/ finished_orders`:"/api/manager/finished_orders"
+`GET/ finished_orders`: "/api/manager/finished_orders"
 
 `GET/ in-progress`: MISSING
 
