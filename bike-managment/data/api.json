@@ -396,34 +396,106 @@
   ],
   "production": [
     {
-      "unitType": "frame",
-      "model": "BGS5657",
-      "brand": "Scott",
-      "jobType": "painting",
-      "startedTime": "",
-      "finishedTime": "",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At, dolorum.",
-      "id": "76578684865587"
+      "id": 4,
+      "serialNumber": "BID28YUOCH0",
+      "dateCreated": "15/11/2023",
+      "orderStates": [
+        {
+          "partId": 1,
+          "partType": "Frame",
+          "partModel": "Frame OG",
+          "nameOfEmplоyeeProducedThePart": " ",
+          "isProduced": false,
+          "startedTime": "",
+          "finishedTime": ""
+        },
+        {
+          "partId": 2,
+          "partType": "Wheel",
+          "partModel": "Wheel of the Year",
+          "nameOfEmplоyeeProducedThePart": " ",
+          "isProduced": false,
+          "startedTime": "",
+          "finishedTime": ""
+        },
+        {
+          "partId": 3,
+          "partType": "Shift",
+          "partModel": "Shift",
+          "nameOfEmplоyeeProducedThePart": " ",
+          "isProduced": false,
+          "startedTime": "",
+          "finishedTime": ""
+        }
+      ]
     },
     {
-      "unitType": "frame",
-      "model": "BGKL5657",
-      "brand": "BMC",
-      "jobType": "painting",
-      "startedTime": "",
-      "finishedTime": "",
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis molestias recusandae ipsa.",
-      "id": "234345646589"
+      "id": 1,
+      "serialNumber": "BID28YUOCH0",
+      "dateCreated": "15/11/2023",
+      "orderStates": [
+        {
+          "partId": 1,
+          "partType": "Frame",
+          "partModel": "Frame OG",
+          "nameOfEmplоyeeProducedThePart": " ",
+          "isProduced": true,
+          "startedTime": "1701586889506",
+          "finishedTime": "1701586910698"
+        },
+        {
+          "partId": 2,
+          "partType": "Wheel",
+          "partModel": "Wheel of the Year",
+          "nameOfEmplоyeeProducedThePart": " ",
+          "isProduced": true,
+          "startedTime": "1701586928700",
+          "finishedTime": "1701586948610"
+        },
+        {
+          "partId": 3,
+          "partType": "Shift",
+          "partModel": "Shift",
+          "nameOfEmplоyeeProducedThePart": " ",
+          "isProduced": false,
+          "startedTime": "",
+          "finishedTime": ""
+        }
+      ]
     },
     {
-      "unitType": "frame",
-      "model": "S-WORKS",
-      "brand": "Specialized",
-      "jobType": "painting",
-      "startedTime": "",
-      "finishedTime": "",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-      "id": "097877656757"
+      "id": 2,
+      "serialNumber": "BID28YUOCH0",
+      "dateCreated": "15/11/2023",
+      "orderStates": [
+        {
+          "partId": 1,
+          "partType": "Frame",
+          "partModel": "Frame OG",
+          "nameOfEmplоyeeProducedThePart": " ",
+          "isProduced": true,
+          "startedTime": "1701586889506",
+          "finishedTime": "1701586910698"
+        },
+        {
+          "partId": 2,
+          "partType": "Wheel",
+          "partModel": "Wheel of the Year",
+          "nameOfEmplоyeeProducedThePart": " ",
+          "isProduced": false,
+          "startedTime": "",
+          "finishedTime": ""
+        },
+        {
+          "partId": 3,
+          "partType": "Shift",
+          "partModel": "Shift",
+          "nameOfEmplоyeeProducedThePart": " ",
+          "isProduced": false,
+          "startedTime": "",
+          "finishedTime": ""
+        }
+      ]
     }
   ],
   "selected_part": [],
@@ -538,7 +610,7 @@
     },
     {
       "imageUrl": "",
-      "password": "$2a$10$oL3ed2ohaRttqUIQQTYRguf9PtNhPlgFgbsVMYM3.tbnyjjYfb9na",
+      "password": "$2a$10$Z4GxMk11HyO1JGIiC0l9xOYaUfTqvHoyxSUSFWzsA/FBCP2ijqS9S",
       "repass": "Lea-12",
       "role": "worker",
       "email": "leaorgana@b-free.com",
