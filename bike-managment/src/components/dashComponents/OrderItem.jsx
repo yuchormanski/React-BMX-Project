@@ -116,7 +116,7 @@ function OrderItem({ product, onBtnHandler, orderId }) {
               item.finishedTime.toLocaleString().split(", ")[0]}
           </p>
           {/* <p className={styles.partId}>ID# {item.partId}</p> */}
-          <p className={styles.partId}>ID# {orderId}</p>
+          <p className={styles.partId}>ID# {orderId + "-" + item.partId}</p>
         </div>
 
         <div className={styles.timer}>
