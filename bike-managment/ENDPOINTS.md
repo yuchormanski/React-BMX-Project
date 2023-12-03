@@ -68,7 +68,7 @@ BASE_URL: "http://localhost:9000",
 
 `GET/ in-progress`: MISSING
 
-|----------|-----------|
+## MODELS
 
 #### Index Page Model
 
