@@ -129,7 +129,6 @@ function Cart() {
             <div className={styles.userInfoWrapper}>
               <figure className={styles.mainInfo}>
                 <div className={styles.img}>
-                  {/* <img src={frame.imageUrls} alt="" /> */}
                   <img src={headImg.frame} alt="" />
                 </div>
                 <div className={styles.header}>
