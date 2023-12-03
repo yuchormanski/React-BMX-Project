@@ -7,7 +7,7 @@ import { put } from "../../util/api.js";
 import { environment } from "../../environments/environment_dev.js";
 import LoaderWheel from "../LoaderWheel.jsx";
 
-function OrderItem({ product, onBtnHandler }) {
+function OrderItem({ product, onBtnHandler, orderId }) {
   const { user } = useContext(UserContext);
   const [index, setIndex] = useState(null);
   const [item, setItem] = useState("");
@@ -105,14 +105,18 @@ function OrderItem({ product, onBtnHandler }) {
           <p className={styles.model}>
             <span>Started on: </span>
             {item.startedTime &&
-              item.startedTime.toLocaleString().split(", ")[0]}
+              item.startedTime
+                .toLocaleString()
+                .split(", ")[0]
+                .replaceAll("/", ".")}
           </p>
           <p className={styles.model}>
             <span>Finished on: </span>
             {item.finishedTime &&
               item.finishedTime.toLocaleString().split(", ")[0]}
           </p>
-          <p className={styles.partId}>ID# {item.partId}</p>
+          {/* <p className={styles.partId}>ID# {item.partId}</p> */}
+          <p className={styles.partId}>ID# {orderId}</p>
         </div>
 
         <div className={styles.timer}>

@@ -60,6 +60,7 @@ function WorkerOrders() {
                 product={order}
                 key={order.id}
                 onBtnHandler={onBtnHandler}
+                orderId={order.id}
               />
             ))}
           {workerList.length === 0 && (
