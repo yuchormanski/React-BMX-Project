@@ -2,96 +2,138 @@ import { useContext, useEffect, useState } from "react";
 import styles from "./OrderItem.module.css";
 import { secondsToTime } from "../../util/util.js";
 import { UserContext } from "../../context/GlobalUserProvider.jsx";
+import { useNavigate } from "react-router-dom";
+import { put } from "../../util/api.js";
+import { environment } from "../../environments/environment_dev.js";
+import LoaderWheel from "../LoaderWheel.jsx";
 
-function OrderItem({ ...product }) {
+function OrderItem({ product, onBtnHandler }) {
   const { user } = useContext(UserContext);
-
+  const [index, setIndex] = useState(null);
   const [item, setItem] = useState("");
-  let started = new Date().toLocaleDateString();
+  const [id, setId] = useState("");
+  const [isDone, setIsDone] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  let newProduct = {};
 
   useEffect(function () {
     const abortController = new AbortController();
 
     if (user.department === "Frames") {
       setItem(product.orderStates[0]);
+      setIndex(0);
+      setId(product.id);
     }
     if (user.department === "Wheels") {
       setItem(product.orderStates[1]);
+      setIndex(1);
     }
     if (user.department === "Accessory") {
       setItem(product.orderStates[2]);
+      setIndex(2);
     }
 
     return () => abortController.abort();
   }, []);
 
+  useEffect(
+    function () {
+      if (item.isProduced) {
+        // make copy on original object
+        newProduct = { ...product };
+
+        // replace array data with modified in state
+        newProduct.orderStates[index] = item;
+        // console.log(newProduct);
+
+        // write data to database
+        finishedJob(id);
+        // rerender parent component
+        onBtnHandler();
+      }
+    },
+    [isDone]
+  );
+
   function onButtonClick() {
-    let currentTime = new Date();
+    let currentDate = new Date();
+    // console.log("in btn");
+    let isFinished = false;
 
     if (item.startedTime === "" && item.finishedTime === "") {
-      setItem({ ...item, startedTime: currentTime });
-    } else {
-      const endTime =
-        (currentTime.getTime() - item.startedTime.getTime()) / 1000;
-
-      setItem({ ...item, finishedTime: endTime });
+      setItem({
+        ...item,
+        startedTime: currentDate,
+        nameOfEmplоyeeProducedThePart: `${user.firstName} ${user.lastName}`,
+      });
     }
-    console.log(item.id);
-    let id = item.id;
-    // updateOrder();
-    // async function updateOrder() {
-    //   const res = await put("/data/workerSequence/" + id, item);
-    //   const data = await res.json();
-    //   console.log(data);
-    // }
+    if (item.startedTime !== "" && item.finishedTime === "") {
+      setItem({ ...item, finishedTime: currentDate, isProduced: true });
+      setIsDone(true);
+      // newProduct = { ...JSON.parse(JSON.stringify(product)) };
+    }
   }
 
-  let time = secondsToTime(item.finishedTime);
-  console.log(item);
+  async function finishedJob(id) {
+    setLoading(true);
+    // console.log("request");
+
+    try {
+      const result = await put(environment.in_progress + id, newProduct);
+      // console.log(result);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  }
 
   return (
-    <figure className={styles.order}>
-      <div className={styles.info}>
-        <h3 className={styles.brand}>
-          <span>Brand: </span>
-          {item.partType}
-        </h3>
-        <p className={styles.model}>
-          <span>Model: </span>
-          {item.partModel}
-        </p>
-        <p className={styles.model}>
-          <span>Started on: </span>
-          {new Date().toLocaleDateString(item.startedTime)}
-        </p>
-        <p className={styles.model}>
-          <span>Finished on: </span>
-          {new Date().toLocaleDateString(item.finishedTime)}
-        </p>
+    <>
+      {loading && <LoaderWheel />}
+      <figure className={styles.order}>
+        <div className={styles.info}>
+          <h3 className={styles.brand}>
+            <span>Brand: </span>
+            {item.partType}
+          </h3>
+          <p className={styles.model}>
+            <span>Model: </span>
+            {item.partModel}
+          </p>
+          <p className={styles.model}>
+            <span>Started on: </span>
+            {item.startedTime &&
+              item.startedTime.toLocaleString().split(", ")[0]}
+          </p>
+          <p className={styles.model}>
+            <span>Finished on: </span>
+            {item.finishedTime &&
+              item.finishedTime.toLocaleString().split(", ")[0]}
+          </p>
+        </div>
 
-        <p className={styles.job}>
-          <span>Finished in: </span>
-          {time}
-        </p>
-      </div>
+        <div className={styles.description}>
+          <span>Description:</span>
+          {product.description}
+        </div>
 
-      <div className={styles.description}>
-        <span>Description:</span>
-        {product.description}
-      </div>
-
-      <div className={styles.timer}>
-        <button
-          className={styles.startBtn}
-          onClick={onButtonClick}
-          disabled={!!item.finishedTime}
-        >
-          {item.startedTime === "" && item.finishedTime === "" && "Start"}
-          {item.startedTime !== "" && item.finishedTime === "" && "In Progress"}
-          {item.startedTime !== "" && item.finishedTime !== "" && "Finished"}
-        </button>
-      </div>
-    </figure>
+        <div className={styles.timer}>
+          <button
+            className={styles.startBtn}
+            onClick={onButtonClick}
+            disabled={item.isProduced}
+          >
+            {item.startedTime === "" && item.finishedTime === "" && "Start"}
+            {item.startedTime !== "" &&
+              item.finishedTime === "" &&
+              "In Progress"}
+            {item.startedTime !== "" && item.finishedTime !== "" && "Finished"}
+          </button>
+        </div>
+      </figure>
+    </>
   );
 }
 
