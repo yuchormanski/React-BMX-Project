@@ -21,6 +21,7 @@ import AddMember from "./components/dashComponents/managerComponents/AddMember.j
 import InProgress from "./components/dashComponents/managerComponents/InProgress.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
 import ProtectedRoute from "./pages/ProtectedRoute.jsx";
+import LimitedRoute from "./pages/LimitedRoute.jsx";
 
 function App() {
   return (
@@ -59,7 +60,14 @@ function App() {
 
               <Route path="app" element={<AppLayout />}>
                 <Route index element={<Navigate replace to="create" />} />
-                <Route path={"create"} element={<CreateBike />} />
+                <Route
+                  path={"create"}
+                  element={
+                    <LimitedRoute>
+                      <CreateBike />
+                    </LimitedRoute>
+                  }
+                />
               </Route>
 
               <Route path="auth" element={<Auth />}>

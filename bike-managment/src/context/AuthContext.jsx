@@ -1,4 +1,5 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
+import { getUserData } from "../util/util.js";
 
 const AuthContext = createContext();
 
@@ -9,6 +10,8 @@ const initialState = {
 
 function reducer(state, action) {
   switch (action.type) {
+    case "hasUser":
+      return { ...state, userAuth: action.payload, isAuthenticated: true };
     case "login":
       return { ...state, userAuth: action.payload, isAuthenticated: true };
     case "logout":
@@ -23,6 +26,13 @@ function AuthProvider({ children }) {
     reducer,
     initialState
   );
+
+  useEffect(function () {
+    const user = getUserData();
+    if (user) {
+      dispatch({ type: "hasUser", payload: user });
+    }
+  }, []);
 
   function loginUser(user) {
     // ще го запиша след респонса от сървъра
