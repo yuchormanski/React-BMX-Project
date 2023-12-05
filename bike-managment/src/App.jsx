@@ -20,6 +20,7 @@ import EmployersList from "./components/dashComponents/managerComponents/Employe
 import AddMember from "./components/dashComponents/managerComponents/AddMember.jsx";
 import InProgress from "./components/dashComponents/managerComponents/InProgress.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
+import ProtectedRoute from "./pages/ProtectedRoute.jsx";
 
 function App() {
   return (
@@ -31,7 +32,14 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="about" element={<About />} />
 
-              <Route path="profile" element={<UserProfile />}>
+              <Route
+                path="profile"
+                element={
+                  <ProtectedRoute>
+                    <UserProfile />
+                  </ProtectedRoute>
+                }
+              >
                 <Route index element={<Navigate replace to="info" />} />
                 <Route path="info" element={<UserInfo />} />
                 <Route path={"cart"} element={<Cart />} />
