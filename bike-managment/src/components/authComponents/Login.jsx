@@ -33,7 +33,7 @@ function Login() {
   useEffect(
     function () {
       if (isAuthenticated) {
-        console.log("login");
+        // console.log("login");
         navigate("/", { replace: true });
         setIsLoading(false);
       }
