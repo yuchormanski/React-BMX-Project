@@ -1,12 +1,14 @@
 import styles from "./ForgottenPassword.module.css";
-import InputComponent from "./InputComponent.jsx";
 
 function ForgottenPassword() {
   return (
-    <div>
-      Please, fill your email address
-      <InputComponent />
-      <button>Reset</button>
+    <div className={styles.wrapper}>
+      <form className={styles.form}>
+        <h2 className={styles.heading}>Password reset</h2>
+        Please, fill your email address
+        {/* <InputComponent /> */}
+        <button>Reset</button>
+      </form>
     </div>
   );
 }
