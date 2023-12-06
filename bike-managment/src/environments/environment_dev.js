@@ -29,4 +29,7 @@ export const environment = {
   orders: "/order_to_be_approved/",
   del_order: "/order_to_be_approved/",
   // del_order: "/orders/",
+
+  // TODO: Uncomment in orderActions approved
+  approve_order: `/api/manager/approve_order?orderId=`, // + id
 };

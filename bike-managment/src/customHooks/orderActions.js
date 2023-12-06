@@ -1,14 +1,15 @@
 import { useContext } from "react";
 import { getElement, getOrder } from "../bikeServices/service.js";
 import { environment } from "../environments/environment_dev.js";
-import { del } from "../util/api.js";
+import { del, post } from "../util/api.js";
 import { OrdersContext } from "../context/GlobalUserProvider.jsx";
 
 async function approveHandlerAction(id) {
-  const approve = await del(`${environment.del_order}${id}`);
-  // console.log(approve);
-  // onApprove((o) => Object.values((orders) => console.log(x)));
-  return approve;
+  // TODO: uncomment approved
+  const approved = post(`${environment.approve_order}` + id);
+  // TODO: remove! only for json server
+  await del(`${environment.del_order}${id}`);
+  return approved;
 }
 
 function onRejectHandler(id) {

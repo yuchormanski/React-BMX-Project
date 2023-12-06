@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import BoardHeader from "../BoardHeader.jsx";
 import styles from "./ManagerOrders.module.css";
-import { getOrdersList } from "../../../bikeServices/service.js";
 import Order from "./Order.jsx";
 import Paginator from "../../Paginator.jsx";
 import { usePagination } from "../../../customHooks/usePaginationArray.js";
