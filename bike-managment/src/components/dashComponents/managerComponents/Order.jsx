@@ -5,37 +5,18 @@ import Button from "../../Button.jsx";
 import {
   onDeleteHandler,
   onRejectHandler,
-  useApproveHandler,
+  approveHandlerAction,
 } from "../../../customHooks/orderActions.js";
-import { OrdersContext } from "../../../context/GlobalUserProvider.jsx";
 
-function Order({ order }) {
-  // const { frame, wheel, accessory, ownerId, id } = order;
-  // const { orders, onOrdersChange } = useContext(OrdersContext);
-  const { orderId, serialNumber, orderParts } = order;
+function Order({ order, onStatusChange }) {
+  const { id, serialNumber, orderParts } = order;
   const frame = orderParts[0];
   const wheel = orderParts[1];
   const accessory = orderParts[2];
 
   async function approveHandler(id) {
-    // const approvedOrder = {
-    //   frame,
-    //   wheel,
-    //   accessory,
-    //   frameStartedTime: "",
-    //   frameFinishedTime: "",
-    //   wheelStartedTime: "",
-    //   wheelFinishedTime: "",
-    //   accessoryStartedTime: "",
-    //   accessoryFinishedTime: "",
-    //   count,
-    //   createdAt,
-    //   id: id,
-    //   customerId: ownerId,
-    // };
-
-    // console.log(approvedOrder);
-    console.log(id);
+    approveHandlerAction(id);
+    onStatusChange();
 
     // const approve = await del(environment.del_order + id);
     // console.log(approve);
@@ -48,10 +29,10 @@ function Order({ order }) {
         <div className={styles.additional}>
           <p>
             <span>Order ID: </span>
-            {orderId}
+            {id}
           </p>
           <p>
-            <span>SN: </span>
+            <span>SN# </span>
             {serialNumber}
           </p>
         </div>
@@ -167,8 +148,8 @@ function Order({ order }) {
           <div className={styles.actions}>
             <Button
               type={"approve"}
-              onClick={() => approveHandler(order)}
-              id={orderId}
+              onClick={() => approveHandler(id)}
+              id={id}
               disabled={
                 frame.partQuantity > frame.partQunatityInStock ||
                 wheel.partQuantity > wheel.partQunatityInStock ||
@@ -177,10 +158,10 @@ function Order({ order }) {
             >
               Approve
             </Button>
-            <Button type={"reject"} onClick={onRejectHandler} id={orderId}>
+            <Button type={"reject"} onClick={onRejectHandler} id={id}>
               Reject
             </Button>
-            <Button type={"delete"} onClick={onDeleteHandler} id={orderId}>
+            <Button type={"delete"} onClick={onDeleteHandler} id={id}>
               Delete
             </Button>
           </div>

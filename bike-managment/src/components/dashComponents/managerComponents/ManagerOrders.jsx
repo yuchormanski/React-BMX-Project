@@ -64,7 +64,7 @@ function ManagerOrders() {
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [dataReceived, page]
+    [dataReceived, page, rerender]
   );
 
   function handlePage(page) {
@@ -72,8 +72,8 @@ function ManagerOrders() {
     setPage(page);
   }
 
-  function onOrdersChange(newData) {
-    setOrders(newData);
+  function onStatusChange() {
+    setRerender(!rerender);
   }
 
   if (orders.length === 0) return <h2>There is no orders in this category</h2>;
@@ -85,7 +85,11 @@ function ManagerOrders() {
           <BoardHeader />
           <div className={styles.orders}>
             {orders.map((order) => (
-              <Order key={order.orderId} order={order} />
+              <Order
+                key={order.id}
+                order={order}
+                onStatusChange={onStatusChange}
+              />
             ))}
           </div>
           <Paginator

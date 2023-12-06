@@ -27,5 +27,6 @@ export const environment = {
   selected_part: "/selected_part/",
   // orders: "/orders/",
   orders: "/order_to_be_approved/",
-  del_order: "/orders/",
+  del_order: "/order_to_be_approved/",
+  // del_order: "/orders/",
 };
