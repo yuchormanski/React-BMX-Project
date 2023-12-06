@@ -12,6 +12,7 @@ function ManagerOrders() {
   const [dataReceived, setDataReceived] = useState([]);
   const [length, setLength] = useState(0);
   const [page, setPage] = useState(1);
+  const [rerender, setRerender] = useState(false);
 
   // useEffect(function () {
   //   const abortController = new AbortController();
@@ -37,17 +38,20 @@ function ManagerOrders() {
   const data = usePagination(path);
   const dataArray = [];
 
-  useEffect(function () {
-    const abortController = new AbortController();
-    async function getOrdersPagination() {
-      const list = await data;
-      setLength(list.length);
-      setDataReceived(list);
-    }
-    getOrdersPagination();
+  useEffect(
+    function () {
+      const abortController = new AbortController();
+      async function getOrdersPagination() {
+        const list = await data;
+        setLength(list.length);
+        setDataReceived(list);
+      }
+      getOrdersPagination();
 
-    return () => abortController.abort();
-  }, []);
+      return () => abortController.abort();
+    },
+    [rerender]
+  );
 
   useEffect(
     function () {
@@ -59,16 +63,17 @@ function ManagerOrders() {
         setOrders(dataArray[page - 1]);
       }
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [dataReceived, page]
   );
-
-  function onOrdersChange(newData) {
-    setOrders(newData);
-  }
 
   function handlePage(page) {
     // console.log(page);
     setPage(page);
+  }
+
+  function onOrdersChange(newData) {
+    setOrders(newData);
   }
 
   if (orders.length === 0) return <h2>There is no orders in this category</h2>;

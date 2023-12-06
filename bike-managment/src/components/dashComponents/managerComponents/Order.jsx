@@ -68,8 +68,22 @@ function Order({ order }) {
                 {frame.descrioption}
               </p>
               <div className={styles.qtyBlock}>
-                <p className={styles.qty}>
-                  <span>Available:</span>
+                <p
+                  className={`${styles.qty} ${
+                    frame.partQuantity > frame.partQunatityInStock
+                      ? styles.notEnough
+                      : null
+                  }`}
+                >
+                  <span
+                    className={`${
+                      frame.partQuantity > frame.partQunatityInStock
+                        ? styles.notEnough
+                        : null
+                    }`}
+                  >
+                    Available:
+                  </span>
                   {frame.partQunatityInStock}
                 </p>
                 <p className={styles.qty}>
@@ -89,8 +103,22 @@ function Order({ order }) {
                 {wheel.descrioption}
               </p>
               <div className={styles.qtyBlock}>
-                <p className={styles.qty}>
-                  <span>Available:</span>
+                <p
+                  className={`${styles.qty} ${
+                    wheel.partQuantity > wheel.partQunatityInStock
+                      ? styles.notEnough
+                      : null
+                  }`}
+                >
+                  <span
+                    className={`${
+                      wheel.partQuantity > wheel.partQunatityInStock
+                        ? styles.notEnough
+                        : null
+                    }`}
+                  >
+                    Available:
+                  </span>
                   {wheel.partQunatityInStock}
                 </p>
                 <p className={styles.qty}>
@@ -110,8 +138,22 @@ function Order({ order }) {
                 {accessory.descrioption}
               </p>
               <div className={styles.qtyBlock}>
-                <p className={styles.qty}>
-                  <span>Available:</span>
+                <p
+                  className={`${styles.qty} ${
+                    accessory.partQuantity > accessory.partQunatityInStock
+                      ? styles.notEnough
+                      : null
+                  }`}
+                >
+                  <span
+                    className={`${
+                      accessory.partQuantity > accessory.partQunatityInStock
+                        ? styles.notEnough
+                        : null
+                    }`}
+                  >
+                    Available:
+                  </span>
                   {accessory.partQunatityInStock}
                 </p>
                 <p className={styles.qty}>
