@@ -5,6 +5,7 @@ import Order from "./Order.jsx";
 import Paginator from "../../Paginator.jsx";
 import { usePagination } from "../../../customHooks/usePaginationArray.js";
 import { environment } from "../../../environments/environment_dev.js";
+import LoaderWheel from "../../LoaderWheel.jsx";
 
 function ManagerOrders() {
   const [orders, setOrders] = useState({});
@@ -12,6 +13,7 @@ function ManagerOrders() {
   const [length, setLength] = useState(0);
   const [page, setPage] = useState(1);
   const [rerender, setRerender] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   // useEffect(function () {
   //   const abortController = new AbortController();
@@ -39,11 +41,13 @@ function ManagerOrders() {
 
   useEffect(
     function () {
+      setLoading(true);
       const abortController = new AbortController();
       async function getOrdersPagination() {
         const list = await data;
         setLength(list.length);
         setDataReceived(list);
+        setLoading(false);
       }
       getOrdersPagination();
 
@@ -55,11 +59,13 @@ function ManagerOrders() {
   useEffect(
     function () {
       if (dataReceived.length > 0) {
+        setLoading(true);
         for (let i = 0; i < dataReceived.length; i += itemPerPage) {
           const chunk = dataReceived.slice(i, i + itemPerPage);
           dataArray.push(chunk);
         }
         setOrders(dataArray[page - 1]);
+        setLoading(false);
       }
     },
     [dataReceived, page, rerender]
@@ -71,7 +77,9 @@ function ManagerOrders() {
   }
 
   function onStatusChange() {
+    setLoading(true);
     setRerender(!rerender);
+    setLoading(false);
   }
 
   if (orders.length === 0) return <h2>There is no orders in this category</h2>;
@@ -81,6 +89,7 @@ function ManagerOrders() {
         <h2 className={styles.dashHeading}>Orders in sequence</h2>
         <section className={styles.board}>
           <BoardHeader />
+          {loading && <LoaderWheel />}
           <div className={styles.orders}>
             {orders.map((order) => (
               <Order

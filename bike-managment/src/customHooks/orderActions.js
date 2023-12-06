@@ -12,8 +12,10 @@ async function approveHandlerAction(id) {
   return;
 }
 
-function onRejectHandler(id) {
+async function onRejectHandler(id) {
   console.log("In process" + id);
+  // const rejected = await post(`${environment.reject_order}`, { orderId: id });
+  // return rejected;
 }
 async function onDeleteHandler(id) {
   // TODO: remove! only for json server
