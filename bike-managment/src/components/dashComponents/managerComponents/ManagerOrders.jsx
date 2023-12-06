@@ -59,7 +59,7 @@ function ManagerOrders() {
         setOrders(dataArray[page - 1]);
       }
     },
-    [page]
+    [dataReceived, page]
   );
 
   function onOrdersChange(newData) {
@@ -71,9 +71,8 @@ function ManagerOrders() {
     setPage(page);
   }
 
-  if (orders && orders.length === 0)
-    return <h2>There is no orders in this category</h2>;
-  if (orders && orders.length > 0)
+  if (orders.length === 0) return <h2>There is no orders in this category</h2>;
+  if (orders.length > 0)
     return (
       <>
         <h2 className={styles.dashHeading}>Orders in sequence</h2>
@@ -85,6 +84,7 @@ function ManagerOrders() {
             ))}
           </div>
           <Paginator
+            // pages={orders.length}
             page={page}
             pages={length}
             countOnPage={itemPerPage}
