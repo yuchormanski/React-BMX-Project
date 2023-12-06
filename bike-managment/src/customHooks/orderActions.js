@@ -7,6 +7,7 @@ import { OrdersContext } from "../context/GlobalUserProvider.jsx";
 async function approveHandlerAction(id) {
   // TODO: uncomment approved when in production
   // const approved = await post(`${environment.approve_order}`, { orderId: id });
+  console.log("approving order " + id);
   onDeleteHandler(id);
   // return approved;
   return;
@@ -19,6 +20,7 @@ async function onRejectHandler(id) {
 }
 async function onDeleteHandler(id) {
   // TODO: remove! only for json server
+  console.log("deleing order " + id);
   const res = await del(`${environment.del_order}${id}`);
 
   // TODO: uncomment when in production
