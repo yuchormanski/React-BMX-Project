@@ -46,6 +46,8 @@
 
 ### `HOST/profile/cart/`
 
+![Clipboard01](https://github.com/yuchormanski/React-BMX-Project/assets/693307/89998311-9bd1-4781-b88e-e2c738f33a28)
+
 И в двата случая направената селекция се запазва в `Local Storage`
 
 Страницата се презарежда автоматично и извежда подробна информация за всяка една от избраните части.
