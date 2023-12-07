@@ -20,7 +20,7 @@
 
 ## След успешно влизане в системата се генерира меню , съобразено с ролята на потребителя
 
-1. [Authorization]
+1. [Authorization](/FrontEndReadMeFiles/Auth/Register.md)
    - [Registration](/FrontEndReadMeFiles/Auth/Register.md)
    - [Login](/FrontEndReadMeFiles/Auth/Login.md)
 2. [Client](/FrontEndReadMeFiles/ClientFiles/Profile.md) - Клиент - възможности
