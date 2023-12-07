@@ -34,10 +34,10 @@ function Cart() {
   useEffect(function () {
     const abortController = new AbortController();
     setLoading(true);
-    const { frame, wheel, parts } = order;
     if (!order) {
       return setLoading(false);
     }
+    const { frame, wheel, parts } = order;
 
     setHeadImg({
       ...headImg,

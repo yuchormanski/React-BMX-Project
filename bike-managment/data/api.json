@@ -479,7 +479,6 @@
       "id": 2,
       "serialNumber": "BID12345640",
       "dateCreated": "2023-12-05 18:49:21.4383743",
-
       "orderParts": [
         {
           "partId": 1,
@@ -601,8 +600,9 @@
           "partModel": "First Frame OG 4",
           "nameOfEmplоyeeProducedThePart": "Stamat Spiridonov",
           "isProduced": true,
-          "startedTime": 1701634619998,
-          "finishedTime": 1701710074114
+          "startedTime": 1701974864834,
+          "finishedTime": 1701974877891,
+          "description": ""
         },
         {
           "partId": 2,
@@ -611,7 +611,8 @@
           "nameOfEmplоyeeProducedThePart": "",
           "isProduced": false,
           "startedTime": "",
-          "finishedTime": ""
+          "finishedTime": "",
+          "description": ""
         },
         {
           "partId": 3,
@@ -620,7 +621,8 @@
           "nameOfEmplоyeeProducedThePart": "",
           "isProduced": false,
           "startedTime": "",
-          "finishedTime": ""
+          "finishedTime": "",
+          "description": ""
         }
       ]
     },
@@ -636,7 +638,8 @@
           "nameOfEmplоyeeProducedThePart": "Stamat Spiridonov",
           "isProduced": true,
           "startedTime": 1701634811501,
-          "finishedTime": 1701635050418
+          "finishedTime": 1701635050418,
+          "description": ""
         },
         {
           "partId": 2,
@@ -645,7 +648,8 @@
           "nameOfEmplоyeeProducedThePart": "John Smith",
           "isProduced": true,
           "startedTime": 1701635767403,
-          "finishedTime": 1701635806376
+          "finishedTime": 1701635806376,
+          "description": ""
         },
         {
           "partId": 3,
@@ -654,7 +658,8 @@
           "nameOfEmplоyeeProducedThePart": "Lea Organa",
           "isProduced": false,
           "startedTime": 1701635970424,
-          "finishedTime": ""
+          "finishedTime": "",
+          "description": ""
         }
       ]
     },
@@ -667,10 +672,11 @@
           "partId": 1,
           "partType": "Some Frame 2",
           "partModel": "Frame OG 2",
-          "nameOfEmplоyeeProducedThePart": "Stamat Spiridonov",
-          "isProduced": true,
-          "startedTime": 1701635897633,
-          "finishedTime": 1701642057452
+          "nameOfEmplоyeeProducedThePart": "",
+          "isProduced": false,
+          "startedTime": "",
+          "finishedTime": "",
+          "description": ""
         },
         {
           "partId": 2,
@@ -678,8 +684,9 @@
           "partModel": "Wheel of the Year 2",
           "nameOfEmplоyeeProducedThePart": "John Smith",
           "isProduced": false,
-          "startedTime": 1701642100907,
-          "finishedTime": ""
+          "startedTime": "",
+          "finishedTime": "",
+          "description": ""
         },
         {
           "partId": 3,
@@ -688,7 +695,45 @@
           "nameOfEmplоyeeProducedThePart": " ",
           "isProduced": false,
           "startedTime": "",
-          "finishedTime": ""
+          "finishedTime": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "serialNumber": "BID28YUOCH0",
+      "dateCreated": "06/01/2023",
+      "orderStates": [
+        {
+          "partId": 1,
+          "partType": "Some Frame 2",
+          "partModel": "Frame OG 2",
+          "nameOfEmplоyeeProducedThePart": "Stamat Spiridonov",
+          "isProduced": true,
+          "startedTime": 1701635897633,
+          "finishedTime": 1701642057452,
+          "description": ""
+        },
+        {
+          "partId": 2,
+          "partType": "Wheel 2",
+          "partModel": "Wheel of the Year 2",
+          "nameOfEmplоyeeProducedThePart": "John Smith",
+          "isProduced": true,
+          "startedTime": 1701642100907,
+          "finishedTime": 1701642100917,
+          "description": ""
+        },
+        {
+          "partId": 3,
+          "partType": "Shift 2",
+          "partModel": "Shift 2",
+          "nameOfEmplоyeeProducedThePart": "Lea Organa",
+          "isProduced": true,
+          "startedTime": 1901635899633,
+          "finishedTime": 1901635899633,
+          "description": ""
         }
       ]
     }
@@ -1001,6 +1046,119 @@
           "partModel": "Shift",
           "nameOfEmplоyeeProducedThePart": " ",
           "isProduced": false
+        }
+      ]
+    }
+  ],
+  "quality_assurance": [
+    {
+      "orderId": 1,
+      "serialNumber": null,
+      "dateCreated": "06/12/2023 18:21",
+      "orderStates": [
+        {
+          "partId": 1,
+          "partType": "Frame",
+          "partModel": "Frame OG",
+          "nameOfEmplоyeeProducedThePart": "Marin Marinov",
+          "isProduced": true,
+          "serialNumber": "BID12345678",
+          "employeeId": "21003785-a275-4139-ae20-af6a6cf8fea8",
+          "elementProduceTimeInMinutes": 70
+        },
+        {
+          "partId": 2,
+          "partType": "Frame",
+          "partModel": "Wheel of the YearG",
+          "nameOfEmplоyeeProducedThePart": "Todor Todorov",
+          "isProduced": true,
+          "serialNumber": "BID12345678",
+          "employeeId": "17063948-8fdc-417e-8fb7-2ae6bf572f94",
+          "elementProduceTimeInMinutes": 28
+        },
+        {
+          "partId": 3,
+          "partType": "Frame",
+          "partModel": "Shift",
+          "nameOfEmplоyeeProducedThePart": "Ivan Ivanov",
+          "isProduced": true,
+          "serialNumber": "BID12345678",
+          "employeeId": "6af8468c-63f1-4bf2-8f88-e24b3f7a8f91",
+          "elementProduceTimeInMinutes": 14
+        }
+      ]
+    },
+    {
+      "orderId": 2,
+      "serialNumber": null,
+      "dateCreated": "06/12/2023 18:21",
+      "orderStates": [
+        {
+          "partId": 1,
+          "partType": "Frame",
+          "partModel": "Frame OG",
+          "nameOfEmplоyeeProducedThePart": "Marin Marinov",
+          "isProduced": true,
+          "serialNumber": "BID12345678",
+          "employeeId": "21003785-a275-4139-ae20-af6a6cf8fea8",
+          "elementProduceTimeInMinutes": 70
+        },
+        {
+          "partId": 2,
+          "partType": "Frame",
+          "partModel": "Wheel of the YearG",
+          "nameOfEmplоyeeProducedThePart": "Todor Todorov",
+          "isProduced": true,
+          "serialNumber": "BID12345678",
+          "employeeId": "17063948-8fdc-417e-8fb7-2ae6bf572f94",
+          "elementProduceTimeInMinutes": 28
+        },
+        {
+          "partId": 3,
+          "partType": "Frame",
+          "partModel": "Shift",
+          "nameOfEmplоyeeProducedThePart": "Ivan Ivanov",
+          "isProduced": true,
+          "serialNumber": "BID12345678",
+          "employeeId": "6af8468c-63f1-4bf2-8f88-e24b3f7a8f91",
+          "elementProduceTimeInMinutes": 14
+        }
+      ]
+    },
+    {
+      "orderId": 3,
+      "serialNumber": null,
+      "dateCreated": "06/12/2023 18:21",
+      "orderStates": [
+        {
+          "partId": 1,
+          "partType": "Frame",
+          "partModel": "Frame OG",
+          "nameOfEmplоyeeProducedThePart": "Marin Marinov",
+          "isProduced": true,
+          "serialNumber": "BID12345678",
+          "employeeId": "21003785-a275-4139-ae20-af6a6cf8fea8",
+          "elementProduceTimeInMinutes": 70
+        },
+        {
+          "partId": 2,
+          "partType": "Frame",
+          "partModel": "Wheel of the YearG",
+          "nameOfEmplоyeeProducedThePart": "Todor Todorov",
+          "isProduced": true,
+          "serialNumber": "BID12345678",
+          "employeeId": "17063948-8fdc-417e-8fb7-2ae6bf572f94",
+          "elementProduceTimeInMinutes": 28
+        },
+        {
+          "partId": 3,
+          "partType": "Frame",
+          "partModel": "Shift",
+          "nameOfEmplоyeeProducedThePart": "Ivan Ivanov",
+          "isProduced": true,
+          "serialNumber": "BID12345678",
+          "employeeId": "6af8468c-63f1-4bf2-8f88-e24b3f7a8f91",
+          "elementProduceTimeInMinutes": 14
         }
       ]
     }

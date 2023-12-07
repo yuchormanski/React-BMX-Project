@@ -1,0 +1,111 @@
+.order {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--color-main-dark);
+  padding: 1.5rem;
+  position: relative;
+  border: 1px solid var(--color-border);
+  border-radius: 0.3rem;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-weight: 500;
+}
+
+.catHeader {
+  width: fit-content;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.brand {
+  text-transform: uppercase;
+  margin-top: 1rem;
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--color-main-dark);
+  /* border-bottom: 1px solid var(--color-border); */
+}
+
+.model,
+.unitType,
+.job,
+.prod,
+.info {
+  font-size: 1.8rem;
+  color: var(--color-main-dark);
+  /* width: 100%; */
+  border-bottom: 1px solid var(--color-border);
+}
+
+.prod,
+.shortLine {
+  width: 62%;
+}
+
+.brand span,
+.model span,
+.unitType span,
+.job span,
+.prod span,
+.info span {
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--color-hd);
+  margin-right: 2rem;
+}
+
+.header .headerSpan {
+  margin-right: 0;
+}
+
+/* img.background {
+  position: absolute;
+  top: 5rem;
+  z-index: 0;
+  opacity: 0.05;
+  left: -5rem;
+} */
+
+.btn {
+  padding: 0.3rem 1rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--color-link-light);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.final {
+  margin-top: 1rem;
+  text-align: right;
+  background-color: var(--color-main-dark);
+}
+
+.checkbox {
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
+}
+
+.textarea {
+  width: 100%;
+  border: 1px solid var(--color-border);
+}

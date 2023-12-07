@@ -39,4 +39,7 @@ export const environment = {
   reject_order: `/rejected_orders/`, // + id
   // TODO: Uncomment approved in orderActions
   //reject_order: `/api/manager/reject_order?orderId=`, // + id
+
+  quality_assurance: "/quality_assurance/",
+  post_qControl: `/api/employee_оrder/quality_assurance?orderId=`,
 };
