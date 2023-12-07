@@ -48,7 +48,13 @@ function ForgottenPassword() {
     e.preventDefault();
     setIsLoading(true);
 
-    // const reset = await post("/api/client/reset", email);
+    if (email.split("@")[1] === "b-free.com") {
+      // const reset = await post("/api/client/reset", email); провери!!!!
+      console.log("worker");
+    } else {
+      console.log("user");
+      // const reset = await post("/api/client/reset", email);
+    }
 
     setTimeout(function info() {
       navigate("/auth/login");
