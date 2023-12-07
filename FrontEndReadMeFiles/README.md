@@ -10,16 +10,16 @@
 
 Базовия URL е общ за всички API заявки и е:
 
-#### `https://localhost:7047`
+#### `https://localhost:9000`
 
 При стартиране се извежда базова информация за приложението, възможност за избор на някое от предварително създадени модели велосипеди, както и два произволни коментара от потребители, като се прави заявка към сървър.
 
-#### `GET /api/indexPage`,
+#### `GET /indexPage`,
 
 ## След успешно влизане в системата се генерира меню , съобразено с ролята на потребителя
 
 1. [Client](/FrontEndReadMeFiles/ClientFiles/Profile.md) - Клиент - възможности
-   - [Profile page](/FrontEndReadMeFiles/Profile.md)
+   - [Profile page](/FrontEndReadMeFiles/ClientFiles/Profile.md)
    - [Edit profile](/FrontEndReadMeFiles/ClientFiles/EditProfile.md)
    - [Create Order](/FrontEndReadMeFiles/ClientFiles/Order.md)
    - [Track order]()
