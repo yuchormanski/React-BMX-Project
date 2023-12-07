@@ -1,7 +1,8 @@
 ###### [Back to Content](/FrontEndReadMeFiles/README.md)
 
-### При поръчка, от страна на клиента се прави заявка на адрес:
+![Clipboard01](https://github.com/yuchormanski/React-BMX-Project/assets/693307/17ff52dd-cc7c-4b19-ab17-51b42371c3b0)
 
+### При поръчка, от страна на клиента се прави заявка на адрес:
 #### `GET /frames`
 
 <!-- #### `GET /api/accountpage/frames` -->
