@@ -20,18 +20,21 @@
 
 ## След успешно влизане в системата се генерира меню , съобразено с ролята на потребителя
 
-1. [Client](/FrontEndReadMeFiles/ClientFiles/Profile.md) - Клиент - възможности
+1. [Authorization]
+   - [Registration](/FrontEndReadMeFiles/Auth/Register.md)
+   - [Login](/FrontEndReadMeFiles/Auth/Login.md)
+2. [Client](/FrontEndReadMeFiles/ClientFiles/Profile.md) - Клиент - възможности
    - [Profile page](/FrontEndReadMeFiles/ClientFiles/Profile.md)
    - [Edit profile](/FrontEndReadMeFiles/ClientFiles/EditProfile.md)
    - [Create Order](/FrontEndReadMeFiles/ClientFiles/Order.md)
    - [Track order]()
    - [Received orders]()
-2. [Employee](/FrontEndReadMeFiles/Employee/Profile.md)
+3. [Employee](/FrontEndReadMeFiles/Employee/Profile.md)
 
    - [Edit profile](/FrontEndReadMeFiles/Employee/EditProfile.md)
    - [Orders](/FrontEndReadMeFiles/Employee/EditProfile.md)
 
-3. [Manager](/FrontEndReadMeFiles/Employee/Profile.md)
+4. [Manager](/FrontEndReadMeFiles/Employee/Profile.md)
 
    - [New Orders](/FrontEndReadMeFiles/Manager/NewOrders.md)
    - [Production](/FrontEndReadMeFiles/Manager/Production.md)
