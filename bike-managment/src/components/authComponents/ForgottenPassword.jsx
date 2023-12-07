@@ -48,7 +48,7 @@ function ForgottenPassword() {
     e.preventDefault();
     setIsLoading(true);
 
-    // const reset = await post("/reset/", email);
+    // const reset = await post("/api/client/reset", email);
 
     setTimeout(function info() {
       navigate("/auth/login");
