@@ -25,12 +25,12 @@
    - [Create Order](/FrontEndReadMeFiles/ClientFiles/Order.md)
    - [Track order]()
    - [Received orders]()
-2. [Employee](/FrontEndReadMeFiles/Profile.md)
+2. [Employee](/FrontEndReadMeFiles/Employee/Profile.md)
 
    - [Edit profile](/FrontEndReadMeFiles/Employee/EditProfile.md)
    - [Orders](/FrontEndReadMeFiles/Employee/EditProfile.md)
 
-3. [Manager](/FrontEndReadMeFiles/Profile.md)
+3. [Manager](/FrontEndReadMeFiles/Employee/Profile.md)
 
    - [New Orders]()
    - [Production]()
