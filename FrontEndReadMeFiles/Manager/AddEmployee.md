@@ -19,3 +19,4 @@
       "department":"",
       "position":""
 ```
+![Clipboard01](https://github.com/yuchormanski/React-BMX-Project/assets/693307/4f6ba3ce-ba83-407a-8587-427879e6810f)
