@@ -9,7 +9,7 @@
 
 ## Интерфейс и функционалност - описание по категории
 
-### [Font-End](/FrontEndReadMeFiles/README.md)
+### [Font-End](/FrontEndReadMeFiles/README.md) - навигиране в приложението
 
 #### Стартиране на приложението
 
