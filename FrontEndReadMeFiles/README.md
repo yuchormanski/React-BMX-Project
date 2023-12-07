@@ -1,6 +1,7 @@
 <h1>Bicycle Management eXtreme- BMX</h1>
 
 ## Front End
+
 ![Clipboard01](https://github.com/yuchormanski/React-BMX-Project/assets/693307/67a508cb-1338-4043-a19f-8937ec22ca67)
 
 ### Резюме
@@ -32,8 +33,8 @@
 
 3. [Manager](/FrontEndReadMeFiles/Employee/Profile.md)
 
-   - [New Orders]()
-   - [Production]()
+   - [New Orders](/FrontEndReadMeFiles/Manager/NewOrders.md)
+   - [Production](/FrontEndReadMeFiles/Manager/Production.md)
    - [Finished]()
    - [Dispatched]()
    - [Employers](/FrontEndReadMeFiles/Manager/Employers.md)
