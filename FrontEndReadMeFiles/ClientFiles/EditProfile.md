@@ -2,6 +2,8 @@
 
 ### Client - Edit customer information
 
+![Clipboard01](https://github.com/yuchormanski/React-BMX-Project/assets/693307/c5dee1f4-a0fc-4115-9d03-8c3dc9737120)
+
 #### Content
 
 - [Front-end](/FrontEndReadMeFiles/README.md)
