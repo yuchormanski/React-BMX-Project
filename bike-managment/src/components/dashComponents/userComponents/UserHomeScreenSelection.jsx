@@ -29,7 +29,8 @@ function UserHomeScreenSelection() {
     [bikeId]
   );
 
-  console.log(bike);
+  function onBtnClick() {}
+
   return (
     <>
       <h2 className={styles.dashHeading}>Selected items</h2>
@@ -46,7 +47,9 @@ function UserHomeScreenSelection() {
               <h2 className={styles.heading}>{bike.modelName}</h2>
               <p className={styles.description}>{bike.description}</p>
               <p className={styles.price}>{price}</p>
-              <button className={styles.btn}>Buy</button>
+              <button className={styles.btn} onClick={onBtnClick}>
+                Buy
+              </button>
             </div>
             <img
               className={styles.imgBG}
