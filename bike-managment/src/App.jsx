@@ -24,6 +24,7 @@ import ProtectedRoute from "./pages/ProtectedRoute.jsx";
 import LimitedRoute from "./pages/LimitedRoute.jsx";
 import QControlOrders from "./components/dashComponents/qControlComponents/QControlOrders.jsx";
 import UserTrackOrder from "./components/dashComponents/userComponents/UserTrackOrder.jsx";
+import UserHomeScreenSelection from "./components/dashComponents/userComponents/UserHomeScreenSelection.jsx";
 
 function App() {
   return (
@@ -49,6 +50,10 @@ function App() {
                 <Route path={"user-ready"} element={<Cart />} />
                 <Route path={"user-in-progress"} element={<UserTrackOrder />} />
                 <Route path={"user-archive"} element={<Cart />} />
+                <Route
+                  path={"get-stock"}
+                  element={<UserHomeScreenSelection />}
+                />
                 <Route path="worker-orders" element={<WorkerOrders />} />
                 <Route path={"finished"} element={<WorkerFinished />} />
                 <Route path={"managerOrders"} element={<ManagerOrders />} />

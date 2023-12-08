@@ -23,6 +23,10 @@ export function getOrderData() {
   return JSON.parse(localStorage.getItem("order"));
 }
 
+export function getStockData() {
+  return JSON.parse(localStorage.getItem("stockBikeSelection"));
+}
+
 export function setUserData(data) {
   return localStorage.setItem(itemName, JSON.stringify(data));
 }

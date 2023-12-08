@@ -35,7 +35,7 @@ function BikeModel({ imageUrl, model, price, top, description, id }) {
           <p>
             {/* <p className={styles["card-pf"]}> */}
             <Link
-              to={user ? "/get-stock" : "/auth/login"}
+              to={user ? "/profile/get-stock" : "/auth/login"}
               className={styles["card-link"]}
               onClick={onClickSelection}
             >
