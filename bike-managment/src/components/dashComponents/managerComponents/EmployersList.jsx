@@ -81,7 +81,7 @@ function Employers() {
                   />
                 ))}
             </div>
-            <h2 className={styles.dashHeading}>QC list</h2>
+            <h2 className={styles.dashHeading}>Quality Control list</h2>
             <div className={styles.cardHolder}>
               {con &&
                 con.map((qControl) => (

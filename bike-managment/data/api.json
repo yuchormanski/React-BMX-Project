@@ -3,7 +3,9 @@
     {
       "name": "KINK ASTRO SPROCKET",
       "oemNumber": "873jahsk894",
-      "imageUrls": ["https://yuchormanski.free.bg/bikes/sprocket1.webp"],
+      "imageUrls": [
+        "https://yuchormanski.free.bg/bikes/sprocket1.webp"
+      ],
       "description": "The Astro sprocket is a true mix of form and function. Using heat-treated 4130 chromoly steel enables this sprocket to use thin spoke like patterns which create the unique look. ",
       "rating": 5,
       "salesPrice": 126.99,
@@ -14,7 +16,9 @@
     {
       "name": "ENDEAVOUR SPROCKET",
       "oemNumber": "873948asda94",
-      "imageUrls": ["https://yuchormanski.free.bg/bikes/sprocket2.webp"],
+      "imageUrls": [
+        "https://yuchormanski.free.bg/bikes/sprocket2.webp"
+      ],
       "description": "The Colony Endeavour BMX Sprocket that comes on most of Colony’s complete bikes is now available separately! Good quality sprocket at a great price.",
       "rating": 1,
       "salesPrice": 13.45,
@@ -25,7 +29,9 @@
     {
       "name": "BLASTER SPROCKET",
       "oemNumber": "8739482as3",
-      "imageUrls": ["https://yuchormanski.free.bg/bikes/sprocket3.webp"],
+      "imageUrls": [
+        "https://yuchormanski.free.bg/bikes/sprocket3.webp"
+      ],
       "description": "Salt has combined a killer set of parts to bring you their Everest 20 wheel. Available in a fresh range of colours and comes complete with hub, rim, rim tape, and 36 spokes.",
       "id": "parts-87c7-45fa-acf9-f04aa472987228",
       "rating": 3,
@@ -36,7 +42,9 @@
     {
       "name": "CD SPROCKET",
       "oemNumber": "8739423494",
-      "imageUrls": ["https://yuchormanski.free.bg/bikes/sprocket4.webp"],
+      "imageUrls": [
+        "https://yuchormanski.free.bg/bikes/sprocket4.webp"
+      ],
       "description": "Retro inspired Colony CD style BMX sprocket, keeping the design clean with a single locator bolt.",
       "rating": 2,
       "salesPrice": 33.45,
@@ -47,7 +55,9 @@
     {
       "name": "GUARD SPROCKET",
       "oemNumber": "8739423494",
-      "imageUrls": ["https://yuchormanski.free.bg/bikes/sprocket5.webp"],
+      "imageUrls": [
+        "https://yuchormanski.free.bg/bikes/sprocket5.webp"
+      ],
       "description": "Guard sprocket from Sunday. The Knox sprocket is made from 7075 aluminum and has been designed to fit larger chains like halflink chains.",
       "rating": 4,
       "salesPrice": 33.45,
@@ -58,7 +68,9 @@
     {
       "name": "SUNDAY SPROCKET",
       "oemNumber": "8739423494",
-      "imageUrls": ["https://yuchormanski.free.bg/bikes/sprocket6.webp"],
+      "imageUrls": [
+        "https://yuchormanski.free.bg/bikes/sprocket6.webp"
+      ],
       "description": "Guard sprocket from Sunday. The Knox sprocket is made from 7075 aluminum and has been designed to fit larger chains like halflink chains.",
       "rating": 1,
       "salesPrice": 33.45,
@@ -69,7 +81,9 @@
     {
       "name": "KNOX SPROCKET",
       "oemNumber": "8739423494",
-      "imageUrls": ["https://yuchormanski.free.bg/bikes/sprocket7.webp"],
+      "imageUrls": [
+        "https://yuchormanski.free.bg/bikes/sprocket7.webp"
+      ],
       "description": "Guard sprocket from Sunday. The Knox sprocket is made from 7075 aluminum and has been designed to fit larger chains like halflink chains.",
       "rating": 2,
       "salesPrice": 33.45,
@@ -80,7 +94,9 @@
     {
       "name": "SUNDAY KNOX SPROCKET",
       "oemNumber": "8739423494",
-      "imageUrls": ["https://yuchormanski.free.bg/bikes/sprocket8.webp"],
+      "imageUrls": [
+        "https://yuchormanski.free.bg/bikes/sprocket8.webp"
+      ],
       "description": "Guard sprocket from Sunday. The Knox sprocket is made from 7075 aluminum and has been designed to fit larger chains like halflink chains.",
       "rating": 2,
       "salesPrice": 33.45,
@@ -129,7 +145,9 @@
     {
       "name": "Blaster",
       "oemNumber": "Colony",
-      "imageUrls": ["https://yuchormanski.free.bg/bikes/frame2.webp"],
+      "imageUrls": [
+        "https://yuchormanski.free.bg/bikes/frame2.webp"
+      ],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis itaque architecto, deleniti quo omnis odio quam voluptatibus ea! Explicabo, quam.",
       "rating": 1,
       "salesPrice": 98.99,
@@ -140,7 +158,9 @@
     {
       "name": "Zeal",
       "oemNumber": "96789",
-      "imageUrls": ["https://yuchormanski.free.bg/bikes/frame3.webp"],
+      "imageUrls": [
+        "https://yuchormanski.free.bg/bikes/frame3.webp"
+      ],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis suscipit eaque id exercitationem cum! Facere doloremque dignissimos cupiditate fugit, culpa animi eveniet est blanditiis!",
       "rating": 5,
       "salesPrice": 1000.01,
@@ -151,7 +171,9 @@
     {
       "name": "Prisma",
       "oemNumber": "678967",
-      "imageUrls": ["https://yuchormanski.free.bg/bikes/frame4.webp"],
+      "imageUrls": [
+        "https://yuchormanski.free.bg/bikes/frame4.webp"
+      ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, nulla!",
       "rating": 3,
       "salesPrice": 561.92,
@@ -196,7 +218,7 @@
         "dateCreated": "10/12/2018"
       },
       {
-        "id": 8.27328483748938e24,
+        "id": 8.27328483748938e+24,
         "partId": 984098348804580400,
         "partName": "Part Name 2",
         "clientId": "jkhsfdksdflssljdfhg",
@@ -286,7 +308,9 @@
       "frame": {
         "name": "Blaster",
         "oemNumber": "Colony",
-        "imageUrls": ["https://yuchormanski.free.bg/bikes/frame2.webp"],
+        "imageUrls": [
+          "https://yuchormanski.free.bg/bikes/frame2.webp"
+        ],
         "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis itaque architecto, deleniti quo omnis odio quam voluptatibus ea! Explicabo, quam.",
         "rating": 1,
         "salesPrice": 98.99,
@@ -323,7 +347,9 @@
       "frame": {
         "name": "Blaster",
         "oemNumber": "Colony",
-        "imageUrls": ["https://yuchormanski.free.bg/bikes/frame2.webp"],
+        "imageUrls": [
+          "https://yuchormanski.free.bg/bikes/frame2.webp"
+        ],
         "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis itaque architecto, deleniti quo omnis odio quam voluptatibus ea! Explicabo, quam.",
         "rating": 1,
         "salesPrice": 98.99,
@@ -334,7 +360,9 @@
       "wheel": {
         "name": "BMX Black Wheel",
         "oemNumber": "87394894",
-        "imageUrls": ["https://yuchormanski.free.bg/bikes/wheel1.webp"],
+        "imageUrls": [
+          "https://yuchormanski.free.bg/bikes/wheel1.webp"
+        ],
         "description": "This complete front wheel allows you to change all your old parts between your fork with a single fix, as this complete wheel comes with a rim, tyre, and inner tube.",
         "rating": 2,
         "salesPrice": 23.45,
@@ -345,7 +373,9 @@
       "accessory": {
         "name": "SUNDAY KNOX SPROCKET",
         "oemNumber": "8739423494",
-        "imageUrls": ["https://yuchormanski.free.bg/bikes/sprocket8.webp"],
+        "imageUrls": [
+          "https://yuchormanski.free.bg/bikes/sprocket8.webp"
+        ],
         "description": "Guard sprocket from Sunday. The Knox sprocket is made from 7075 aluminum and has been designed to fit larger chains like halflink chains.",
         "rating": 2,
         "salesPrice": 33.45,
@@ -363,7 +393,9 @@
       "frame": {
         "name": "Blaster",
         "oemNumber": "Colony",
-        "imageUrls": ["https://yuchormanski.free.bg/bikes/frame2.webp"],
+        "imageUrls": [
+          "https://yuchormanski.free.bg/bikes/frame2.webp"
+        ],
         "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis itaque architecto, deleniti quo omnis odio quam voluptatibus ea! Explicabo, quam.",
         "rating": 1,
         "salesPrice": 98.99,
@@ -374,7 +406,9 @@
       "wheel": {
         "name": "SUNDAY KNOX V2",
         "oemNumber": "87394894",
-        "imageUrls": ["https://yuchormanski.free.bg/bikes/wheel2.webp"],
+        "imageUrls": [
+          "https://yuchormanski.free.bg/bikes/wheel2.webp"
+        ],
         "description": "This complete front wheel allows you to change all your old parts between your fork with a single fix, as this complete wheel comes with a rim, tyre, and inner tube.",
         "rating": 5,
         "salesPrice": 89.45,
@@ -385,7 +419,9 @@
       "accessory": {
         "name": "SUNDAY KNOX SPROCKET",
         "oemNumber": "8739423494",
-        "imageUrls": ["https://yuchormanski.free.bg/bikes/sprocket8.webp"],
+        "imageUrls": [
+          "https://yuchormanski.free.bg/bikes/sprocket8.webp"
+        ],
         "description": "Guard sprocket from Sunday. The Knox sprocket is made from 7075 aluminum and has been designed to fit larger chains like halflink chains.",
         "rating": 2,
         "salesPrice": 33.45,
@@ -418,7 +454,9 @@
       "wheel": {
         "name": "HARO TEAM DISC",
         "oemNumber": "87394894",
-        "imageUrls": ["https://yuchormanski.free.bg/bikes/wheel4.webp"],
+        "imageUrls": [
+          "https://yuchormanski.free.bg/bikes/wheel4.webp"
+        ],
         "description": "Salt has combined a killer set Available in a fresh range of colours and  36 spokes.",
         "rating": 1,
         "salesPrice": 43.45,
@@ -430,7 +468,9 @@
       "accessory": {
         "name": "CD SPROCKET",
         "oemNumber": "8739423494",
-        "imageUrls": ["https://yuchormanski.free.bg/bikes/sprocket4.webp"],
+        "imageUrls": [
+          "https://yuchormanski.free.bg/bikes/sprocket4.webp"
+        ],
         "description": "Retro inspired Colony CD style BMX sprocket, keeping the design clean with a single locator bolt.",
         "rating": 2,
         "salesPrice": 33.45,
@@ -444,6 +484,104 @@
       "createdAt": 1701599534944,
       "ownerId": 1,
       "id": 6
+    },
+    {
+      "frame": {
+        "name": "Zeal",
+        "oemNumber": "96789",
+        "imageUrls": [
+          "https://yuchormanski.free.bg/bikes/frame3.webp"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis suscipit eaque id exercitationem cum! Facere doloremque dignissimos cupiditate fugit, culpa animi eveniet est blanditiis!",
+        "rating": 5,
+        "salesPrice": 1000.01,
+        "type": 3,
+        "id": 3,
+        "intend": "Completing jumps",
+        "headImg": "https://yuchormanski.free.bg/bikes/frame3.webp"
+      },
+      "wheel": {
+        "name": "Everest 20 Wheels",
+        "oemNumber": "87394823",
+        "imageUrls": [
+          "https://yuchormanski.free.bg/bikes/wheel5.webp"
+        ],
+        "description": "Salt has combined a killer set of parts to bring you their Everest 20 wheel. Available in a fresh range of colours and comes complete with hub, rim, rim tape, and 36 spokes.",
+        "rating": 0,
+        "salesPrice": 93.45,
+        "type": 3,
+        "id": 5,
+        "intend": "Regular usage",
+        "headImg": "https://yuchormanski.free.bg/bikes/wheel5.webp"
+      },
+      "accessory": {
+        "name": "GUARD SPROCKET",
+        "oemNumber": "8739423494",
+        "imageUrls": [
+          "https://yuchormanski.free.bg/bikes/sprocket5.webp"
+        ],
+        "description": "Guard sprocket from Sunday. The Knox sprocket is made from 7075 aluminum and has been designed to fit larger chains like halflink chains.",
+        "rating": 4,
+        "salesPrice": 33.45,
+        "type": 3,
+        "id": 4,
+        "intend": "Competition",
+        "headImg": "https://yuchormanski.free.bg/bikes/sprocket5.webp"
+      },
+      "userText": "Some test Information",
+      "count": 1,
+      "createdAt": 1702039695515,
+      "ownerId": 5,
+      "id": 7
+    },
+    {
+      "frame": {
+        "name": "Blaster",
+        "oemNumber": "Colony",
+        "imageUrls": [
+          "https://yuchormanski.free.bg/bikes/frame2.webp"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis itaque architecto, deleniti quo omnis odio quam voluptatibus ea! Explicabo, quam.",
+        "rating": 1,
+        "salesPrice": 98.99,
+        "type": 2,
+        "id": 2,
+        "intend": "Freestyle",
+        "headImg": "https://yuchormanski.free.bg/bikes/frame2.webp"
+      },
+      "wheel": {
+        "name": "BMX Black Wheel",
+        "oemNumber": "87394894",
+        "imageUrls": [
+          "https://yuchormanski.free.bg/bikes/wheel1.webp"
+        ],
+        "description": "This complete front wheel allows you to change all your old parts between your fork with a single fix, as this complete wheel comes with a rim, tyre, and inner tube.",
+        "rating": 2,
+        "salesPrice": 23.45,
+        "type": 2,
+        "id": 1,
+        "intend": "Regular usage",
+        "headImg": "https://yuchormanski.free.bg/bikes/wheel1.webp"
+      },
+      "accessory": {
+        "name": "SUNDAY KNOX SPROCKET",
+        "oemNumber": "8739423494",
+        "imageUrls": [
+          "https://yuchormanski.free.bg/bikes/sprocket8.webp"
+        ],
+        "description": "Guard sprocket from Sunday. The Knox sprocket is made from 7075 aluminum and has been designed to fit larger chains like halflink chains.",
+        "rating": 2,
+        "salesPrice": 33.45,
+        "type": 2,
+        "id": 7,
+        "intend": "Competition",
+        "headImg": "https://yuchormanski.free.bg/bikes/sprocket8.webp"
+      },
+      "userText": "",
+      "count": 2,
+      "createdAt": 1702041934680,
+      "ownerId": 5,
+      "id": 8
     }
   ],
   "order_to_be_approved": [
@@ -599,7 +737,7 @@
           "partId": 1,
           "partType": "Frame 4",
           "partModel": "First Frame OG 4",
-          "nameOfEmplоyeeProducedThePart": "Stamat Spiridonov",
+          "nameOfEmplоyeeProducedThePart": "Jaba The Hut",
           "isProduced": true,
           "startedTime": 1701974864834,
           "finishedTime": 1701974877891,
@@ -637,7 +775,7 @@
           "partId": 1,
           "partType": " Second Frame 1",
           "partModel": "Frame OG 1",
-          "nameOfEmplоyeeProducedThePart": "Stamat Spiridonov",
+          "nameOfEmplоyeeProducedThePart": "Jaba The Hut",
           "isProduced": true,
           "startedTime": 1701634811501,
           "finishedTime": 1701635050418,
@@ -647,7 +785,7 @@
           "partId": 2,
           "partType": "Wheel from ID 1",
           "partModel": "Wheel of the Year",
-          "nameOfEmplоyeeProducedThePart": "John Smith",
+          "nameOfEmplоyeeProducedThePart": "Luke Skywalker",
           "isProduced": true,
           "startedTime": 1701635767403,
           "finishedTime": 1701635806376,
@@ -685,7 +823,7 @@
           "partId": 2,
           "partType": "Wheel 2",
           "partModel": "Wheel of the Year 2",
-          "nameOfEmplоyeeProducedThePart": "John Smith",
+          "nameOfEmplоyeeProducedThePart": "",
           "isProduced": false,
           "startedTime": "",
           "finishedTime": "",
@@ -713,7 +851,7 @@
           "partId": 1,
           "partType": "Some Frame 2",
           "partModel": "Frame OG 2",
-          "nameOfEmplоyeeProducedThePart": "Stamat Spiridonov",
+          "nameOfEmplоyeeProducedThePart": "Jaba The Hut",
           "isProduced": true,
           "startedTime": 1701635897633,
           "finishedTime": 1701642057452,
@@ -723,7 +861,7 @@
           "partId": 2,
           "partType": "Wheel 2",
           "partModel": "Wheel of the Year",
-          "nameOfEmplоyeeProducedThePart": "John Smith",
+          "nameOfEmplоyeeProducedThePart": "Luke Skywalker",
           "isProduced": true,
           "startedTime": 1701642100907,
           "finishedTime": 1701642100917,
@@ -754,7 +892,7 @@
       "lastName": "Petrov",
       "iban": "QWESADAXC456FDGH",
       "balance": 10000,
-      "phone": "+3591234567890",
+      "phoneNumber": "+3591234567890",
       "city": "Veliko Tarnovo",
       "imageUrl": "",
       "address": {
@@ -770,37 +908,6 @@
       "id": 1
     },
     {
-      "department": "Wheels",
-      "phoneNumber": "+359567474237",
-      "position": "Junior mechanic",
-      "dateOfHire": "24/05/1987",
-      "isManager": false,
-      "password": "$2a$10$fbE1mEpjtiS11c2hth/fL./tqLLx9AppbhaeZYdNSPtMBWTGIg4ra",
-      "repass": "John-1",
-      "role": "worker",
-      "email": "john@abv.bg",
-      "firstName": "John",
-      "lastName": "Smith",
-      "imageUrl": "",
-      "id": 2
-    },
-    {
-      "email": "stamat@b-free.com",
-      "password": "$2a$10$uOpMPHni6eF.gaFQAKXfve4SSO.xgebUFA7vvOaCPcIMSm7urfCMK",
-      "firstName": "Stamat",
-      "lastName": "Spiridonov",
-      "repass": "Stamat-1",
-      "role": "worker",
-      "department": "Frames",
-      "id": 3,
-      "phoneNumber": "+359567474237",
-      "phone": "+359567474237",
-      "position": "Senior mechanic",
-      "dateOfHire": "02/10/1987",
-      "isManager": false,
-      "imageUrl": ""
-    },
-    {
       "imageUrl": "",
       "password": "$2a$10$0ukyVgaoPQxJdANgXMmj.eXeKgoEx8qzGB0TnkwIP1Pf558J4KVEi",
       "repass": "User123",
@@ -808,22 +915,20 @@
       "email": "manager@b-free.com",
       "firstName": "Master",
       "lastName": "Yoda",
-      "department": "Wheels",
       "phoneNumber": "+359567474237",
-      "position": "Manager",
       "dateOfHire": "29/02/2012",
       "isManager": true,
       "id": 4
     },
     {
       "email": "van@deribohten.com",
-      "password": "$2a$10$HbFYdBTTqy7wcqx/X38Ea.uF0.qbArepi.0mDFPUr.Cpy9.K18XKO",
+      "password": "$2a$10$Xa8Gqh15AWvX2OtCcJs8j.YGoqbLALl2gfNyX0DVhQ0H.Eh.MRaKy",
       "firstName": "Van",
       "lastName": "Deribohten",
       "repass": "Van-12",
       "iban": "BG80BNBG96611020345678",
-      "balance": 1020,
-      "phone": "+359888777666",
+      "balance": 957.644,
+      "phoneNumber": "+359888777666",
       "city": "Dolno chepruchane",
       "role": "user",
       "address": {
@@ -869,30 +974,6 @@
       "id": 7
     },
     {
-      "email": "test@worker.com",
-      "password": "$2a$10$5p/AR0nQ6jbWCpIz15zE8eaUF1KKeewdpEtWi9n3Ff/LfO8BQzUeu",
-      "firstName": "Test",
-      "lastName": " User",
-      "repass": "IsWorker1",
-      "iban": "FDSVGDSFG",
-      "balance": 234234,
-      "phone": "+359324234",
-      "city": "Solt Lake City",
-      "role": "user",
-      "address": {
-        "country": "USA",
-        "city": "Solt Lake City",
-        "postCode": "",
-        "district": "",
-        "block": "",
-        "floor": 0,
-        "apartment": "",
-        "street": "Match",
-        "strNumber": "2"
-      },
-      "id": 8
-    },
-    {
       "email": "palpatine@b-free.com",
       "password": "$2a$10$tCLqcHEBc5N9fv0.atuWGuzi1fU5T9Gz5BmvG0Lfi6Ck8yvxEQfhm",
       "firstName": "Senator",
@@ -904,13 +985,45 @@
       "dateOfHire": "12/3/2023",
       "imageUrl": "",
       "id": 9
+    },
+    {
+      "email": "luke_skywalker@b-free.com",
+      "password": "$2a$10$EnauOU8gT80TD7gQ.QPq4uOre4AbC4xXoN9Kajy51/D9StmbF/aXe",
+      "firstName": "Luke",
+      "lastName": "Skywalker",
+      "repass": "Luke-1",
+      "role": "worker",
+      "phoneNumber": "+35974289739842",
+      "isManager": false,
+      "dateOfHire": "12/8/2023",
+      "imageUrl": "",
+      "department": "Wheels",
+      "position": "Senior mechanic",
+      "id": 10
+    },
+    {
+      "email": "jaba@b-free.com",
+      "password": "$2a$10$LX1HdNjbtiMEJMpr/IYIB.gHmOXxebvr/z6iI6O7iZ4sJkJXnKztW",
+      "firstName": "Jaba",
+      "lastName": "The Hut",
+      "repass": "Jaba-1",
+      "role": "worker",
+      "phoneNumber": "+35967443563",
+      "isManager": false,
+      "dateOfHire": "12/8/2023",
+      "imageUrl": "",
+      "department": "Frames",
+      "position": "Junior mechanic",
+      "id": 11
     }
   ],
   "wheels": [
     {
       "name": "BMX Black Wheel",
       "oemNumber": "87394894",
-      "imageUrls": ["https://yuchormanski.free.bg/bikes/wheel1.webp"],
+      "imageUrls": [
+        "https://yuchormanski.free.bg/bikes/wheel1.webp"
+      ],
       "description": "This complete front wheel allows you to change all your old parts between your fork with a single fix, as this complete wheel comes with a rim, tyre, and inner tube.",
       "rating": 2,
       "salesPrice": 23.45,
@@ -921,7 +1034,9 @@
     {
       "name": "SUNDAY KNOX V2",
       "oemNumber": "87394894",
-      "imageUrls": ["https://yuchormanski.free.bg/bikes/wheel2.webp"],
+      "imageUrls": [
+        "https://yuchormanski.free.bg/bikes/wheel2.webp"
+      ],
       "description": "This complete front wheel allows you to change all your old parts between your fork with a single fix, as this complete wheel comes with a rim, tyre, and inner tube.",
       "rating": 5,
       "salesPrice": 89.45,
@@ -932,7 +1047,9 @@
     {
       "name": "BMX Purple Wheels",
       "oemNumber": "87394894",
-      "imageUrls": ["https://yuchormanski.free.bg/bikes/wheel3.webp"],
+      "imageUrls": [
+        "https://yuchormanski.free.bg/bikes/wheel3.webp"
+      ],
       "description": "Salt has combined a killer set of parts to bring you their Everest 20 front wheel. Available in a fresh range of colours and  36 spokes.",
       "rating": 5,
       "salesPrice": 43.45,
@@ -943,7 +1060,9 @@
     {
       "name": "HARO TEAM DISC",
       "oemNumber": "87394894",
-      "imageUrls": ["https://yuchormanski.free.bg/bikes/wheel4.webp"],
+      "imageUrls": [
+        "https://yuchormanski.free.bg/bikes/wheel4.webp"
+      ],
       "description": "Salt has combined a killer set Available in a fresh range of colours and  36 spokes.",
       "rating": 1,
       "salesPrice": 43.45,
@@ -954,7 +1073,9 @@
     {
       "name": "Everest 20 Wheels",
       "oemNumber": "87394823",
-      "imageUrls": ["https://yuchormanski.free.bg/bikes/wheel5.webp"],
+      "imageUrls": [
+        "https://yuchormanski.free.bg/bikes/wheel5.webp"
+      ],
       "description": "Salt has combined a killer set of parts to bring you their Everest 20 wheel. Available in a fresh range of colours and comes complete with hub, rim, rim tape, and 36 spokes.",
       "rating": 0,
       "salesPrice": 93.45,
@@ -965,7 +1086,9 @@
     {
       "name": "20 Rampage Wheel",
       "oemNumber": "8739423494",
-      "imageUrls": ["https://yuchormanski.free.bg/bikes/wheel6.webp"],
+      "imageUrls": [
+        "https://yuchormanski.free.bg/bikes/wheel6.webp"
+      ],
       "description": "Whether you're building a custom, replacing on your complete or simply need a new complete front wheel - the Rampage 20 by Stolen is worth looking at. It comes with all the techs you're looking for, and at a very fair price point.",
       "rating": 5,
       "salesPrice": 43.45,
@@ -976,7 +1099,9 @@
     {
       "name": "Rear Wheel",
       "oemNumber": "8739423494",
-      "imageUrls": ["https://yuchormanski.free.bg/bikes/wheel7.webp"],
+      "imageUrls": [
+        "https://yuchormanski.free.bg/bikes/wheel7.webp"
+      ],
       "description": "Whether you're building a custom, replacing on your complete or simply need a new complete front wheel - the Rampage 20 by Stolen is worth looking at. It comes with all the techs you're looking for, and at a very fair price point.",
       "rating": 1,
       "salesPrice": 43.45,
@@ -987,7 +1112,9 @@
     {
       "name": "Black Rear Wheel",
       "oemNumber": "8739423494",
-      "imageUrls": ["https://yuchormanski.free.bg/bikes/wheel8.webp"],
+      "imageUrls": [
+        "https://yuchormanski.free.bg/bikes/wheel8.webp"
+      ],
       "description": "Whether you're building a custom, replacing on your complete or simply need a new complete front wheel - the Rampage 20 by Stolen is worth looking at. It comes with all the techs you're looking for, and at a very fair price point.",
       "rating": 2,
       "salesPrice": 43.45,

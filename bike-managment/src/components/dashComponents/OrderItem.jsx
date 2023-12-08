@@ -22,7 +22,7 @@ function OrderItem({ product, onBtnHandler, orderId }) {
   useEffect(function () {
     const abortController = new AbortController();
     // setId(product.id);
-    console.log(product);
+    // console.log(product);
 
     setMeta({
       id: product.id,
@@ -121,6 +121,10 @@ function OrderItem({ product, onBtnHandler, orderId }) {
           <span>Model: </span>
           {item.partModel}
         </p>
+        <div className={styles.model}>
+          <span>Description:</span>
+          {item.description}
+        </div>
         {/* </div> */}
         {/* <div className={styles.info}> */}
         <p className={styles.model}>

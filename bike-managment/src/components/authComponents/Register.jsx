@@ -182,7 +182,7 @@ function Register() {
       repass: values.repass,
       iban: values.iban,
       balance: Number(values.balance),
-      phone: values.phone,
+      phoneNumber: values.phone,
       city: values.city,
       role: "user",
       address: {
