@@ -29,6 +29,9 @@ export function setUserData(data) {
 export function setOrderData(orderName, data) {
   return localStorage.setItem(orderName, JSON.stringify(data));
 }
+export function setStockBike(data) {
+  return localStorage.setItem("stockBikeSelection", JSON.stringify(data));
+}
 
 export function clearUserData() {
   localStorage.removeItem(itemName);
@@ -36,6 +39,10 @@ export function clearUserData() {
 
 export function clearOrderData() {
   localStorage.removeItem("order");
+}
+
+export function clearStockData() {
+  localStorage.removeItem("stockBikeSelection");
 }
 
 export function secondsToTime(time) {

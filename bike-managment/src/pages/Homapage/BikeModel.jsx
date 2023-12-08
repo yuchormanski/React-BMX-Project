@@ -1,9 +1,15 @@
+import { setStockBike } from "../../util/util.js";
 import styles from "./BikeModel.module.css";
 
 import { Link } from "react-router-dom";
 
-function BikeModel({ imageUrl, model, price, top, description }) {
+function BikeModel({ imageUrl, model, price, top, description, id }) {
   const pSplit = price.toFixed(2).split(".");
+  const bikeId = id;
+
+  function onClickSelection() {
+    setStockBike(id);
+  }
 
   return (
     <figure
@@ -25,7 +31,11 @@ function BikeModel({ imageUrl, model, price, top, description }) {
           </span>
           <p>
             {/* <p className={styles["card-pf"]}> */}
-            <Link to={"#"} className={styles["card-link"]}>
+            <Link
+              to={"/get-stock"}
+              className={styles["card-link"]}
+              onClick={onClickSelection}
+            >
               Get it!
             </Link>
           </p>
