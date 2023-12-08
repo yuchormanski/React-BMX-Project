@@ -1,9 +1,12 @@
+import { useContext } from "react";
 import { setStockBike } from "../../util/util.js";
 import styles from "./BikeModel.module.css";
 
 import { Link } from "react-router-dom";
+import { UserContext } from "../../context/GlobalUserProvider.jsx";
 
 function BikeModel({ imageUrl, model, price, top, description, id }) {
+  const { user } = useContext(UserContext);
   const pSplit = price.toFixed(2).split(".");
   const bikeId = id;
 
@@ -32,7 +35,7 @@ function BikeModel({ imageUrl, model, price, top, description, id }) {
           <p>
             {/* <p className={styles["card-pf"]}> */}
             <Link
-              to={"/get-stock"}
+              to={user ? "/get-stock" : "/auth/login"}
               className={styles["card-link"]}
               onClick={onClickSelection}
             >
