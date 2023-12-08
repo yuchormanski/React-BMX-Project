@@ -1,6 +1,6 @@
 function Paginator({
   // default
-  page,
+  page = 1,
   pages,
   size = 25,
   bgColor = "#ededed",
@@ -17,7 +17,6 @@ function Paginator({
     justifyContent: "center",
     gap: "0.5rem",
   };
-  console.log(Math.ceil(pages / countOnPage));
   return (
     <div style={paginatorLine}>
       {Array.from({ length: Math.ceil(pages / countOnPage) }, (_, i) => (

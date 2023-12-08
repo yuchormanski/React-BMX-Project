@@ -3,8 +3,9 @@ import styles from "./QControlOrderItem.module.css";
 import { useReducer, useState } from "react";
 import LoaderWheel from "../../LoaderWheel.jsx";
 import { timeResolver } from "../../../util/resolvers.js";
-import { post } from "../../../util/api.js";
+import { del, post } from "../../../util/api.js";
 import { environment } from "../../../environments/environment_dev.js";
+import { v4 as uuidv4 } from "uuid"; //unique ID
 
 const initialState = {
   loading: false,
@@ -38,9 +39,21 @@ function reducer(state, action) {
   }
 }
 
-function QControlOrderItem({ product }) {
-  const [{ loading, frameCheck, wheelCheck, accessoryCheck, text }, dispatch] =
-    useReducer(reducer, initialState);
+function QControlOrderItem({ product, onReBuild }) {
+  const [
+    {
+      loading,
+      frameCheck,
+      wheelCheck,
+      accessoryCheck,
+      textFrame,
+      textWheel,
+      textAccessory,
+    },
+    dispatch,
+  ] = useReducer(reducer, initialState);
+  const snNumber = uuidv4();
+  const finalResult = { ...product };
 
   function checkboxHandler(e) {
     dispatch({ type: e.target.name, payload: e.target.checked });
@@ -57,38 +70,71 @@ function QControlOrderItem({ product }) {
   }
 
   async function onControl() {
-    if (frameCheck && wheelCheck && accessoryCheck) {
-      // const result = await post(environment.post_qControl + product.orderId);
-      console.log(environment.post_qControl + product.orderId);
-    }
-  }
+    finalResult.orderStates[0].isProduced = frameCheck;
+    finalResult.orderStates[0].description = textFrame;
+    finalResult.orderStates[1].isProduced = wheelCheck;
+    finalResult.orderStates[1].description = textWheel;
+    finalResult.orderStates[2].isProduced = accessoryCheck;
+    finalResult.orderStates[2].description = textAccessory;
 
+    console.log(finalResult);
+
+    // TODO: only for json server
+    await del(environment.quality_assurance + product.orderId);
+    onReBuild();
+    // NEXT is for production
+    // const result = await post(environment.post_qControl + product.orderId);
+  }
   return (
     <>
       {loading && <LoaderWheel />}
       <figure className={styles.order}>
         <header className={styles.header}>
           <p className={styles.model}>
+            <span className={styles.headerSpan}>ID: </span>
+            {product.orderId}
+          </p>
+          <p className={styles.model}>
             <span className={styles.headerSpan}>SN: </span>
-            {product.serialNumber}
+            {product.serialNumber || `BMX-XXX-XXX-XX${product.orderId}`}
           </p>
           <p className={styles.model}>
             <span className={styles.headerSpan}>Date created: </span>
             {product.dateCreated.replaceAll("/", ".")}
           </p>
-          <p className={styles.model}>
-            <span className={styles.headerSpan}>ID: </span>
-            {product.orderId}
-          </p>
         </header>
 
-        <section className={styles.part}>
-          <div className={styles.headerWrapper}>
-            <h3 className={styles.brand}>
-              <p className={styles.catHeader}>Frame</p>
-              <span>Brand: </span>
+        <section className={styles.partInfo}>
+          <h4 className={styles.type}>Frame</h4>
+          <div className={styles.part}>
+            <p>
+              <span className={styles.label}>Brand:</span>
               {product.orderStates[0].partType}
-            </h3>
+            </p>
+            <p>
+              <span className={styles.label}>Model:</span>
+              {product.orderStates[0].partModel}
+            </p>
+            <p>
+              <span className={styles.label}>SN:</span>
+              {product.orderStates[0].serialNumber}
+            </p>
+            <p>
+              <span className={styles.label}>Employee:</span>
+              {product.orderStates[0].nameOfEmplоyeeProducedThePart}
+            </p>
+            <p>
+              <span className={styles.label}>Time elapsed:</span>
+              {product.orderStates[0].elementProduceTimeInMinutes} minutes
+            </p>
+          </div>
+          <div className={styles.textContainer}>
+            <textarea
+              className={styles.textarea}
+              name={"frameText"}
+              onChange={textHandler}
+              rows={2}
+            ></textarea>
             <input
               className={styles.checkbox}
               type="checkbox"
@@ -97,36 +143,39 @@ function QControlOrderItem({ product }) {
               onChange={checkboxHandler}
             />
           </div>
-
-          <div className={styles.content}>
-            <p className={styles.info}>
-              <span>Model:</span>
-              {product.orderStates[0].partModel}
-            </p>
-            <p className={styles.info}>
-              <span>Finished in:</span>
-              {product.orderStates[0].elementProduceTimeInMinutes} minutes
-            </p>
-            <p className={styles.info}>
-              <span>Employee name:</span>
-              {product.orderStates[0].nameOfEmplоyeeProducedThePart}
-            </p>
-            <textarea
-              className={styles.textarea}
-              name={"frameText"}
-              onChange={textHandler}
-              rows={4}
-            ></textarea>
-          </div>
         </section>
 
-        <section className={styles.part}>
-          <div className={styles.headerWrapper}>
-            <h3 className={styles.brand}>
-              <h4 className={styles.catHeader}>Wheels</h4>
-              <span>Brand: </span>
+        <section className={styles.partInfo}>
+          <h4 className={styles.type}>Wheel</h4>
+          <div className={styles.part}>
+            <p>
+              <span className={styles.label}>Brand:</span>
               {product.orderStates[1].partType}
-            </h3>
+            </p>
+            <p>
+              <span className={styles.label}>Model:</span>
+              {product.orderStates[1].partModel}
+            </p>
+            <p>
+              <span className={styles.label}>SN:</span>
+              {product.orderStates[1].serialNumber}
+            </p>
+            <p>
+              <span className={styles.label}>Employee:</span>
+              {product.orderStates[1].nameOfEmplоyeeProducedThePart}
+            </p>
+            <p>
+              <span className={styles.label}>Time elapsed:</span>
+              {product.orderStates[1].elementProduceTimeInMinutes} minutes
+            </p>
+          </div>
+          <div className={styles.textContainer}>
+            <textarea
+              className={styles.textarea}
+              name={"wheelText"}
+              onChange={textHandler}
+              rows={2}
+            ></textarea>
             <input
               className={styles.checkbox}
               type="checkbox"
@@ -135,36 +184,39 @@ function QControlOrderItem({ product }) {
               onChange={checkboxHandler}
             />
           </div>
-
-          <div className={styles.content}>
-            <p className={styles.info}>
-              <span>Model:</span>
-              {product.orderStates[1].partModel}
-            </p>
-            <p className={styles.info}>
-              <span>Finished in:</span>
-              {product.orderStates[1].elementProduceTimeInMinutes} minutes
-            </p>
-            <p className={styles.info}>
-              <span>Employee name:</span>
-              {product.orderStates[1].nameOfEmplоyeeProducedThePart}
-            </p>
-            <textarea
-              className={styles.textarea}
-              name={"wheelText"}
-              onChange={textHandler}
-              rows={4}
-            ></textarea>
-          </div>
         </section>
 
-        <section className={styles.part}>
-          <div className={styles.headerWrapper}>
-            <h3 className={styles.brand}>
-              <h4 className={styles.catHeader}>Accessory</h4>
-              <span>Brand: </span>
+        <section className={styles.partInfo}>
+          <h4 className={styles.type}>Accessory</h4>
+          <div className={styles.part}>
+            <p>
+              <span className={styles.label}>Brand:</span>
               {product.orderStates[2].partType}
-            </h3>
+            </p>
+            <p>
+              <span className={styles.label}>Model:</span>
+              {product.orderStates[2].partModel}
+            </p>
+            <p>
+              <span className={styles.label}>SN:</span>
+              {product.orderStates[2].serialNumber}
+            </p>
+            <p>
+              <span className={styles.label}>Employee:</span>
+              {product.orderStates[2].nameOfEmplоyeeProducedThePart}
+            </p>
+            <p>
+              <span className={styles.label}>Time elapsed:</span>
+              {product.orderStates[2].elementProduceTimeInMinutes} minutes
+            </p>
+          </div>
+          <div className={styles.textContainer}>
+            <textarea
+              className={styles.textarea}
+              name={"accessoryText"}
+              onChange={textHandler}
+              rows={2}
+            ></textarea>
             <input
               className={styles.checkbox}
               type="checkbox"
@@ -173,33 +225,16 @@ function QControlOrderItem({ product }) {
               onChange={checkboxHandler}
             />
           </div>
-          <div className={styles.content}>
-            <p className={styles.info}>
-              <span>Model:</span>
-              {product.orderStates[2].partModel}
-            </p>
-            <p className={styles.info}>
-              <span>Finished in:</span>
-              {product.orderStates[2].elementProduceTimeInMinutes} minutes
-            </p>
-            <p className={styles.info}>
-              <span>Employee name:</span>
-              {product.orderStates[2].nameOfEmplоyeeProducedThePart}
-            </p>
-            <textarea
-              className={styles.textarea}
-              name={"accessoryText"}
-              onChange={textHandler}
-              rows={4}
-            ></textarea>
-          </div>
         </section>
-
-        {/* <img className={styles.background} src="/img/bg-bike.webp" alt="" /> */}
-
-        <button className={`${styles.btn} ${styles.final}`} onClick={onControl}>
-          Quality Control
-        </button>
+        <div className={styles.infoBlock}>
+          <p className={styles.qControlInfo}></p>
+          <button
+            className={`${styles.btn} ${styles.final}`}
+            onClick={onControl}
+          >
+            Quality Control
+          </button>
+        </div>
       </figure>
     </>
   );

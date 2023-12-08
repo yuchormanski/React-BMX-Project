@@ -13,9 +13,10 @@ const initialState = {
   orderList: [],
   error: { message: "" },
   page: 1,
-  itemPerPage: 2,
+  itemPerPage: 1,
   length: "",
   chunkData: [],
+  status: true,
 };
 
 function reducer(state, action) {
@@ -28,10 +29,12 @@ function reducer(state, action) {
       return { ...state, orderList: action.payload };
     case "setLength":
       return { ...state, length: action.payload };
-    case "page/isChanged":
+    case "page/changed":
       return { ...state, page: action.payload };
     case "hasChunk":
       return { ...state, chunkData: action.payload };
+    case "rerender":
+      return { ...state, status: !state.status };
     default:
       throw new Error("Unknown action type");
   }
@@ -39,59 +42,64 @@ function reducer(state, action) {
 
 function QControlOrders() {
   const [
-    { loading, orderList, error, page, itemPerPage, length, chunkData },
+    { loading, orderList, error, page, itemPerPage, length, chunkData, status },
     dispatch,
   ] = useReducer(reducer, initialState);
   const dataArray = [];
 
-  useEffect(function () {
-    dispatch({ type: "isLoading", payload: true });
-    const abortController = new AbortController();
-    async function getOrders() {
-      const result = await get(environment.quality_assurance);
-      if (!result) {
-        dispatch({ type: "isLoading", payload: false });
-        return dispatch({
-          type: "hasError",
-          payload: "Something went wrong. Service can not get data!",
-        });
+  useEffect(
+    function () {
+      dispatch({ type: "isLoading", payload: true });
+      const abortController = new AbortController();
+      async function getOrders() {
+        const result = await get(environment.quality_assurance);
+        if (!result) {
+          dispatch({ type: "isLoading", payload: false });
+          return dispatch({
+            type: "hasError",
+            payload: "Something went wrong. Service can not get data!",
+          });
+        }
+        // const finished = result.filter((x) => {
+        //   if (
+        //     x.orderStates[0].isProduced === true &&
+        //     x.orderStates[1].isProduced === true &&
+        //     x.orderStates[2].isProduced === true
+        //   )
+        //     return x;
+        // });
+        const finished = result.slice();
+        for (let i = 0; i < finished.length; i += itemPerPage) {
+          const chunk = finished.slice(i, i + itemPerPage);
+          dataArray.push(chunk);
+        }
+        dispatch({ type: "hasChunk", payload: dataArray });
+        dispatch({ type: "setLength", payload: finished.length });
       }
-      const finished = result.filter((x) => {
-        if (
-          x.orderStates[0].isProduced === true &&
-          x.orderStates[1].isProduced === true &&
-          x.orderStates[2].isProduced === true
-        )
-          return x;
-      });
-      for (let i = 0; i < finished.length; i += itemPerPage) {
-        const chunk = finished.slice(i, i + itemPerPage);
-        dataArray.push(chunk);
-      }
-      dispatch({ type: "hasChunk", payload: dataArray });
-      dispatch({ type: "setLength", payload: finished.length });
-      // // dispatch({ type: "orders/hasOrders", payload: dataArray[page - 1] });
-      // dispatch({ type: "isLoading", payload: false });
-    }
-    getOrders();
+      getOrders();
 
-    return () => abortController.abort();
-  }, []);
+      return () => abortController.abort();
+    },
+    [status]
+  );
 
-  console.log(chunkData);
   useEffect(
     function () {
       dispatch({ type: "orders/hasOrders", payload: chunkData[page - 1] });
-      // dispatch({ type: "orders/hasOrders", payload: dataArray[page - 1] });
       dispatch({ type: "isLoading", payload: false });
     },
     [chunkData, page]
   );
 
   function handlePage(page) {
-    dispatch({ type: "page/isChanged", payload: page });
+    dispatch({ type: "page/changed", payload: page });
   }
 
+  function reBuild() {
+    dispatch({ type: "isLoading", payload: true });
+    dispatch({ type: "rerender" });
+    dispatch({ type: "isLoading", payload: false });
+  }
   return (
     <>
       <h2 className={styles.dashHeading}>Finished Orders</h2>
@@ -107,6 +115,7 @@ function QControlOrders() {
                 key={order.orderId}
                 // onBtnHandler={onBtnHandler}
                 orderId={order.id}
+                onReBuild={reBuild}
               />
             ))}
         </div>

@@ -1052,6 +1052,7 @@
   ],
   "quality_assurance": [
     {
+      "id": 1,
       "orderId": 1,
       "serialNumber": null,
       "dateCreated": "06/12/2023 18:21",
@@ -1089,9 +1090,10 @@
       ]
     },
     {
+      "id": 2,
       "orderId": 2,
       "serialNumber": null,
-      "dateCreated": "06/12/2023 18:21",
+      "dateCreated": "06/03/2023 18:21",
       "orderStates": [
         {
           "partId": 1,
@@ -1126,9 +1128,10 @@
       ]
     },
     {
+      "id": 3,
       "orderId": 3,
       "serialNumber": null,
-      "dateCreated": "06/12/2023 18:21",
+      "dateCreated": "06/23/2023 18:21",
       "orderStates": [
         {
           "partId": 1,
