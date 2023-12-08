@@ -591,6 +591,7 @@
   "production": [
     {
       "id": 4,
+      "ownerId": 1,
       "serialNumber": "BID28YUOCH0",
       "dateCreated": "15/09/2023",
       "orderStates": [
@@ -607,7 +608,7 @@
         {
           "partId": 2,
           "partType": "Wheel from ID 4",
-          "partModel": "Wheel of the Year from ID 4",
+          "partModel": "Wheel of the Year",
           "nameOfEmplоyeeProducedThePart": "",
           "isProduced": false,
           "startedTime": "",
@@ -628,6 +629,7 @@
     },
     {
       "id": 1,
+      "ownerId": 2,
       "serialNumber": "BID28YUOCH0",
       "dateCreated": "15/11/2023",
       "orderStates": [
@@ -644,7 +646,7 @@
         {
           "partId": 2,
           "partType": "Wheel from ID 1",
-          "partModel": "Wheel of the Year from ID 1",
+          "partModel": "Wheel of the Year",
           "nameOfEmplоyeeProducedThePart": "John Smith",
           "isProduced": true,
           "startedTime": 1701635767403,
@@ -665,6 +667,7 @@
     },
     {
       "id": 2,
+      "ownerId": 3,
       "serialNumber": "BID28YUOCH0",
       "dateCreated": "06/01/2023",
       "orderStates": [
@@ -702,6 +705,7 @@
     },
     {
       "id": 6,
+      "ownerId": 1,
       "serialNumber": "BID28YUOCH0",
       "dateCreated": "06/01/2023",
       "orderStates": [
@@ -718,7 +722,7 @@
         {
           "partId": 2,
           "partType": "Wheel 2",
-          "partModel": "Wheel of the Year 2",
+          "partModel": "Wheel of the Year",
           "nameOfEmplоyeeProducedThePart": "John Smith",
           "isProduced": true,
           "startedTime": 1701642100907,

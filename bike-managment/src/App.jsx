@@ -23,6 +23,7 @@ import { AuthProvider } from "./context/AuthContext.jsx";
 import ProtectedRoute from "./pages/ProtectedRoute.jsx";
 import LimitedRoute from "./pages/LimitedRoute.jsx";
 import QControlOrders from "./components/dashComponents/qControlComponents/QControlOrders.jsx";
+import UserTrackOrder from "./components/dashComponents/userComponents/UserTrackOrder.jsx";
 
 function App() {
   return (
@@ -46,7 +47,7 @@ function App() {
                 <Route path="info" element={<UserInfo />} />
                 <Route path={"cart"} element={<Cart />} />
                 <Route path={"user-ready"} element={<Cart />} />
-                <Route path={"user-in-progress"} element={<Cart />} />
+                <Route path={"user-in-progress"} element={<UserTrackOrder />} />
                 <Route path={"user-archive"} element={<Cart />} />
                 <Route path="worker-orders" element={<WorkerOrders />} />
                 <Route path={"finished"} element={<WorkerFinished />} />
