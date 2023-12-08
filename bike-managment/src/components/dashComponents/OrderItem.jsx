@@ -1,5 +1,6 @@
-import { useContext, useEffect, useState } from "react";
 import styles from "./OrderItem.module.css";
+
+import { useContext, useEffect, useState } from "react";
 import { secondsToTime } from "../../util/util.js";
 import { UserContext } from "../../context/GlobalUserProvider.jsx";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +8,7 @@ import { put } from "../../util/api.js";
 import { environment } from "../../environments/environment_dev.js";
 import LoaderWheel from "../LoaderWheel.jsx";
 
-function OrderItem({ product, onBtnHandler, orderId }) {
+function OrderItem({ product, onBtnHandler, orderId, orderIndex }) {
   const { user } = useContext(UserContext);
   const [index, setIndex] = useState(null);
   const [item, setItem] = useState("");
@@ -147,9 +148,16 @@ function OrderItem({ product, onBtnHandler, orderId }) {
           <button
             className={styles.startBtn}
             onClick={onButtonClick}
-            disabled={item.isProduced}
+            disabled={item.isProduced || orderIndex !== 0}
           >
-            {item.startedTime === "" && item.finishedTime === "" && "Start"}
+            {item.startedTime === "" &&
+              item.finishedTime === "" &&
+              orderIndex !== 0 &&
+              "to Queue"}
+            {item.startedTime === "" &&
+              item.finishedTime === "" &&
+              orderIndex === 0 &&
+              "Start"}
             {item.startedTime !== "" &&
               item.finishedTime === "" &&
               "In Progress"}
