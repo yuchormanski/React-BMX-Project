@@ -42,7 +42,7 @@ function Login() {
   );
 
   function onChangeHandler(e) {
-    setValues({ ...values, [e.target.name]: e.target.value });
+    setValues({ ...values, [e.target.name]: e.target.value.trim() });
   }
 
   function validateInput(e) {

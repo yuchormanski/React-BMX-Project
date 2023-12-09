@@ -54,9 +54,12 @@ function Register() {
         [e.target.name]: Number(e.target.value),
       });
     } else if (e.target.name === "iban") {
-      setValues({ ...values, [e.target.name]: e.target.value.toUpperCase() });
+      setValues({
+        ...values,
+        [e.target.name]: e.target.value.trim().toUpperCase(),
+      });
     } else {
-      setValues({ ...values, [e.target.name]: e.target.value });
+      setValues({ ...values, [e.target.name]: e.target.value.trim() });
     }
   }
 
