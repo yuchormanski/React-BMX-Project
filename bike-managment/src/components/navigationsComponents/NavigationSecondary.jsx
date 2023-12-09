@@ -29,7 +29,7 @@ function NavigationSecondary() {
       { link: "info", textContent: "Profile" },
       { link: "managerOrders", textContent: "Orders" },
       { link: "manager-in-progress", textContent: "In production" },
-      { link: "manager-finished", textContent: "Finished" },
+      // { link: "manager-finished", textContent: "Finished" },
       // { link: "manager-dispatched", textContent: "Dispatched" },
       { link: "employers", textContent: "Employers" },
       // { link: "manager-storage", textContent: "Storage" },

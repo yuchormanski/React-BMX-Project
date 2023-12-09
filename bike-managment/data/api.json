@@ -632,6 +632,55 @@
       "createdAt": 1702044334119,
       "ownerId": 1,
       "id": 9
+    },
+    {
+      "frame": {
+        "name": "Zeal",
+        "oemNumber": "96789",
+        "imageUrls": [
+          "https://yuchormanski.free.bg/bikes/frame3.webp"
+        ],
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis suscipit eaque id exercitationem cum! Facere doloremque dignissimos cupiditate fugit, culpa animi eveniet est blanditiis!",
+        "rating": 5,
+        "salesPrice": 1000.01,
+        "type": 3,
+        "id": 3,
+        "intend": "Completing jumps",
+        "headImg": "https://yuchormanski.free.bg/bikes/frame3.webp"
+      },
+      "wheel": {
+        "name": "BMX Purple Wheels",
+        "oemNumber": "87394894",
+        "imageUrls": [
+          "https://yuchormanski.free.bg/bikes/wheel3.webp"
+        ],
+        "description": "Salt has combined a killer set of parts to bring you their Everest 20 front wheel. Available in a fresh range of colours and  36 spokes.",
+        "rating": 5,
+        "salesPrice": 43.45,
+        "type": 3,
+        "id": 3,
+        "intend": "Regular usage",
+        "headImg": "https://yuchormanski.free.bg/bikes/wheel3.webp"
+      },
+      "accessory": {
+        "name": "ENDEAVOUR SPROCKET",
+        "oemNumber": "873948asda94",
+        "imageUrls": [
+          "https://yuchormanski.free.bg/bikes/sprocket2.webp"
+        ],
+        "description": "The Colony Endeavour BMX Sprocket that comes on most of Colony’s complete bikes is now available separately! Good quality sprocket at a great price.",
+        "rating": 1,
+        "salesPrice": 13.45,
+        "type": 3,
+        "id": 2,
+        "intend": "Competition",
+        "headImg": "https://yuchormanski.free.bg/bikes/sprocket2.webp"
+      },
+      "userText": "g ghjgkj",
+      "count": 2,
+      "createdAt": 1702154438833,
+      "ownerId": 1,
+      "id": 10
     }
   ],
   "order_to_be_approved": [
@@ -972,14 +1021,14 @@
   "selected_part": [],
   "users": [
     {
-      "password": "$2a$10$4im/hkEX51SKyifOMuDwEeG96YymkQiawJ1rx0lwTxUZm9ctCthQG",
+      "password": "$2a$10$8p8862IBxaEagS1.7Rb7FOo7bMuVRcrSrW6Dj9tH0Xxxfx8c36OJa",
       "repass": "Petar-1",
       "role": "user",
       "email": "petar@abv.bg",
       "firstName": "Petar",
       "lastName": "Petrov",
       "iban": "QWESADAXC456FDGH",
-      "balance": 9919.86,
+      "balance": 9497.096000000001,
       "phoneNumber": "+3591234567890",
       "city": "Veliko Tarnovo",
       "imageUrl": "",

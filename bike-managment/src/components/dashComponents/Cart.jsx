@@ -4,7 +4,7 @@ import styles from "./Cart.module.css";
 
 import BoardHeader from "./BoardHeader.jsx";
 // import { UserContext } from "../UserProfile.jsx";
-import { clearOrderData, getOrderData } from "../../util/util.js";
+import { clearOrderData, getOrderData, getStockData } from "../../util/util.js";
 import {
   getOneFrame,
   getOnePart,
@@ -31,6 +31,9 @@ function Cart() {
   const navigate = useNavigate();
 
   const order = getOrderData();
+  const defaultBike = getStockData();
+
+  // if (defaultBike) navigate("/profile/get-stock");
 
   useEffect(function () {
     const abortController = new AbortController();

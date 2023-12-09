@@ -11,7 +11,12 @@ function BikeModel({ imageUrl, model, price, top, description, id }) {
   const bikeId = id;
 
   function onClickSelection() {
-    setStockBike(id);
+    if (user) {
+      setStockBike({
+        userId: user.id,
+        bikeId: id,
+      });
+    }
   }
 
   return (

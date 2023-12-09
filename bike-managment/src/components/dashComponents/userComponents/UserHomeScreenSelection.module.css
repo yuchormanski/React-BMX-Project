@@ -42,6 +42,16 @@
   opacity: 0.1;
   z-index: 0;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+iconBox {
+}
+
 .heading {
   width: fit-content;
   font-size: 2.2rem;
