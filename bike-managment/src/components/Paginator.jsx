@@ -1,5 +1,4 @@
 function Paginator({
-  // default
   page = 1,
   pages,
   size = 25,
